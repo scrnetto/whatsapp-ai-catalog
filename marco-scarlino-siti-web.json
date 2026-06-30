@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "sito": "Clinicametabolomica",
+    "url": "https://share.google/3PEvsQ0d1dTj90ErB",
+    "categoria": "Salute",
+    "descrizione": "Articolo: 6 carenze che scatenano la sindrome di Sjogren",
+    "fonte": "messaggio 03/07/2025",
+    "macro": "Z",
+    "uso": "Articolo divulgativo di salute (non strumento dev)."
+  },
+  {
+    "id": 2,
+    "sito": "Nintendo eShop (redeem)",
+    "url": "https://ec.nintendo.com/redeem/",
+    "categoria": "Gaming",
+    "descrizione": "Pagina riscatto codici Nintendo (msg con codici E12KYH7G7PQBGBTG, P3M1P3LZFE997ZTK)",
+    "fonte": "messaggio 20/08/2025",
+    "macro": "Z",
+    "uso": "Pagina riscatto codici Nintendo (personale)."
+  },
+  {
+    "id": 3,
+    "sito": "Proactor.ai",
+    "url": "https://proactor.ai",
+    "categoria": "Tool AI",
+    "descrizione": "Pagina pricing di Proactor.ai (assistente AI)",
+    "fonte": "messaggio 02/01/2026 (share.google/5sSkqijVpEmMcPGJp)",
+    "macro": "B",
+    "uso": "Tool/assistente AI (valutare pricing)."
+  },
+  {
+    "id": 4,
+    "sito": "ByteDance Seedance 2.0",
+    "url": "https://seed.bytedance.com/en/seedance2_0",
+    "categoria": "AI/Video",
+    "descrizione": "Pagina ufficiale del modello video Seedance 2.0 (ByteDance Seed)",
+    "fonte": "messaggio 12/02/2026",
+    "macro": "F",
+    "uso": "Pagina ufficiale modello video Seedance (vedi repo correlati)."
+  },
+  {
+    "id": 5,
+    "sito": "ByteDance Seed",
+    "url": "https://share.google/LG73RZT9Y4oIhlhWp",
+    "categoria": "AI/Team",
+    "descrizione": "Team/organizzazione ByteDance Seed (ricerca AI)",
+    "fonte": "messaggio 12/02/2026",
+    "macro": "F",
+    "uso": "Team di ricerca AI di ByteDance (hub di modelli)."
+  },
+  {
+    "id": 6,
+    "sito": "YouTube",
+    "url": "https://share.google/2IO5HNn00UcfWZYEi",
+    "categoria": "Video",
+    "descrizione": "Video YouTube condiviso (fonte non specificata)",
+    "fonte": "messaggio 09/04/2026",
+    "macro": "Z",
+    "uso": "Video YouTube condiviso (personale)."
+  },
+  {
+    "id": 7,
+    "sito": "Cookist",
+    "url": "https://www.cookist.it/sfogliatine-alle-mele-la-ricetta-dei-dolcetti-veloci-e-irresistibili/",
+    "categoria": "Cucina",
+    "descrizione": "Ricetta sfogliatine alle mele",
+    "fonte": "messaggio 26/11/2025",
+    "macro": "Z",
+    "uso": "Ricetta di cucina (personale)."
+  },
+  {
+    "id": 8,
+    "sito": "Facebook (reel/post)",
+    "url": "https://www.facebook.com/",
+    "categoria": "Social",
+    "descrizione": "5 reel/post Facebook condivisi (contenuti vari non identificati)",
+    "fonte": "messaggi 31/07/2025, 21/09/2025, 23/11/2025, 26/12/2025, 29/12/2025, 19/04/2026",
+    "macro": "Z",
+    "uso": "Contenuti Facebook condivisi (personale)."
+  },
+  {
+    "id": 9,
+    "sito": "Instagram Stories (simorizzo_ai)",
+    "url": "https://www.instagram.com/stories/simorizzo_ai/",
+    "categoria": "Social/AI",
+    "descrizione": "Story di Simone Rizzo AI",
+    "fonte": "messaggio 30/12/2025",
+    "macro": "Z",
+    "uso": "Story Instagram di Simone Rizzo AI."
+  },
+  {
+    "id": 10,
+    "sito": "Mistral AI - Voxtral",
+    "url": "https://mistral.ai/news/voxtral-tts/",
+    "categoria": "AI/TTS",
+    "descrizione": "Voxtral 4B, modello TTS open-weight (alternativa ElevenLabs) - solo modello/sito, no repo",
+    "fonte": "reel DZm0AWkKckt (ai_swarm_solutions 15/06/2026)",
+    "macro": "F",
+    "uso": "Voce/TTS open-weight di Mistral, alternativa a ElevenLabs (modello, no repo)."
+  },
+  {
+    "id": 11,
+    "sito": "Jina AI",
+    "url": "https://jina.ai",
+    "categoria": "AI/Embedding",
+    "descrizione": "Jina Embedding V4, modello embedding per RAG",
+    "fonte": "reel DLujSxQvd9G (simorizzo_ai 05/07/2025)",
+    "macro": "J",
+    "uso": "Modelli di embedding per RAG (Jina)."
+  },
+  {
+    "id": 12,
+    "sito": "TestSprite",
+    "url": "https://www.testsprite.com",
+    "categoria": "Tool AI/Dev",
+    "descrizione": "Agente AI che risolve problemi nel codice generato dai coding agent",
+    "fonte": "reel DMv03jZsEoM (simorizzo_ai 30/07/2025)",
+    "macro": "H",
+    "uso": "Agente AI che testa/ripara il codice generato."
+  },
+  {
+    "id": 13,
+    "sito": "Google Stitch",
+    "url": "https://stitch.withgoogle.com",
+    "categoria": "AI/UI",
+    "descrizione": "Progettazione interfacce grafiche da linguaggio naturale",
+    "fonte": "reel DWrSQ8mCpZ8 (lorenzodelia.ai 03/04/2026)",
+    "macro": "A",
+    "uso": "Generare UI da linguaggio naturale, poi passare a Claude Code (Google)."
+  },
+  {
+    "id": 14,
+    "sito": "Google Code Wiki",
+    "url": "https://labs.google/code-wiki",
+    "categoria": "Dev/Docs",
+    "descrizione": "Generazione automatica di documentazione del codice (Google)",
+    "fonte": "reel DSFDUcUjMik (gabriaprile 10/12/2025)",
+    "macro": "H",
+    "uso": "Generazione automatica di documentazione del codice (Google)."
+  },
+  {
+    "id": 15,
+    "sito": "Render",
+    "url": "https://render.com",
+    "categoria": "Hosting/Dev",
+    "descrizione": "Hosting per self-host gratuito di n8n (tutorial)",
+    "fonte": "reel DKeaXfkx6rw (buildusingai 04/06/2025)",
+    "macro": "H",
+    "uso": "Hosting per self-host gratuito (es. n8n)."
+  },
+  {
+    "id": 16,
+    "sito": "agentskills.io",
+    "url": "https://agentskills.io",
+    "categoria": "AI/Standard",
+    "descrizione": "Standard per le skill degli agenti AI (riferito da Anthropic-Cybersecurity-Skills)",
+    "fonte": "reel DZxpG9dtMfW / repo #36",
+    "macro": "B",
+    "uso": "Standard per le skill degli agenti AI."
+  },
+  {
+    "id": 17,
+    "sito": "Google EmbeddingGemma",
+    "url": "https://ai.google.dev/gemma",
+    "categoria": "AI/Embedding",
+    "descrizione": "Modello embedding Google per RAG locale on-device",
+    "fonte": "reel DOZFb5Pjx6i (simorizzo_ai 09/09/2025)",
+    "macro": "J",
+    "uso": "Modello di embedding Google per RAG locale on-device."
+  }
+]

@@ -1,0 +1,692 @@
+[
+  {
+    "id": 1,
+    "progetto": "Unsloth AI",
+    "descrizione": "Addestrare LLM in VS Code + Colab",
+    "url": "https://github.com/unslothai/unsloth",
+    "categoria": "AI/LLM",
+    "fonte": "Messaggio 41 - Data Science/Ramakrushna",
+    "macro": "C",
+    "uso": "Quando vuoi fare fine-tuning di LLM (Llama, Mistral, ecc.) velocemente e con poca VRAM."
+  },
+  {
+    "id": 2,
+    "progetto": "CLI-Anything",
+    "descrizione": "Making ALL Software Agent-Native (HKUDS)",
+    "url": "https://github.com/HKUDS/CLI-Anything",
+    "categoria": "Dev/Agent",
+    "fonte": "Messaggio 56",
+    "macro": "A",
+    "uso": "Per rendere qualsiasi software comandabile da un agente AI via CLI."
+  },
+  {
+    "id": 3,
+    "progetto": "Spec Kit",
+    "descrizione": "Spec-driven development toolkit (GitHub)",
+    "url": "https://github.com/github/spec-kit",
+    "categoria": "Dev/Workflow",
+    "fonte": "Commento messaggio 15",
+    "macro": "A",
+    "uso": "Per impostare uno sviluppo spec-driven (dalla specifica al codice) con agenti."
+  },
+  {
+    "id": 4,
+    "progetto": "Everything Claude Code",
+    "descrizione": "Guida definitiva setup Claude Code (marcobuilds7)",
+    "url": "https://github.com/affaan-m/everything-claude-code",
+    "categoria": "Claude Code",
+    "fonte": "Commento messaggio 46",
+    "macro": "A",
+    "uso": "Guida/setup completo per configurare al meglio Claude Code."
+  },
+  {
+    "id": 5,
+    "progetto": "Heretic",
+    "descrizione": "Rimuovere filtri sicurezza LLM (censorship removal)",
+    "url": "https://github.com/p-e-w/heretic",
+    "categoria": "AI/Hacking",
+    "fonte": "Simone Rizzo AI (index 42)",
+    "macro": "C",
+    "uso": "Per rimuovere i filtri di censura da un LLM open-source eseguito in locale (uso consapevole)."
+  },
+  {
+    "id": 6,
+    "progetto": "NanoBot",
+    "descrizione": "Agente AI personale open-source leggero (HKUDS)",
+    "url": "https://github.com/HKUDS/nanobot",
+    "categoria": "AI Agent",
+    "fonte": "Simone Rizzo AI (index 23)",
+    "macro": "B",
+    "uso": "Assistente AI personale leggero gestibile da Telegram/WhatsApp, sempre attivo sul tuo PC."
+  },
+  {
+    "id": 7,
+    "progetto": "Parlant",
+    "descrizione": "Framework per AI agents customer-facing (Python)",
+    "url": "https://github.com/emcie-co/parlant",
+    "categoria": "AI Agent",
+    "fonte": "Simone Rizzo AI (index 1)",
+    "macro": "B",
+    "uso": "Framework per costruire agenti conversazionali con regole/comportamenti controllati."
+  },
+  {
+    "id": 8,
+    "progetto": "Kimi K2.5",
+    "descrizione": "Modello AI multimodale open-source (Moonshot AI)",
+    "url": "https://github.com/MoonshotAI/Kimi-K2.5",
+    "categoria": "AI/LLM",
+    "fonte": "Simone Rizzo AI (index 19)",
+    "macro": "C",
+    "uso": "LLM open-source potente per orchestrare molti agenti in parallelo e visual coding."
+  },
+  {
+    "id": 9,
+    "progetto": "Qwen3-Coder",
+    "descrizione": "Modello di coding AI open-source (Qwen Team)",
+    "url": "https://github.com/QwenLM/Qwen3-Coder",
+    "categoria": "AI/LLM",
+    "fonte": "Simone Rizzo AI (index 22)",
+    "macro": "C",
+    "uso": "Coding agent open-source efficiente (pochi parametri attivi) per generare codice."
+  },
+  {
+    "id": 10,
+    "progetto": "OpenClaw",
+    "descrizione": "Personal AI assistant - Any OS, Any Platform",
+    "url": "https://github.com/openclaw/openclaw",
+    "categoria": "AI Agent",
+    "fonte": "Simone Rizzo AI (index 38)",
+    "macro": "B",
+    "uso": "Assistente/agente AI generalista open-source da self-hostare."
+  },
+  {
+    "id": 11,
+    "progetto": "Pixel Agents",
+    "descrizione": "VS Code extension per Claude Code (agenti virtuali)",
+    "url": "https://github.com/pixel-agents-hq/pixel-agents",
+    "categoria": "Dev Tool",
+    "fonte": "Manthan Patel (index 52)",
+    "macro": "A",
+    "uso": "Estensione VS Code che visualizza gli agenti Claude Code come 'ufficio' di personaggi."
+  },
+  {
+    "id": 12,
+    "progetto": "BMAD-METHOD",
+    "descrizione": "Breakthrough Method for Agile AI Driven Development",
+    "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+    "categoria": "Dev/Workflow",
+    "fonte": "Simone Rizzo AI (index 15)",
+    "macro": "A",
+    "uso": "Metodo agile per guidare lo sviluppo software con AI (planning strutturato)."
+  },
+  {
+    "id": 13,
+    "progetto": "TRELLIS",
+    "descrizione": "Structured 3D Latents per generazione 3D (Microsoft)",
+    "url": "https://github.com/microsoft/trellis",
+    "categoria": "AI/3D",
+    "fonte": "Simone Rizzo AI (index 40)",
+    "macro": "F",
+    "uso": "Generare modelli 3D strutturati da testo o immagini (Microsoft)."
+  },
+  {
+    "id": 14,
+    "progetto": "Qwen3-TTS",
+    "descrizione": "Text-to-Speech open-source (Alibaba Qwen)",
+    "url": "https://github.com/QwenLM/Qwen3-TTS",
+    "categoria": "AI/TTS",
+    "fonte": "Simone Rizzo AI (index 17)",
+    "macro": "F",
+    "uso": "Clonazione vocale e text-to-speech open-source (Alibaba Qwen)."
+  },
+  {
+    "id": 15,
+    "progetto": "NanoChat",
+    "descrizione": "Minimal ChatGPT clone (Andrej Karpathy)",
+    "url": "https://github.com/karpathy/nanochat",
+    "categoria": "AI/LLM",
+    "fonte": "Simone Rizzo AI (index 7)",
+    "macro": "C",
+    "uso": "Studiare/replicare un ChatGPT minimale da zero (Karpathy), didattico."
+  },
+  {
+    "id": 16,
+    "progetto": "Vibe Kanban",
+    "descrizione": "Potenziare coding agent con kanban (BloopAI)",
+    "url": "https://github.com/BloopAI/vibe-kanban",
+    "categoria": "Dev/Workflow",
+    "fonte": "Simone Rizzo AI (index 14)",
+    "macro": "A",
+    "uso": "Gestire i task di un coding agent con board kanban."
+  },
+  {
+    "id": 17,
+    "progetto": "AutoResearchClaw",
+    "descrizione": "Ricerca scientifica autonoma con AI (23-stage pipeline)",
+    "url": "https://github.com/aiming-lab/AutoResearchClaw",
+    "categoria": "AI Research",
+    "fonte": "Simone Rizzo AI (index 13)",
+    "macro": "J",
+    "uso": "Ricerca scientifica autonoma con AI (pipeline a stadi)."
+  },
+  {
+    "id": 18,
+    "progetto": "Claude SEO",
+    "descrizione": "SEO analysis skill per Claude Code (25 sub-skills)",
+    "url": "https://github.com/AgriciDaniel/claude-seo",
+    "categoria": "Claude Code Skill",
+    "fonte": "Simone Rizzo AI (index 9)",
+    "macro": "A",
+    "uso": "Skill Claude Code per attività SEO."
+  },
+  {
+    "id": 19,
+    "progetto": "SAM Audio",
+    "descrizione": "Segment Anything Model per audio (Meta)",
+    "url": "https://github.com/facebookresearch/sam-audio",
+    "categoria": "AI/Audio",
+    "fonte": "Simone Rizzo AI (index 29)",
+    "macro": "F",
+    "uso": "Isolare/separare tracce audio con AI (Meta)."
+  },
+  {
+    "id": 20,
+    "progetto": "Z-Image",
+    "descrizione": "Generazione immagini efficiente 6B (Alibaba Tongyi)",
+    "url": "https://github.com/Tongyi-MAI/Z-Image",
+    "categoria": "AI/Immagini",
+    "fonte": "Simone Rizzo AI (index 3)",
+    "macro": "F",
+    "uso": "Generazione immagini gratuita e open (Alibaba)."
+  },
+  {
+    "id": 21,
+    "progetto": "Easy Dataset",
+    "descrizione": "Creare dataset da PDF per addestramento LLM",
+    "url": "https://github.com/ConardLi/easy-dataset",
+    "categoria": "AI/Dataset",
+    "fonte": "Simone Rizzo AI (index 4)",
+    "macro": "D",
+    "uso": "Creare dataset di training per LLM partendo da PDF/documenti."
+  },
+  {
+    "id": 22,
+    "progetto": "VibeVoice",
+    "descrizione": "Text-to-Speech open-source frontier (Microsoft)",
+    "url": "https://github.com/microsoft/VibeVoice",
+    "categoria": "AI/TTS",
+    "fonte": "Simone Rizzo AI (index 0)",
+    "macro": "F",
+    "uso": "Text-to-speech open-source di qualità (Microsoft)."
+  },
+  {
+    "id": 23,
+    "progetto": "PicoClaw",
+    "descrizione": "Ultra-lightweight AI assistant in Go (Sipeed)",
+    "url": "https://github.com/sipeed/picoclaw",
+    "categoria": "AI Agent",
+    "fonte": "Simone Rizzo AI (index 23)",
+    "macro": "B",
+    "uso": "Assistente AI ultraleggero in Go, per hardware minimale (Sipeed)."
+  },
+  {
+    "id": 24,
+    "progetto": "GLM-Image",
+    "descrizione": "Image generation autoregressivo (Zhipu AI)",
+    "url": "https://github.com/zai-org/GLM-Image",
+    "categoria": "AI/Immagini",
+    "fonte": "Simone Rizzo AI (index 7)",
+    "macro": "F",
+    "uso": "Generazione immagini autoregressiva (Zhipu AI)."
+  },
+  {
+    "id": 25,
+    "progetto": "Seedance 2.0",
+    "descrizione": "Video generation multimodale (ByteDance)",
+    "url": "https://github.com/bytedance-seedance/seedance-2.0",
+    "categoria": "AI/Video",
+    "fonte": "Simone Rizzo AI (index 27)",
+    "macro": "F",
+    "uso": "Generazione video da prompt/immagini/video di riferimento (ByteDance)."
+  },
+  {
+    "id": 26,
+    "progetto": "GenieRedux",
+    "descrizione": "World models con ambienti virtuali (Google Genie)",
+    "url": "https://github.com/insait-institute/GenieRedux",
+    "categoria": "AI/World Model",
+    "fonte": "Simone Rizzo AI (index 51)",
+    "macro": "F",
+    "uso": "World model: ambienti virtuali generativi (replica di Google Genie)."
+  },
+  {
+    "id": 27,
+    "progetto": "VideoRAG",
+    "descrizione": "Chat con i tuoi video (HKUDS, KDD'2026)",
+    "url": "https://github.com/hkuds/videorag",
+    "categoria": "AI/RAG",
+    "fonte": "Simone Rizzo AI (index 4)",
+    "macro": "D",
+    "uso": "Chattare/interrogare i propri video con un sistema RAG."
+  },
+  {
+    "id": 28,
+    "progetto": "IQuest-Coder-V1",
+    "descrizione": "Modello di programmazione cinese open-source",
+    "url": "https://github.com/IQuestLab/IQuest-Coder-V1",
+    "categoria": "AI/LLM",
+    "fonte": "Simone Rizzo AI (index 3)",
+    "macro": "C",
+    "uso": "Modello di programmazione open-source alternativo."
+  },
+  {
+    "id": 29,
+    "progetto": "cc-blender-skill",
+    "descrizione": "Claude Code skill per Blender 3D",
+    "url": "https://github.com/RobLe3/cc-blender-skill",
+    "categoria": "Claude Code Skill",
+    "fonte": "Simone Rizzo AI (index 6)",
+    "macro": "A",
+    "uso": "Skill Claude Code per pilotare Blender (3D)."
+  },
+  {
+    "id": 30,
+    "progetto": "blender-mcp",
+    "descrizione": "MCP per controllare Blender con LLM",
+    "url": "https://github.com/ahujasid/blender-mcp",
+    "categoria": "Dev/3D",
+    "fonte": "Simone Rizzo AI (index 6)",
+    "macro": "A",
+    "uso": "Server MCP per controllare Blender da un agente."
+  },
+  {
+    "id": 31,
+    "progetto": "J.A.R.V.I.S",
+    "descrizione": "AI personal assistant con n8n + Telegram",
+    "url": "https://github.com/PrabhanshuKamal2121/J.A.R.V.I.S",
+    "categoria": "n8n/AI",
+    "fonte": "Gianmarco Pompizii (index 13)",
+    "macro": "B",
+    "uso": "Assistente personale stile JARVIS costruito in n8n."
+  },
+  {
+    "id": 32,
+    "progetto": "JARVIS-PA-Lovable",
+    "descrizione": "Voice AI assistant con n8n + Lovable + ElevenLabs",
+    "url": "https://github.com/SachinSavkare/JARVIS-PA-Lovable-11-Labs-n8n",
+    "categoria": "n8n/AI",
+    "fonte": "Gianmarco Pompizii (index 13)",
+    "macro": "B",
+    "uso": "Variante JARVIS con n8n + ElevenLabs + Lovable."
+  },
+  {
+    "id": 33,
+    "progetto": "BMAD-Speckit-SDD-Flow",
+    "descrizione": "End-to-end workflow BMAD + Speckit integration",
+    "url": "https://github.com/milome/BMAD-Speckit-SDD-Flow",
+    "categoria": "Dev/Workflow",
+    "fonte": "Simone Rizzo AI (index 15)",
+    "macro": "A",
+    "uso": "Flusso che unisce BMAD + Spec Kit per spec-driven development."
+  },
+  {
+    "id": 34,
+    "progetto": "Ralph Loop",
+    "descrizione": "Claude Code plugin per iterative development loops",
+    "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop",
+    "categoria": "Claude Code Plugin",
+    "fonte": "Simone Rizzo AI (index 13)",
+    "macro": "A",
+    "uso": "Plugin Claude Code per loop iterativi di sviluppo autonomo."
+  },
+  {
+    "id": 35,
+    "progetto": "Pusa V1.0 (Pusa-VidGen)",
+    "descrizione": "Video diffusion model con vectorized timestep adaptation (VTA); fine-tuning di Wan2.1-T2V-14B a ~1/200 del costo",
+    "url": "https://github.com/Yaofang-Liu/Pusa-VidGen",
+    "categoria": "AI/Video",
+    "fonte": "Messaggio 19/07/2025 - link diretto github.io/Pusa_Web",
+    "macro": "F",
+    "uso": "Generazione video AI a basso costo (fine-tuning di Wan2.1)."
+  },
+  {
+    "id": 36,
+    "progetto": "Anthropic-Cybersecurity-Skills",
+    "descrizione": "817 skill di cybersecurity strutturate per AI agent, mappate a 6 framework (MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND, NIST AI RMF, F3); standard agentskills.io",
+    "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "categoria": "Sicurezza/AI Agent",
+    "fonte": "Messaggio 20/06/2026 - link diretto GitHub nel testo",
+    "macro": "G",
+    "uso": "Dare a un agente AI ~800 skill di cybersecurity mappate ai framework standard."
+  },
+  {
+    "id": 37,
+    "progetto": "Stirling-PDF",
+    "descrizione": "Gestione/modifica PDF self-hosted",
+    "url": "https://github.com/Stirling-Tools/Stirling-PDF",
+    "categoria": "Dev/PDF",
+    "fonte": "devop.sbs 30/05/2026 (reel DY9x4ukMeZ0)",
+    "macro": "H",
+    "uso": "Gestire/modificare PDF in self-hosting (no abbonamenti, no upload cloud)."
+  },
+  {
+    "id": 38,
+    "progetto": "Kronos",
+    "descrizione": "Foundation model open-source per dati di borsa/grafici finanziari",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "categoria": "AI/Finance",
+    "fonte": "devop.sbs 01/06/2026 (reel DYumeDwM2O7)",
+    "macro": "I",
+    "uso": "Modello di fondazione per analizzare dati di borsa/serie storiche finanziarie."
+  },
+  {
+    "id": 39,
+    "progetto": "flowsint",
+    "descrizione": "OSINT con grafi interattivi delle relazioni tra dati",
+    "url": "https://github.com/reconurge/flowsint",
+    "categoria": "Sicurezza/OSINT",
+    "fonte": "devop.sbs 03/06/2026 (reel DZIP6HOMzk1)",
+    "macro": "G",
+    "uso": "Indagini OSINT con grafi interattivi delle relazioni tra dati."
+  },
+  {
+    "id": 40,
+    "progetto": "last30days-skill",
+    "descrizione": "Skill che trasforma un agente AI in motore di ricerca sugli ultimi 30 giorni",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "categoria": "AI/Search",
+    "fonte": "devop.sbs 04/06/2026 (reel DZKnkZuM4ko)",
+    "macro": "D",
+    "uso": "Skill che dà a un agente un motore di ricerca sugli ultimi 30 giorni."
+  },
+  {
+    "id": 41,
+    "progetto": "AirLLM",
+    "descrizione": "Eseguire modelli 70B su hardware consumer caricando layer-by-layer",
+    "url": "https://github.com/lyogavin/airllm",
+    "categoria": "AI/LLM",
+    "fonte": "ai.honeycove 01/06/2026 (reel DZEKM7iOXQw)",
+    "macro": "C",
+    "uso": "Eseguire modelli da 70B su hardware consumer (caricamento layer-by-layer)."
+  },
+  {
+    "id": 42,
+    "progetto": "Tolaria",
+    "descrizione": "App desktop open-source per appunti resilienti",
+    "url": "https://github.com/refactoringhq/tolaria",
+    "categoria": "Dev/Productivity",
+    "fonte": "devop.sbs 08/06/2026 (reel DZVABdVsOV7)",
+    "macro": "H",
+    "uso": "App desktop open-source per appunti resilienti al cambio di formato."
+  },
+  {
+    "id": 43,
+    "progetto": "Trivy",
+    "descrizione": "Scanner open-source per vulnerabilità, secret e misconfigurazioni",
+    "url": "https://github.com/aquasecurity/trivy",
+    "categoria": "Sicurezza",
+    "fonte": "devop.sbs 06/06/2026 (reel DZP0vjFMn_q)",
+    "macro": "G",
+    "uso": "Scanner di sicurezza per vulnerabilità, secret e misconfig (standard di settore)."
+  },
+  {
+    "id": 44,
+    "progetto": "whichllm",
+    "descrizione": "Tool per scegliere il miglior LLM locale per la propria VRAM",
+    "url": "https://github.com/Andyyyy64/whichllm",
+    "categoria": "AI/LLM",
+    "fonte": "devop.sbs 10/06/2026 (reel DZaCoJasljS)",
+    "macro": "C",
+    "uso": "Scegliere il miglior LLM locale in base alla tua VRAM."
+  },
+  {
+    "id": 45,
+    "progetto": "Supertonic",
+    "descrizione": "Text-to-Speech completamente locale ad alte performance",
+    "url": "https://github.com/supertone-inc/supertonic",
+    "categoria": "AI/TTS",
+    "fonte": "devop.sbs 14/05/2026 (reel DYUnUNrMjzy)",
+    "macro": "F",
+    "uso": "Text-to-speech completamente locale ad alte prestazioni."
+  },
+  {
+    "id": 46,
+    "progetto": "zvec",
+    "descrizione": "Database vettoriale open-source in-process (embedded)",
+    "url": "https://github.com/alibaba/zvec",
+    "categoria": "AI/Database",
+    "fonte": "devop.sbs 16/06/2026 (reel DZpnptlMMxj)",
+    "macro": "J",
+    "uso": "Database vettoriale embedded (in-process) per RAG senza server separato."
+  },
+  {
+    "id": 47,
+    "progetto": "Pake",
+    "descrizione": "Trasforma qualsiasi sito web in app desktop con un comando",
+    "url": "https://github.com/tw93/Pake",
+    "categoria": "Dev/Tools",
+    "fonte": "devop.sbs 20/06/2026 (reel DZ0SrCKuBTN)",
+    "macro": "H",
+    "uso": "Trasformare qualsiasi sito web in app desktop con un comando."
+  },
+  {
+    "id": 48,
+    "progetto": "supervision",
+    "descrizione": "Libreria computer vision (Roboflow), 40k+ stelle",
+    "url": "https://github.com/roboflow/supervision",
+    "categoria": "AI/Computer Vision",
+    "fonte": "aisintesi 23/06/2026 (reel DZ9NSaJibSi)",
+    "macro": "H",
+    "uso": "Libreria Python per computer vision (annotazioni, tracking) di Roboflow."
+  },
+  {
+    "id": 49,
+    "progetto": "MinerU",
+    "descrizione": "Trasforma documenti complessi in dati strutturati per LLM/RAG/agenti",
+    "url": "https://github.com/opendatalab/MinerU",
+    "categoria": "AI/RAG",
+    "fonte": "devop.sbs 28/06/2026 (reel DaJC9uDuhNq)",
+    "macro": "D",
+    "uso": "Convertire documenti complessi in dati strutturati per LLM/RAG/agenti."
+  },
+  {
+    "id": 50,
+    "progetto": "CuPy",
+    "descrizione": "Array library GPU-accelerated compatibile NumPy",
+    "url": "https://github.com/cupy/cupy",
+    "categoria": "Dev/Computing",
+    "fonte": "devop.sbs 29/06/2026 (reel DaLOAGXs4yu)",
+    "macro": "H",
+    "uso": "Array library GPU (NumPy-compatibile) per accelerare calcolo/data science."
+  },
+  {
+    "id": 51,
+    "progetto": "ai-website-cloner-template",
+    "descrizione": "Template per ricostruire un sito esistente in codebase moderna con agenti AI",
+    "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+    "categoria": "Dev/Agent",
+    "fonte": "devop.sbs 24/06/2026 (reel DZ-RuinMGnM)",
+    "macro": "A",
+    "uso": "Template per clonare un sito esistente in una codebase moderna con agenti."
+  },
+  {
+    "id": 52,
+    "progetto": "LibreTranslate",
+    "descrizione": "API di traduzione automatica self-hosted open-source",
+    "url": "https://github.com/LibreTranslate/LibreTranslate",
+    "categoria": "AI/Traduzione",
+    "fonte": "devop.sbs 18/06/2026 (reel DZuyVOwMVKY)",
+    "macro": "H",
+    "uso": "API di traduzione automatica self-hosted (privacy, no costi per chiamata)."
+  },
+  {
+    "id": 53,
+    "progetto": "Deep-Live-Cam",
+    "descrizione": "Face swap live sulla webcam da una sola foto, 93k stelle",
+    "url": "https://github.com/hacksider/Deep-Live-Cam",
+    "categoria": "AI/Video",
+    "fonte": "guglielmo.builds 30/06/2026 (reel DaNR-i-Nxfj)",
+    "macro": "F",
+    "uso": "Face swap live sulla webcam da una sola foto (uso etico richiesto)."
+  },
+  {
+    "id": 54,
+    "progetto": "GLM-OCR",
+    "descrizione": "Modello OCR multimodale (zai-org) PDF complessi -> Markdown, 0.9B",
+    "url": "https://github.com/zai-org/GLM-OCR",
+    "categoria": "AI/OCR",
+    "fonte": "simorizzo_ai 29/04/2026 (reel DXuA2Y4FiMX)",
+    "macro": "E",
+    "uso": "OCR multimodale: PDF complessi → Markdown puliti per agenti (Zhipu)."
+  },
+  {
+    "id": 55,
+    "progetto": "MiroFish",
+    "descrizione": "Motore di intelligenza collettiva: simula migliaia di agenti AI per previsioni (studente cinese, virale)",
+    "url": "https://github.com/666ghj/MiroFish",
+    "categoria": "AI/Agent",
+    "fonte": "simorizzo_ai 18/03 + lorenzodelia.ai 27/03/2026 (reel DWCXcd0jHIM, DWbS8oHoJ5Q)",
+    "macro": "B",
+    "uso": "Motore di intelligenza collettiva: simula migliaia di agenti per previsioni."
+  },
+  {
+    "id": 56,
+    "progetto": "DwarfStar (ds4)",
+    "descrizione": "Engine di inferenza locale per DeepSeek V4 Flash su hardware consumer (antirez)",
+    "url": "https://github.com/antirez/ds4",
+    "categoria": "AI/LLM",
+    "fonte": "simorizzo_ai 26/06/2026 (reel DaDbAFIDY8m)",
+    "macro": "C",
+    "uso": "Far girare modelli di frontiera (DeepSeek V4) in locale su Mac/consumer (antirez)."
+  },
+  {
+    "id": 57,
+    "progetto": "SkillSpector",
+    "descrizione": "Security scanner NVIDIA per le skill degli agenti AI (rileva pattern malevoli)",
+    "url": "https://github.com/NVIDIA/SkillSpector",
+    "categoria": "Sicurezza/AI Agent",
+    "fonte": "simorizzo_ai 25/06/2026 (reel DaAXoFQiv9u) - citato come 'SkillSpectron'",
+    "macro": "G",
+    "uso": "Scanner NVIDIA che verifica la sicurezza delle skill degli agenti prima di installarle."
+  },
+  {
+    "id": 58,
+    "progetto": "SEAL (Self-Adapting LM)",
+    "descrizione": "Framework MIT: LLM che generano i propri dati di training adattandosi (self-edits)",
+    "url": "https://github.com/Continual-Intelligence/SEAL",
+    "categoria": "AI/Research",
+    "fonte": "simorizzo_ai 29/06/2025 (reel DLfcRkryOlZ)",
+    "macro": "J",
+    "uso": "LLM che si auto-adatta generando i propri dati di training (ricerca MIT)."
+  },
+  {
+    "id": 59,
+    "progetto": "SpikingBrain-7B",
+    "descrizione": "LLM brain-inspired (CAS): hybrid attention + spike encoding, 100x TTFT",
+    "url": "https://github.com/BICLab/SpikingBrain-7B",
+    "categoria": "AI/LLM",
+    "fonte": "simorizzo_ai 18/09/2025 (reel DOvy-OlDKL9)",
+    "macro": "C",
+    "uso": "LLM brain-inspired efficiente (spiking) con contesto molto lungo."
+  },
+  {
+    "id": 60,
+    "progetto": "Memvid",
+    "descrizione": "Memoria AI video-based: milioni di chunk in file MP4, ricerca semantica senza DB",
+    "url": "https://github.com/Olow304/memvid",
+    "categoria": "AI/Memory",
+    "fonte": "simorizzo_ai 23/09/2025 (reel DO9JwLzEcLW)",
+    "macro": "D",
+    "uso": "Memoria per agenti AI che salva milioni di chunk in file MP4, ricerca semantica senza DB."
+  },
+  {
+    "id": 61,
+    "progetto": "Dyad",
+    "descrizione": "AI app builder locale e open-source (alternativa Lovable/Bolt/v0)",
+    "url": "https://github.com/dyad-sh/dyad",
+    "categoria": "Dev/AI App Builder",
+    "fonte": "simorizzo_ai 15/12/2025 (reel DSSlJYdD4AX)",
+    "macro": "A",
+    "uso": "Costruire app con AI in locale (alternativa open a Lovable/Bolt/v0)."
+  },
+  {
+    "id": 62,
+    "progetto": "Headroom",
+    "descrizione": "Layer di compressione contesto locale: -60/95% token verso gli LLM (ing. Netflix T. Chopra)",
+    "url": "https://github.com/chopratejas/headroom",
+    "categoria": "AI/Tooling",
+    "fonte": "simorizzo_ai 20/06/2026 (reel DZzmh_6iNiV)",
+    "macro": "D",
+    "uso": "Comprimere il contesto verso gli LLM e tagliare i costi token del 60-95%."
+  },
+  {
+    "id": 63,
+    "progetto": "Bumblebee",
+    "descrizione": "Scanner read-only supply-chain per endpoint sviluppatore (Perplexity)",
+    "url": "https://github.com/perplexityai/bumblebee",
+    "categoria": "Sicurezza/Supply-chain",
+    "fonte": "didof.dev 29/05/2026 (reel DY6zTt6C2-G)",
+    "macro": "G",
+    "uso": "Scanner read-only supply-chain per le macchine degli sviluppatori (Perplexity)."
+  },
+  {
+    "id": 64,
+    "progetto": "Unlimited-OCR",
+    "descrizione": "Modello OCR open-source Baidu per parsing documenti (evoluzione DeepSeek-OCR)",
+    "url": "https://github.com/baidu/Unlimited-OCR",
+    "categoria": "AI/OCR",
+    "fonte": "simorizzo_ai 24/06/2026 (reel DZ-VI92kezb)",
+    "macro": "E",
+    "uso": "Modello OCR open-source per parsing documenti aziendali in locale (Baidu)."
+  },
+  {
+    "id": 65,
+    "progetto": "TencentDB-Agent-Memory",
+    "descrizione": "Memoria persistente locale per agenti AI, pipeline a 4 livelli, zero API esterne (Tencent)",
+    "url": "https://github.com/Tencent/TencentDB-Agent-Memory",
+    "categoria": "AI/Memory",
+    "fonte": "simorizzo_ai 27/05/2026 (reel DY2tC0SCfZ0)",
+    "macro": "D",
+    "uso": "Memoria persistente locale per agenti AI a 4 livelli, zero API esterne (Tencent)."
+  },
+  {
+    "id": 66,
+    "progetto": "SwarmClaw",
+    "descrizione": "Runtime/framework multi-agente self-hosted: delega a Claude Code, Codex, OpenClaw, Hermes ecc.",
+    "url": "https://github.com/swarmclawai/swarmclaw",
+    "categoria": "AI/Agent",
+    "fonte": "simorizzo_ai 25/05/2026 (reel DYxFkcuiliz)",
+    "macro": "B",
+    "uso": "Runtime multi-agente che orchestra Claude Code, Codex, OpenClaw, Hermes ecc."
+  },
+  {
+    "id": 67,
+    "progetto": "ai-hedge-fund",
+    "descrizione": "Hedge fund simulato con agenti AI (Buffett, Cathie Wood, analista tecnico, risk manager); paper trading, no profitto garantito",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "categoria": "AI/Finance",
+    "fonte": "ai_swarm_solutions 29/05/2026 (reel DY7ohnhq9Og)",
+    "macro": "I",
+    "uso": "Hedge fund simulato con agenti AI (paper trading, didattico, no profitto garantito)."
+  },
+  {
+    "id": 68,
+    "progetto": "TradingAgents",
+    "descrizione": "Framework multi-agente per trading (gemello strutturale di ai-hedge-fund)",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "categoria": "AI/Finance",
+    "fonte": "ai_swarm_solutions 29/05/2026 (reel DY7ohnhq9Og)",
+    "macro": "I",
+    "uso": "Framework multi-agente LLM per il trading finanziario."
+  },
+  {
+    "id": 69,
+    "progetto": "knowledge-work-plugins",
+    "descrizione": "Repository ufficiale Anthropic con 11 plugin per knowledge worker (vendite, marketing, finance, supporto, legale, ecc.) che trasformano Claude in uno specialista per ruolo: skill markdown, slash command, subagent, connettori MCP e hook, senza codice.",
+    "url": "https://github.com/anthropics/knowledge-work-plugins",
+    "categoria": "AI/Claude Code Plugins",
+    "fonte": "neuralcoffe 30/06/2026 (reel DaN24idMMfe)",
+    "macro": "A",
+    "uso": "Quando vuoi dare a Claude Code/Cowork competenze pronte per un ruolo aziendale (sales, finance, legal...) installando plugin file-based personalizzabili."
+  }
+]

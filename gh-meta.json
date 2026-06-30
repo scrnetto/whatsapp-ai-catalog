@@ -1,0 +1,711 @@
+{
+ "1": {
+  "slug": "unslothai/unsloth",
+  "stars": 67665,
+  "pushed": "2026-06-30T19:33:50Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 1013,
+  "desc": "Unsloth Studio is a web UI for training and running open models like Gemma 4, Qwen3.6, DeepSeek, gpt-oss locally.",
+  "fork": false
+ },
+ "2": {
+  "slug": "HKUDS/CLI-Anything",
+  "stars": 44332,
+  "pushed": "2026-06-25T15:17:48Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 67,
+  "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+  "fork": false
+ },
+ "3": {
+  "slug": "github/spec-kit",
+  "stars": 116695,
+  "pushed": "2026-06-30T20:44:50Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 370,
+  "desc": "💫 Toolkit to help you get started with Spec-Driven Development",
+  "fork": false
+ },
+ "4": {
+  "slug": "affaan-m/everything-claude-code",
+  "stars": 223997,
+  "pushed": "2026-06-30T02:44:52Z",
+  "archived": false,
+  "lang": "JavaScript",
+  "license": "MIT",
+  "open_issues": 69,
+  "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+  "fork": false
+ },
+ "5": {
+  "slug": "p-e-w/heretic",
+  "stars": 25642,
+  "pushed": "2026-06-27T13:33:30Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "AGPL-3.0",
+  "open_issues": 72,
+  "desc": "Fully automatic censorship removal for language models",
+  "fork": false
+ },
+ "6": {
+  "slug": "HKUDS/nanobot",
+  "stars": 44893,
+  "pushed": "2026-06-30T16:40:25Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 863,
+  "desc": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
+  "fork": false
+ },
+ "7": {
+  "slug": "emcie-co/parlant",
+  "stars": 18154,
+  "pushed": "2026-06-30T17:57:05Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 40,
+  "desc": "Build reliable customer-facing AI agents with Parlant: an interaction control harness optimized for controlled, consistent, and predictable LLM interactions.",
+  "fork": false
+ },
+ "8": {
+  "slug": "MoonshotAI/Kimi-K2.5",
+  "stars": 2076,
+  "pushed": "2026-01-31T00:49:42Z",
+  "archived": false,
+  "lang": null,
+  "license": "NOASSERTION",
+  "open_issues": 45,
+  "desc": "Moonshot's most powerful model",
+  "fork": false
+ },
+ "9": {
+  "slug": "QwenLM/Qwen3-Coder",
+  "stars": 16657,
+  "pushed": "2026-03-24T08:22:10Z",
+  "archived": false,
+  "lang": "Python",
+  "license": null,
+  "open_issues": 108,
+  "desc": "Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team.",
+  "fork": false
+ },
+ "10": {
+  "slug": "openclaw/openclaw",
+  "stars": 381163,
+  "pushed": "2026-06-30T20:58:02Z",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "NOASSERTION",
+  "open_issues": 6735,
+  "desc": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+  "fork": false
+ },
+ "11": {
+  "slug": "pixel-agents-hq/pixel-agents",
+  "stars": 8402,
+  "pushed": "2026-06-29T15:29:52Z",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": 83,
+  "desc": "Pixel office.",
+  "fork": false
+ },
+ "12": {
+  "slug": "bmad-code-org/BMAD-METHOD",
+  "stars": 49912,
+  "pushed": "2026-06-30T15:56:09Z",
+  "archived": false,
+  "lang": "JavaScript",
+  "license": "NOASSERTION",
+  "open_issues": 79,
+  "desc": "Breakthrough Method for Agile Ai Driven Development",
+  "fork": false
+ },
+ "13": {
+  "slug": "microsoft/trellis",
+  "stars": 13035,
+  "pushed": "2026-06-26T07:27:56Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 254,
+  "desc": "Official repo for paper \"Structured 3D Latents for Scalable and Versatile 3D Generation\" (CVPR'25 Spotlight).",
+  "fork": false
+ },
+ "14": {
+  "slug": "QwenLM/Qwen3-TTS",
+  "stars": 12228,
+  "pushed": "2026-03-17T06:38:41Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 57,
+  "desc": "Qwen3-TTS is an open-source series of TTS models developed by the Qwen team at Alibaba Cloud, supporting stable, expressive, and streaming speech generation, free-form voice design, and vivid voice cloning.",
+  "fork": false
+ },
+ "15": {
+  "slug": "karpathy/nanochat",
+  "stars": 55640,
+  "pushed": "2026-05-05T03:17:23Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 113,
+  "desc": "The best ChatGPT that $100 can buy.",
+  "fork": false
+ },
+ "16": {
+  "slug": "BloopAI/vibe-kanban",
+  "stars": 27217,
+  "pushed": "2026-04-24T09:17:34Z",
+  "archived": false,
+  "lang": "Rust",
+  "license": "Apache-2.0",
+  "open_issues": 530,
+  "desc": "Get 10X more out of Claude Code, Codex or any coding agent",
+  "fork": false
+ },
+ "17": {
+  "slug": "aiming-lab/AutoResearchClaw",
+  "stars": 13658,
+  "pushed": "2026-06-03T15:58:09Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 14,
+  "desc": "Fully autonomous & self-evolving research from idea to paper. Chat an Idea. Get a Paper. 🦞",
+  "fork": false
+ },
+ "18": {
+  "slug": "AgriciDaniel/claude-seo",
+  "stars": 10202,
+  "pushed": "2026-06-22T06:08:48Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 19,
+  "desc": "Universal SEO skill for Claude Code. 25 sub-skills + 18 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, backlinks, local SEO, maps intelligence, semantic clustering, e-commerce SEO, international SEO, Google APIs, and PDF/Excel reporting. Optional DataForSEO, Firecrawl, and Banana extensions.",
+  "fork": false
+ },
+ "19": {
+  "slug": "facebookresearch/sam-audio",
+  "stars": 3551,
+  "pushed": "2026-05-26T05:38:19Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "open_issues": 50,
+  "desc": "The repository provides code for running inference with the Meta Segment Anything Audio Model (SAM-Audio), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+  "fork": false
+ },
+ "20": {
+  "slug": "Tongyi-MAI/Z-Image",
+  "stars": 11663,
+  "pushed": "2026-02-09T12:49:43Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 108,
+  "desc": null,
+  "fork": false
+ },
+ "21": {
+  "slug": "ConardLi/easy-dataset",
+  "stars": 14558,
+  "pushed": "2026-05-01T15:03:32Z",
+  "archived": false,
+  "lang": "JavaScript",
+  "license": "NOASSERTION",
+  "open_issues": 118,
+  "desc": "A powerful tool for creating datasets for LLM fine-tuning 、RAG and Eval",
+  "fork": false
+ },
+ "22": {
+  "slug": "microsoft/VibeVoice",
+  "stars": 49776,
+  "pushed": "2026-05-06T06:49:25Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 174,
+  "desc": "Open-Source Frontier Voice AI",
+  "fork": false
+ },
+ "23": {
+  "slug": "sipeed/picoclaw",
+  "stars": 29533,
+  "pushed": "2026-06-30T09:42:56Z",
+  "archived": false,
+  "lang": "Go",
+  "license": "MIT",
+  "open_issues": 55,
+  "desc": "Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity",
+  "fork": false
+ },
+ "24": {
+  "slug": "zai-org/GLM-Image",
+  "stars": 966,
+  "pushed": "2026-03-20T03:10:16Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 20,
+  "desc": "GLM-Image: Auto-regressive for Dense-knowledge and High-fidelity Image Generation.",
+  "fork": false
+ },
+ "25": {
+  "slug": "bytedance-seedance/seedance-2.0",
+  "stars": 17,
+  "pushed": "2026-04-10T16:35:27Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 0,
+  "desc": "Seedance 2.0 is a revolutionary multi-modal video generation model that bridges the gap between AI and professional filmmaking. This repository provides the official Python client for interacting with the Seedance API.",
+  "fork": false
+ },
+ "26": {
+  "slug": "insait-institute/GenieRedux",
+  "stars": 76,
+  "pushed": "2026-05-14T16:12:46Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 0,
+  "desc": "A framework for training world models with virtual environments, complete with annotated environment dataset (RetroAct), exploration agent (AutoExplore Agent), and GenieRedux-G - an implementation of Genie with enhancements",
+  "fork": false
+ },
+ "27": {
+  "slug": "hkuds/videorag",
+  "stars": 3084,
+  "pushed": "2026-03-18T08:33:07Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "open_issues": 19,
+  "desc": "[KDD'2026] \"VideoRAG: Chat with Your Videos\"",
+  "fork": false
+ },
+ "28": {
+  "slug": "IQuestLab/IQuest-Coder-V1",
+  "stars": 1386,
+  "pushed": "2026-03-02T11:58:44Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "open_issues": 17,
+  "desc": null,
+  "fork": false
+ },
+ "29": {
+  "slug": "RobLe3/cc-blender-skill",
+  "stars": 13,
+  "pushed": "2026-05-01T10:34:49Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 0,
+  "desc": "Claude Code skill plugin: drive Blender 5.x like a senior 3D artist via natural language. 10 chain-loadable skills (modeling, materials, lighting, cameras, rendering, animation, export, wireframe-to-3d, pro-workflow). Validated on 6 scene classes.",
+  "fork": false
+ },
+ "30": {
+  "slug": "ahujasid/blender-mcp",
+  "stars": 23322,
+  "pushed": "2026-06-11T13:20:04Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 78,
+  "desc": "Open-source MCP to use Blender with any LLM",
+  "fork": false
+ },
+ "31": {
+  "slug": "PrabhanshuKamal2121/J.A.R.V.I.S",
+  "stars": 4,
+  "pushed": "2025-07-21T12:38:13Z",
+  "archived": false,
+  "lang": null,
+  "license": null,
+  "open_issues": 0,
+  "desc": "J.A.R.V.I.S. (Just A Rather Very Intelligent System) is an AI-powered personal assistant inspired by Tony Stark's iconic companion. Built on the n8n workflow automation platform, it integrates various APIs and AI models to handle voice, text, and image-based tasks.",
+  "fork": false
+ },
+ "32": {
+  "slug": "SachinSavkare/JARVIS-PA-Lovable-11-Labs-n8n",
+  "stars": 0,
+  "pushed": "2026-04-30T15:34:59Z",
+  "archived": false,
+  "lang": null,
+  "license": null,
+  "open_issues": 0,
+  "desc": null,
+  "fork": false
+ },
+ "33": {
+  "slug": "milome/BMAD-Speckit-SDD-Flow",
+  "stars": 0,
+  "pushed": "2026-06-29T17:30:42Z",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": 0,
+  "desc": "AI-TDD control plane for requirement contracts and evidence-chain delivery across Cursor, Claude Code, and Codex, built on BMAD + Spec-Kit.",
+  "fork": false
+ },
+ "34": {
+  "slug": "anthropics/claude-plugins-official",
+  "stars": 31348,
+  "pushed": "2026-06-30T20:15:17Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 781,
+  "desc": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+  "fork": false
+ },
+ "35": {
+  "slug": "Yaofang-Liu/Pusa-VidGen",
+  "stars": 683,
+  "pushed": "2026-02-13T06:40:42Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 28,
+  "desc": "Pusa: Thousands Timesteps Video Diffusion Model",
+  "fork": false
+ },
+ "36": {
+  "slug": "mukul975/Anthropic-Cybersecurity-Skills",
+  "stars": 23426,
+  "pushed": "2026-06-26T14:37:50Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 29,
+  "desc": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
+  "fork": false
+ },
+ "37": {
+  "slug": "Stirling-Tools/Stirling-PDF",
+  "stars": 85394,
+  "pushed": "2026-06-30T20:38:21Z",
+  "archived": false,
+  "lang": "Java",
+  "license": "NOASSERTION",
+  "open_issues": 461,
+  "desc": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
+  "fork": false
+ },
+ "38": {
+  "slug": "shiyu-coder/Kronos",
+  "stars": 31612,
+  "pushed": "2026-04-13T12:38:49Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 229,
+  "desc": "Kronos: A Foundation Model for the Language of Financial Markets",
+  "fork": false
+ },
+ "39": {
+  "slug": "reconurge/flowsint",
+  "stars": 7098,
+  "pushed": "2026-06-24T07:29:32Z",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "Apache-2.0",
+  "open_issues": 43,
+  "desc": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
+  "fork": false
+ },
+ "40": {
+  "slug": "mvanhorn/last30days-skill",
+  "stars": 47895,
+  "pushed": "2026-06-30T15:38:14Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 68,
+  "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+  "fork": false
+ },
+ "41": {
+  "slug": "lyogavin/airllm",
+  "stars": 21978,
+  "pushed": "2026-06-26T02:02:37Z",
+  "archived": false,
+  "lang": "Jupyter Notebook",
+  "license": "Apache-2.0",
+  "open_issues": 167,
+  "desc": "AirLLM 70B inference with single 4GB GPU",
+  "fork": false
+ },
+ "42": {
+  "slug": "refactoringhq/tolaria",
+  "stars": 17805,
+  "pushed": "2026-06-30T12:42:45Z",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "AGPL-3.0",
+  "open_issues": 72,
+  "desc": "Desktop app to manage markdown knowledge bases",
+  "fork": false
+ },
+ "43": {
+  "slug": "aquasecurity/trivy",
+  "stars": 36660,
+  "pushed": "2026-06-30T10:44:32Z",
+  "archived": false,
+  "lang": "Go",
+  "license": "Apache-2.0",
+  "open_issues": 235,
+  "desc": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+  "fork": false
+ },
+ "44": {
+  "slug": "Andyyyy64/whichllm",
+  "stars": 5464,
+  "pushed": "2026-06-29T04:32:20Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 19,
+  "desc": "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly.",
+  "fork": false
+ },
+ "45": {
+  "slug": "supertone-inc/supertonic",
+  "stars": 12827,
+  "pushed": "2026-06-30T07:07:06Z",
+  "archived": false,
+  "lang": "Swift",
+  "license": "MIT",
+  "open_issues": 124,
+  "desc": "Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX.",
+  "fork": false
+ },
+ "46": {
+  "slug": "alibaba/zvec",
+  "stars": 12633,
+  "pushed": "2026-06-30T07:36:34Z",
+  "archived": false,
+  "lang": "C++",
+  "license": "Apache-2.0",
+  "open_issues": 63,
+  "desc": "A lightweight, lightning-fast, in-process vector database",
+  "fork": false
+ },
+ "47": {
+  "slug": "tw93/Pake",
+  "stars": 58731,
+  "pushed": "2026-06-28T01:14:08Z",
+  "archived": false,
+  "lang": "Rust",
+  "license": "GPL-3.0",
+  "open_issues": 41,
+  "desc": "🤱🏻 Turn any webpage into a desktop app with one command.",
+  "fork": false
+ },
+ "48": {
+  "slug": "roboflow/supervision",
+  "stars": 45866,
+  "pushed": "2026-06-30T21:05:05Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 101,
+  "desc": "We write your reusable computer vision tools. 💜",
+  "fork": false
+ },
+ "49": {
+  "slug": "opendatalab/MinerU",
+  "stars": 72578,
+  "pushed": "2026-06-30T06:53:56Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "open_issues": 30,
+  "desc": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+  "fork": false
+ },
+ "50": {
+  "slug": "cupy/cupy",
+  "stars": 11971,
+  "pushed": "2026-06-30T12:42:42Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 682,
+  "desc": "NumPy & SciPy for GPU",
+  "fork": false
+ },
+ "51": {
+  "slug": "JCodesMore/ai-website-cloner-template",
+  "stars": 23933,
+  "pushed": "2026-06-01T04:09:21Z",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": 19,
+  "desc": "Clone any website with one command using AI coding agents",
+  "fork": false
+ },
+ "52": {
+  "slug": "LibreTranslate/LibreTranslate",
+  "stars": 15258,
+  "pushed": "2026-06-28T05:01:26Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "AGPL-3.0",
+  "open_issues": 121,
+  "desc": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
+  "fork": false
+ },
+ "53": {
+  "slug": "hacksider/Deep-Live-Cam",
+  "stars": 94463,
+  "pushed": "2026-06-24T10:15:41Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "AGPL-3.0",
+  "open_issues": 58,
+  "desc": "real time face swap and one-click video deepfake with only a single image",
+  "fork": false
+ },
+ "54": {
+  "slug": "zai-org/GLM-OCR",
+  "stars": 7078,
+  "pushed": "2026-04-21T08:52:11Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 43,
+  "desc": "GLM-OCR: Accurate ×  Fast × Comprehensive",
+  "fork": false
+ },
+ "55": {
+  "slug": "666ghj/MiroFish",
+  "stars": 67568,
+  "pushed": "2026-05-24T16:48:58Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "AGPL-3.0",
+  "open_issues": 326,
+  "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+  "fork": false
+ },
+ "56": {
+  "slug": "antirez/ds4",
+  "stars": 17004,
+  "pushed": "2026-06-17T06:25:30Z",
+  "archived": false,
+  "lang": "C",
+  "license": "MIT",
+  "open_issues": 239,
+  "desc": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+  "fork": false
+ },
+ "57": {
+  "slug": "NVIDIA/SkillSpector",
+  "stars": 11603,
+  "pushed": "2026-06-30T07:57:24Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 74,
+  "desc": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
+  "fork": false
+ },
+ "58": {
+  "slug": "Continual-Intelligence/SEAL",
+  "stars": 1782,
+  "pushed": "2025-08-01T20:06:35Z",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 4,
+  "desc": "Self-Adapting Language Models",
+  "fork": false
+ },
+ "59": {
+  "slug": "BICLab/SpikingBrain-7B",
+  "stars": 1331,
+  "pushed": "2025-12-01",
+  "archived": false
+ },
+ "60": {
+  "slug": "Olow304/memvid",
+  "stars": 15701,
+  "pushed": "2026-05-27",
+  "archived": false
+ },
+ "61": {
+  "slug": "dyad-sh/dyad",
+  "stars": 20772,
+  "pushed": "2026-06-29",
+  "archived": false
+ },
+ "62": {
+  "slug": "chopratejas/headroom",
+  "stars": 54588,
+  "pushed": "2026-06-29",
+  "archived": false
+ },
+ "63": {
+  "slug": "perplexityai/bumblebee",
+  "stars": 4678,
+  "pushed": "2026-06-18",
+  "archived": false
+ },
+ "64": {
+  "slug": "baidu/Unlimited-OCR",
+  "stars": 12422,
+  "pushed": "2026-06-28",
+  "archived": false
+ },
+ "65": {
+  "slug": "Tencent/TencentDB-Agent-Memory",
+  "stars": 6344,
+  "pushed": "2026-05-28",
+  "archived": false
+ },
+ "66": {
+  "slug": "swarmclawai/swarmclaw",
+  "stars": 595,
+  "pushed": "2026-06-30",
+  "archived": false
+ },
+ "67": {
+  "slug": "virattt/ai-hedge-fund",
+  "stars": 60692,
+  "pushed": "2026-06-17",
+  "archived": false
+ },
+ "68": {
+  "slug": "TauricResearch/TradingAgents",
+  "stars": 90009,
+  "pushed": "2026-06-22",
+  "archived": false
+ },
+ "69": {
+  "slug": "anthropics/knowledge-work-plugins",
+  "stars": 22219,
+  "pushed": "2026-06-30T20:13:37Z",
+  "archived": false,
+  "lang": null,
+  "license": "Apache-2.0",
+  "open_issues": null,
+  "desc": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+  "fork": false
+ }
+}

@@ -1,0 +1,18 @@
+# --- Dati personali estratti dalla chat WhatsApp (NON pubblicare) ---
+# messaggi grezzi: importi, codici, contatti, note mediche/lavoro
+marco-scarlino-catalogo-completo.csv
+# riassunti dei messaggi personali
+marco-scarlino-chat.md
+# screenshot login WhatsApp
+whatsapp-login.png
+# snapshot delle pagine WhatsApp/Instagram (contengono dati personali)
+.playwright-mcp/
+
+# --- Temporanei / build ---
+__pycache__/
+*.pyc
+*.tmp
+.DS_Store
+
+# --- Settings locali eventuali ---
+.claude/settings.local.json
