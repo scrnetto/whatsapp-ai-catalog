@@ -857,5 +857,115 @@
   "license": "MIT",
   "open_issues": 35,
   "desc": "Google Flights MCP, CLI and Python Library"
+ },
+ "85": {
+  "slug": "twentyhq/twenty",
+  "stars": 51970,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "NOASSERTION",
+  "open_issues": 96,
+  "desc": "The open alternative to Salesforce, designed for AI."
+ },
+ "86": {
+  "slug": "google-research/timesfm",
+  "stars": 26264,
+  "pushed": "2026-06-23",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 227,
+  "desc": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting."
+ },
+ "87": {
+  "slug": "Raphire/Win11Debloat",
+  "stars": 49873,
+  "pushed": "2026-06-28",
+  "archived": false,
+  "lang": "PowerShell",
+  "license": "MIT",
+  "open_issues": 33,
+  "desc": "A simple, lightweight PowerShell script that allows you to remove pre-installed apps, disable telemetry, as well as perform various other changes to declutter and customize your Windows experience. Win11Debloat works for both Windows 10 and Windows 11."
+ },
+ "88": {
+  "slug": "cypress-io/cypress",
+  "stars": 50436,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": 1089,
+  "desc": "Fast, easy and reliable testing for anything that runs in a browser."
+ },
+ "89": {
+  "slug": "andrewyng/aisuite",
+  "stars": 14871,
+  "pushed": "2026-06-26",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 148,
+  "desc": "Simple, unified interface to multiple Generative AI providers "
+ },
+ "90": {
+  "slug": "YusufB5/ASCILINE",
+  "stars": 2247,
+  "pushed": "2026-06-26",
+  "archived": false,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "open_issues": 2,
+  "desc": "A high-performance, real-time ASCII video rendering engine. Streams binary-encoded frames via WebSockets for ultra-low latency, 30 FPS playback using HTML5 Canvas and requestAnimationFrame."
+ },
+ "91": {
+  "slug": "microsoft/agent-lightning",
+  "stars": 17364,
+  "pushed": "2026-04-29",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 154,
+  "desc": "The absolute trainer to light up AI agents."
+ },
+ "92": {
+  "slug": "dicebear/dicebear",
+  "stars": 8949,
+  "pushed": "2026-06-28",
+  "archived": false,
+  "lang": "Vue",
+  "license": "MIT",
+  "open_issues": 1,
+  "desc": "DiceBear is an avatar library for designers and developers. \ud83c\udf0d"
+ },
+ "93": {
+  "slug": "resemble-ai/chatterbox",
+  "stars": 25281,
+  "pushed": "2026-06-10",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 347,
+  "desc": "SoTA open-source TTS"
+ },
+ "94": {
+  "slug": "StarTrail-org/PixelRAG",
+  "stars": 5713,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 31,
+  "desc": "The end of web parsing. The beginning of scalable pixel-native search. link: https://pixelrag.ai/"
+ },
+ "95": {
+  "slug": "pewdiepie-archdaemon/odysseus",
+  "stars": 79665,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "Python",
+  "license": "AGPL-3.0",
+  "open_issues": 1516,
+  "desc": "Self-hosted AI workspace. "
  }
 }

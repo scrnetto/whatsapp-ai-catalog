@@ -2,18 +2,18 @@
 
 > Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai reel Instagram
 > e dai messaggi salvati nella chat WhatsApp personale di Marco Scarlino.
-> **84 repository** + **17 siti web**, organizzati per categoria operativa.
+> **95 repository** + **19 siti web**, organizzati per categoria operativa.
 > Stato attività verificato il **2026-07-01**. Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.
 
 ## Indice
-- **Coding Agent, Claude Code & sviluppo AI-assistito** (17)
-- **Framework Agenti AI & assistenti personali** (11)
-- **LLM, modelli & inferenza locale** (10)
-- **RAG, memoria agenti & knowledge base** (8)
+- **Coding Agent, Claude Code & sviluppo AI-assistito** (18)
+- **Framework Agenti AI & assistenti personali** (13)
+- **LLM, modelli & inferenza locale** (11)
+- **RAG, memoria agenti & knowledge base** (9)
 - **OCR & parsing documenti** (3)
-- **Generazione media (video, immagini, 3D, voce)** (17)
+- **Generazione media (video, immagini, 3D, voce)** (19)
 - **Sicurezza & supply-chain** (7)
-- **Dev tools, produttività & librerie** (13)
+- **Dev tools, produttività & librerie** (19)
 - **Finanza & trading AI** (3)
 - **Ricerca AI, world models & dati vettoriali** (6)
 - **Contenuti personali / non-dev** (6)
@@ -39,17 +39,20 @@
 | [cc-blender-skill](https://github.com/RobLe3/cc-blender-skill) | Claude Code skill per Blender 3D | Skill Claude Code per pilotare Blender (3D). | 🟢 ⭐13 · 2026-05-01 · MIT |
 | [BMAD-Speckit-SDD-Flow](https://github.com/milome/BMAD-Speckit-SDD-Flow) | End-to-end workflow BMAD + Speckit integration | Flusso che unisce BMAD + Spec Kit per spec-driven development. | 🟢 ⭐0 · 2026-06-29 · MIT |
 | [Google Stitch](https://stitch.withgoogle.com) | Progettazione interfacce grafiche da linguaggio naturale | Generare UI da linguaggio naturale, poi passare a Claude Code (Google). | 🌐 sito |
+| [GitReverse](https://www.gitreverse.com) | Servizio web (e estensione) che, sostituendo 'github' con 'gitreverse' nell'URL di una repo pubblica, ne genera un prompt in linguaggio naturale per ricreare il progetto con un coding agent. Porti la tua chiave LLM. | Quando vuoi capire o ricreare una repo GitHub trasformandola in un prompt pronto per un AI coding agent. | 🌐 sito |
 
 ## Framework Agenti AI & assistenti personali
 
 | Progetto | Cosa fa | Quando usarlo | Stato |
 |---|---|---|---|
 | [OpenClaw](https://github.com/openclaw/openclaw) | Personal AI assistant - Any OS, Any Platform | Assistente/agente AI generalista open-source da self-hostare. | 🟢 ⭐381.2k · 2026-06-30 |
+| [odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | Workspace AI self-hosted open source creato da PewDiePie: chat+agenti, deep research, documenti, email, note/task, con modelli locali (Ollama, llama.cpp, vLLM) o API. Alternativa privata a ChatGPT/Claude. | Quando vuoi un workspace AI completo e privato, self-hosted, con modelli locali e niente dipendenza dal cloud. | 🟢 ⭐79.7k · 2026-06-30 · AGPL-3.0 |
 | [MiroFish](https://github.com/666ghj/MiroFish) | Motore di intelligenza collettiva: simula migliaia di agenti AI per previsioni (studente cinese, virale) | Motore di intelligenza collettiva: simula migliaia di agenti per previsioni. | 🟢 ⭐67.6k · 2026-05-24 · AGPL-3.0 |
 | [Agent-Reach](https://github.com/Panniantong/Agent-Reach) | Scaffolding/CLI open source che dà a un agente AI accesso a Twitter, Reddit, YouTube, GitHub, Bilibili in tempo reale senza API a pagamento: un install e una SKILL.md che orchestra tool upstream (yt-dlp, gh, ecc.). | Quando vuoi che il tuo agente legga social e piattaforme web in tempo reale senza pagare API ufficiali. | 🟢 ⭐47k · 2026-06-29 · MIT |
 | [NanoBot](https://github.com/HKUDS/nanobot) | Agente AI personale open-source leggero (HKUDS) | Assistente AI personale leggero gestibile da Telegram/WhatsApp, sempre attivo sul tuo PC. | 🟢 ⭐44.9k · 2026-06-30 · MIT |
 | [PicoClaw](https://github.com/sipeed/picoclaw) | Ultra-lightweight AI assistant in Go (Sipeed) | Assistente AI ultraleggero in Go, per hardware minimale (Sipeed). | 🟢 ⭐29.5k · 2026-06-30 · MIT |
 | [Parlant](https://github.com/emcie-co/parlant) | Framework per AI agents customer-facing (Python) | Framework per costruire agenti conversazionali con regole/comportamenti controllati. | 🟢 ⭐18.2k · 2026-06-30 · Apache-2.0 |
+| [agent-lightning](https://github.com/microsoft/agent-lightning) | Framework di Microsoft Research per addestrare con reinforcement learning qualsiasi AI agent senza riscriverne il codice: decoupla esecuzione e training (LightningRL, credit assignment) e supporta backend multipli. | Quando vuoi migliorare con RL un agente AI esistente senza rifare l'architettura del tuo workflow. | 🟢 ⭐17.4k · 2026-04-29 · MIT |
 | [SwarmClaw](https://github.com/swarmclawai/swarmclaw) | Runtime/framework multi-agente self-hosted: delega a Claude Code, Codex, OpenClaw, Hermes ecc. | Runtime multi-agente che orchestra Claude Code, Codex, OpenClaw, Hermes ecc. | 🟢 ⭐595 · 2026-06-30 |
 | [J.A.R.V.I.S](https://github.com/PrabhanshuKamal2121/J.A.R.V.I.S) | AI personal assistant con n8n + Telegram | Assistente personale stile JARVIS costruito in n8n. | 🟢 ⭐4 · 2025-07-21 |
 | [JARVIS-PA-Lovable](https://github.com/SachinSavkare/JARVIS-PA-Lovable-11-Labs-n8n) | Voice AI assistant con n8n + Lovable + ElevenLabs | Variante JARVIS con n8n + ElevenLabs + Lovable. | 🟢 ⭐0 · 2026-04-30 |
@@ -62,6 +65,7 @@
 |---|---|---|---|
 | [Unsloth AI](https://github.com/unslothai/unsloth) | Addestrare LLM in VS Code + Colab | Quando vuoi fare fine-tuning di LLM (Llama, Mistral, ecc.) velocemente e con poca VRAM. | 🟢 ⭐67.7k · 2026-06-30 · Apache-2.0 |
 | [NanoChat](https://github.com/karpathy/nanochat) | Minimal ChatGPT clone (Andrej Karpathy) | Studiare/replicare un ChatGPT minimale da zero (Karpathy), didattico. | 🟢 ⭐55.6k · 2026-05-05 · MIT |
+| [timesfm](https://github.com/google-research/timesfm) | Modello di fondazione per il forecasting di serie temporali rilasciato da Google Research: prevede vendite, consumi o stock in zero-shot senza addestrare un modello dedicato per ogni dataset. | Quando devi fare previsioni su serie temporali (vendite, domanda, metriche) senza addestrare un modello da zero. | 🟢 ⭐26.3k · 2026-06-23 · Apache-2.0 |
 | [Heretic](https://github.com/p-e-w/heretic) | Rimuovere filtri sicurezza LLM (censorship removal) | Per rimuovere i filtri di censura da un LLM open-source eseguito in locale (uso consapevole). | 🟢 ⭐25.6k · 2026-06-27 · AGPL-3.0 |
 | [AirLLM](https://github.com/lyogavin/airllm) | Eseguire modelli 70B su hardware consumer caricando layer-by-layer | Eseguire modelli da 70B su hardware consumer (caricamento layer-by-layer). | 🟢 ⭐22k · 2026-06-26 · Apache-2.0 |
 | [DwarfStar (ds4)](https://github.com/antirez/ds4) | Engine di inferenza locale per DeepSeek V4 Flash su hardware consumer (antirez) | Far girare modelli di frontiera (DeepSeek V4) in locale su Mac/consumer (antirez). | 🟢 ⭐17k · 2026-06-17 · MIT |
@@ -82,6 +86,7 @@
 | [Memvid](https://github.com/Olow304/memvid) | Memoria AI video-based: milioni di chunk in file MP4, ricerca semantica senza DB | Memoria per agenti AI che salva milioni di chunk in file MP4, ricerca semantica senza DB. | 🟢 ⭐15.7k · 2026-05-27 |
 | [Easy Dataset](https://github.com/ConardLi/easy-dataset) | Creare dataset da PDF per addestramento LLM | Creare dataset di training per LLM partendo da PDF/documenti. | 🟢 ⭐14.6k · 2026-05-01 |
 | [TencentDB-Agent-Memory](https://github.com/Tencent/TencentDB-Agent-Memory) | Memoria persistente locale per agenti AI, pipeline a 4 livelli, zero API esterne (Tencent) | Memoria persistente locale per agenti AI a 4 livelli, zero API esterne (Tencent). | 🟢 ⭐6.3k · 2026-05-28 |
+| [PixelRAG](https://github.com/StarTrail-org/PixelRAG) | Sistema RAG 'pixel-native': invece di estrarre testo, fa lo screenshot delle pagine e recupera per immagine con un modello vision-language (Qwen3-VL + FAISS), robusto a tabelle e layout complessi. Include plugin pixelbrowse per Claude Code. | Quando il RAG testuale fallisce su PDF/pagine con layout complessi e vuoi recuperare basandoti sull'immagine. | 🟢 ⭐5.7k · 2026-06-30 · Apache-2.0 |
 | [VideoRAG](https://github.com/hkuds/videorag) | Chat con i tuoi video (HKUDS, KDD'2026) | Chattare/interrogare i propri video con un sistema RAG. | 🟢 ⭐3.1k · 2026-03-18 |
 
 ## OCR & parsing documenti
@@ -99,6 +104,7 @@
 | [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam) | Face swap live sulla webcam da una sola foto, 93k stelle | Face swap live sulla webcam da una sola foto (uso etico richiesto). | 🟢 ⭐94.5k · 2026-06-24 · AGPL-3.0 |
 | [VibeVoice](https://github.com/microsoft/VibeVoice) | Text-to-Speech open-source frontier (Microsoft) | Text-to-speech open-source di qualità (Microsoft). | 🟢 ⭐49.8k · 2026-05-06 · MIT |
 | [hyperframes](https://github.com/heygen-com/hyperframes) | Framework open source di HeyGen per generare video MP4 descrivendo una scena come una pagina web (HTML, CSS, media, animazioni); agent-native, con skill installabili per Claude Code, Cursor, Codex e altri. | Quando vuoi produrre video 'as code' (HTML/CSS) automatizzabili da un coding agent, simile a Remotion ma in HTML puro. | 🟢 ⭐32.4k · 2026-06-30 · Apache-2.0 |
+| [chatterbox](https://github.com/resemble-ai/chatterbox) | Modello TTS open source (MIT) di Resemble AI con voice cloning, supporto multilingue e watermarking integrato: alternativa locale e gratuita a ElevenLabs, installabile via pip. | Quando vuoi sintesi vocale o clonazione voce di qualita' in locale, senza pagare servizi cloud. | 🟢 ⭐25.3k · 2026-06-10 · MIT |
 | [TRELLIS](https://github.com/microsoft/trellis) | Structured 3D Latents per generazione 3D (Microsoft) | Generare modelli 3D strutturati da testo o immagini (Microsoft). | 🟢 ⭐13k · 2026-06-26 · MIT |
 | [Supertonic](https://github.com/supertone-inc/supertonic) | Text-to-Speech completamente locale ad alte performance | Text-to-speech completamente locale ad alte prestazioni. | 🟢 ⭐12.8k · 2026-06-30 · MIT |
 | [video-use](https://github.com/browser-use/video-use) | Skill open source (di browser-use) che trasforma un coding agent come Claude Code in un video editor agentico: metti le clip grezze in una cartella, descrivi il video voluto e l'agente lavora su trascrizioni, timestamp, waveform e ffmpeg fino al final.mp4. | Quando vuoi montare video da footage grezzo guidando Claude Code/Codex a tagliare e comporre la timeline via testo. | 🟢 ⭐12.5k · 2026-05-15 · MIT |
@@ -106,6 +112,7 @@
 | [Z-Image](https://github.com/Tongyi-MAI/Z-Image) | Generazione immagini efficiente 6B (Alibaba Tongyi) | Generazione immagini gratuita e open (Alibaba). | 🟢 ⭐11.7k · 2026-02-09 · Apache-2.0 |
 | [palmier-pro](https://github.com/palmier-io/palmier-pro) | Video editor open source per macOS (YC-backed) che mette un server MCP dentro la timeline: Claude Code, Codex o Cursor possono generare clip, tagliare e organizzare il montaggio via testo. Editor, MCP server e chat agent sono GPLv3. | Quando vuoi un editor video nativo macOS pilotabile da un coding agent tramite MCP per il montaggio agentico. | 🟢 ⭐9.7k · 2026-06-30 · GPL-3.0 |
 | [SAM Audio](https://github.com/facebookresearch/sam-audio) | Segment Anything Model per audio (Meta) | Isolare/separare tracce audio con AI (Meta). | 🟢 ⭐3.6k · 2026-05-26 |
+| [ASCILINE](https://github.com/YusufB5/ASCILINE) | Motore di rendering video ASCII in tempo reale ad alte prestazioni: converte i fotogrammi in testo e blocchi di colore e li trasmette via WebSocket (binario) a 30 FPS su HTML5 Canvas. Demo su asciline.dev. | Quando vuoi sperimentare streaming video reso interamente come testo/ASCII nel browser. | 🟢 ⭐2.2k · 2026-06-26 |
 | [GLM-Image](https://github.com/zai-org/GLM-Image) | Image generation autoregressivo (Zhipu AI) | Generazione immagini autoregressiva (Zhipu AI). | 🟢 ⭐966 · 2026-03-20 · Apache-2.0 |
 | [Pusa V1.0 (Pusa-VidGen)](https://github.com/Yaofang-Liu/Pusa-VidGen) | Video diffusion model con vectorized timestep adaptation (VTA); fine-tuning di Wan2.1-T2V-14B a ~1/200 del costo | Generazione video AI a basso costo (fine-tuning di Wan2.1). | 🟢 ⭐683 · 2026-02-13 · Apache-2.0 |
 | [GenieRedux](https://github.com/insait-institute/GenieRedux) | World models con ambienti virtuali (Google Genie) | World model: ambienti virtuali generativi (replica di Google Genie). | 🟢 ⭐76 · 2026-05-14 · MIT |
@@ -133,16 +140,22 @@
 | [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) | Gestione/modifica PDF self-hosted | Gestire/modificare PDF in self-hosting (no abbonamenti, no upload cloud). | 🟢 ⭐85.4k · 2026-06-30 |
 | [Pake](https://github.com/tw93/Pake) | Trasforma qualsiasi sito web in app desktop con un comando | Trasformare qualsiasi sito web in app desktop con un comando. | 🟢 ⭐58.7k · 2026-06-28 · GPL-3.0 |
 | [Penpot](https://github.com/penpot/penpot) | Piattaforma open source di design e prototipazione collaborativa che ragiona in standard web nativi (SVG, HTML, CSS, JSON), ponte reale tra design e sviluppo frontend. | Quando cerchi un'alternativa open source a Figma con handoff design-sviluppo basato su standard web aperti. | 🟢 ⭐54.7k · 2026-06-30 · MPL-2.0 |
+| [twenty](https://github.com/twentyhq/twenty) | CRM open source moderno, alternativa self-hostable a Salesforce/HubSpot: niente costi di licenza crescenti e dati aziendali sotto il tuo controllo. UI in stile Notion, GraphQL, personalizzabile. | Quando ti serve un CRM open source e self-hosted senza vendor lock-in ne' licenze a consumo. | 🟢 ⭐52k · 2026-06-30 |
+| [cypress](https://github.com/cypress-io/cypress) | Framework di testing end-to-end per applicazioni web: esegue i test direttamente nel browser, con time-travel, debugging visivo e attese automatiche per intercettare i bug prima del rilascio. | Quando vuoi test E2E affidabili sul frontend che girano nel browser ad ogni modifica del codice. | 🟢 ⭐50.4k · 2026-06-30 · MIT |
+| [Win11Debloat](https://github.com/Raphire/Win11Debloat) | Script PowerShell semplice e leggero per ripulire Windows 10/11 da bloatware, telemetria, pubblicita' e app preinstallate, con opzioni interattive o silenziose. | Quando configuri un PC Windows nuovo e vuoi togliere rapidamente bloatware, telemetria e app inutili. | 🟢 ⭐49.9k · 2026-06-28 · MIT |
 | [supervision](https://github.com/roboflow/supervision) | Libreria computer vision (Roboflow), 40k+ stelle | Libreria Python per computer vision (annotazioni, tracking) di Roboflow. | 🟢 ⭐45.9k · 2026-06-30 · MIT |
 | [CasaOS](https://github.com/IceWhaleTech/CasaOS) | Sistema operativo open source che trasforma un vecchio PC, un Raspberry Pi o un mini PC in un cloud personale domestico per file, dati e servizi self-hosted. | Quando vuoi costruire un cloud casalingo self-hosted su hardware riciclato con una UI semplice per app e servizi. | 🟢 ⭐36.1k · 2025-08-06 · Apache-2.0 |
 | [Tolaria](https://github.com/refactoringhq/tolaria) | App desktop open-source per appunti resilienti | App desktop open-source per appunti resilienti al cambio di formato. | 🟢 ⭐17.8k · 2026-06-30 · AGPL-3.0 |
 | [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate) | API di traduzione automatica self-hosted open-source | API di traduzione automatica self-hosted (privacy, no costi per chiamata). | 🟢 ⭐15.3k · 2026-06-28 · AGPL-3.0 |
+| [aisuite](https://github.com/andrewyng/aisuite) | Libreria di Andrew Ng che offre un'interfaccia unificata in stile OpenAI per chiamare LLM di provider diversi (OpenAI, Anthropic, Google, Mistral...) cambiando modello con una sola stringa. | Quando vuoi testare/scambiare piu' LLM nel codice senza riscrivere l'integrazione per ogni provider. | 🟢 ⭐14.9k · 2026-06-26 · MIT |
 | [CuPy](https://github.com/cupy/cupy) | Array library GPU-accelerated compatibile NumPy | Array library GPU (NumPy-compatibile) per accelerare calcolo/data science. | 🟢 ⭐12k · 2026-06-30 · MIT |
+| [dicebear](https://github.com/dicebear/dicebear) | Libreria open source per generare avatar unici e deterministici a partire da un seed/ID utente, con decine di stili e API HTTP: utile per popolare profili senza chiedere il caricamento di una foto. | Quando ti serve un avatar di default unico per ogni utente della tua app senza upload di immagini. | 🟢 ⭐8.9k · 2026-06-28 · MIT |
 | [TREK](https://github.com/mauriceboe/TREK) | Travel/trip planner self-hosted con collaborazione in tempo reale, mappe interattive, supporto PWA, SSO, budget e packing list; espone anche un server MCP per assistenti AI. | Quando organizzi viaggi di gruppo e vuoi un pianificatore collaborativo self-hosted al posto di fogli e chat sparse. | 🟢 ⭐8.6k · 2026-06-30 · AGPL-3.0 |
 | [fli](https://github.com/punitarani/fli) | Libreria Python, CLI e server MCP open source per Google Flights: ricerca voli con filtri avanzati e date flessibili, integrabile con Claude per trovare il volo piu' economico parlando in linguaggio naturale. Esiste anche il port TypeScript fli-js. | Quando vuoi cercare voli (anche via Claude/MCP) in modo programmatico senza aprire decine di tab tra i comparatori. | 🟢 ⭐3k · 2026-06-29 · MIT |
 | [TestSprite](https://www.testsprite.com) | Agente AI che risolve problemi nel codice generato dai coding agent | Agente AI che testa/ripara il codice generato. | 🌐 sito |
 | [Google Code Wiki](https://labs.google/code-wiki) | Generazione automatica di documentazione del codice (Google) | Generazione automatica di documentazione del codice (Google). | 🌐 sito |
 | [Render](https://render.com) | Hosting per self-host gratuito di n8n (tutorial) | Hosting per self-host gratuito (es. n8n). | 🌐 sito |
+| [Codeberg](https://codeberg.org) | Piattaforma di hosting Git gestita da una non-profit tedesca e completamente open source (basata su Forgejo): alternativa etica a GitHub per ospitare repository. | Quando cerchi un'alternativa open source e no-profit a GitHub per ospitare i tuoi repository. | 🌐 sito |
 
 ## Finanza & trading AI
 

@@ -838,5 +838,115 @@
   "fonte": "guglielmo.builds 26/06/2026 (reel DaDDBNYtf2Z)",
   "macro": "H",
   "uso": "Quando vuoi cercare voli (anche via Claude/MCP) in modo programmatico senza aprire decine di tab tra i comparatori."
+ },
+ {
+  "id": 85,
+  "progetto": "twenty",
+  "descrizione": "CRM open source moderno, alternativa self-hostable a Salesforce/HubSpot: niente costi di licenza crescenti e dati aziendali sotto il tuo controllo. UI in stile Notion, GraphQL, personalizzabile.",
+  "url": "https://github.com/twentyhq/twenty",
+  "categoria": "Dev/Tools",
+  "fonte": "devop.sbs 21/06/2026 (reel DZ2pXxUsEz1)",
+  "macro": "H",
+  "uso": "Quando ti serve un CRM open source e self-hosted senza vendor lock-in ne' licenze a consumo."
+ },
+ {
+  "id": 86,
+  "progetto": "timesfm",
+  "descrizione": "Modello di fondazione per il forecasting di serie temporali rilasciato da Google Research: prevede vendite, consumi o stock in zero-shot senza addestrare un modello dedicato per ogni dataset.",
+  "url": "https://github.com/google-research/timesfm",
+  "categoria": "AI/Modelli",
+  "fonte": "devop.sbs 17/06/2026 (reel DZsYH0Ms-L9)",
+  "macro": "C",
+  "uso": "Quando devi fare previsioni su serie temporali (vendite, domanda, metriche) senza addestrare un modello da zero."
+ },
+ {
+  "id": 87,
+  "progetto": "Win11Debloat",
+  "descrizione": "Script PowerShell semplice e leggero per ripulire Windows 10/11 da bloatware, telemetria, pubblicita' e app preinstallate, con opzioni interattive o silenziose.",
+  "url": "https://github.com/Raphire/Win11Debloat",
+  "categoria": "Dev/Tools",
+  "fonte": "devop.sbs 15/06/2026 (reel DZnYdzcOdVo)",
+  "macro": "H",
+  "uso": "Quando configuri un PC Windows nuovo e vuoi togliere rapidamente bloatware, telemetria e app inutili."
+ },
+ {
+  "id": 88,
+  "progetto": "cypress",
+  "descrizione": "Framework di testing end-to-end per applicazioni web: esegue i test direttamente nel browser, con time-travel, debugging visivo e attese automatiche per intercettare i bug prima del rilascio.",
+  "url": "https://github.com/cypress-io/cypress",
+  "categoria": "Dev/Tools",
+  "fonte": "devop.sbs 14/06/2026 (reel DZkfqfgM5es)",
+  "macro": "H",
+  "uso": "Quando vuoi test E2E affidabili sul frontend che girano nel browser ad ogni modifica del codice."
+ },
+ {
+  "id": 89,
+  "progetto": "aisuite",
+  "descrizione": "Libreria di Andrew Ng che offre un'interfaccia unificata in stile OpenAI per chiamare LLM di provider diversi (OpenAI, Anthropic, Google, Mistral...) cambiando modello con una sola stringa.",
+  "url": "https://github.com/andrewyng/aisuite",
+  "categoria": "Dev/Librerie",
+  "fonte": "devop.sbs 13/06/2026 (reel DZiQD4buti4)",
+  "macro": "H",
+  "uso": "Quando vuoi testare/scambiare piu' LLM nel codice senza riscrivere l'integrazione per ogni provider."
+ },
+ {
+  "id": 90,
+  "progetto": "ASCILINE",
+  "descrizione": "Motore di rendering video ASCII in tempo reale ad alte prestazioni: converte i fotogrammi in testo e blocchi di colore e li trasmette via WebSocket (binario) a 30 FPS su HTML5 Canvas. Demo su asciline.dev.",
+  "url": "https://github.com/YusufB5/ASCILINE",
+  "categoria": "AI/Media",
+  "fonte": "devop.sbs 19/06/2026 (reel DZxR0RBMGbp)",
+  "macro": "F",
+  "uso": "Quando vuoi sperimentare streaming video reso interamente come testo/ASCII nel browser."
+ },
+ {
+  "id": 91,
+  "progetto": "agent-lightning",
+  "descrizione": "Framework di Microsoft Research per addestrare con reinforcement learning qualsiasi AI agent senza riscriverne il codice: decoupla esecuzione e training (LightningRL, credit assignment) e supporta backend multipli.",
+  "url": "https://github.com/microsoft/agent-lightning",
+  "categoria": "AI/Agenti",
+  "fonte": "neuralcoffe 27/04/2026 (reel DXpFIr6OGRq)",
+  "macro": "B",
+  "uso": "Quando vuoi migliorare con RL un agente AI esistente senza rifare l'architettura del tuo workflow."
+ },
+ {
+  "id": 92,
+  "progetto": "dicebear",
+  "descrizione": "Libreria open source per generare avatar unici e deterministici a partire da un seed/ID utente, con decine di stili e API HTTP: utile per popolare profili senza chiedere il caricamento di una foto.",
+  "url": "https://github.com/dicebear/dicebear",
+  "categoria": "Dev/Librerie",
+  "fonte": "guglielmo.builds 08/06/2026 (reel DZU7R6ut7UE)",
+  "macro": "H",
+  "uso": "Quando ti serve un avatar di default unico per ogni utente della tua app senza upload di immagini."
+ },
+ {
+  "id": 93,
+  "progetto": "chatterbox",
+  "descrizione": "Modello TTS open source (MIT) di Resemble AI con voice cloning, supporto multilingue e watermarking integrato: alternativa locale e gratuita a ElevenLabs, installabile via pip.",
+  "url": "https://github.com/resemble-ai/chatterbox",
+  "categoria": "AI/Voce",
+  "fonte": "neuralcoffe 29/04/2026 (reel DXuO--rjLc9)",
+  "macro": "F",
+  "uso": "Quando vuoi sintesi vocale o clonazione voce di qualita' in locale, senza pagare servizi cloud."
+ },
+ {
+  "id": 94,
+  "progetto": "PixelRAG",
+  "descrizione": "Sistema RAG 'pixel-native': invece di estrarre testo, fa lo screenshot delle pagine e recupera per immagine con un modello vision-language (Qwen3-VL + FAISS), robusto a tabelle e layout complessi. Include plugin pixelbrowse per Claude Code.",
+  "url": "https://github.com/StarTrail-org/PixelRAG",
+  "categoria": "AI/RAG",
+  "fonte": "guglielmo.builds 23/06/2026 (reel DZ7joCgNrI3)",
+  "macro": "D",
+  "uso": "Quando il RAG testuale fallisce su PDF/pagine con layout complessi e vuoi recuperare basandoti sull'immagine."
+ },
+ {
+  "id": 95,
+  "progetto": "odysseus",
+  "descrizione": "Workspace AI self-hosted open source creato da PewDiePie: chat+agenti, deep research, documenti, email, note/task, con modelli locali (Ollama, llama.cpp, vLLM) o API. Alternativa privata a ChatGPT/Claude.",
+  "url": "https://github.com/pewdiepie-archdaemon/odysseus",
+  "categoria": "AI/Agenti",
+  "fonte": "simorizzo_ai 03/06/2026 (reel DZIo5lIiO7e)",
+  "macro": "B",
+  "uso": "Quando vuoi un workspace AI completo e privato, self-hosted, con modelli locali e niente dipendenza dal cloud."
  }
 ]
