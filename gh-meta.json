@@ -29,7 +29,7 @@
   "lang": "Python",
   "license": "MIT",
   "open_issues": 370,
-  "desc": "💫 Toolkit to help you get started with Spec-Driven Development",
+  "desc": "\ud83d\udcab Toolkit to help you get started with Spec-Driven Development",
   "fork": false
  },
  "4": {
@@ -106,7 +106,7 @@
   "lang": "TypeScript",
   "license": "NOASSERTION",
   "open_issues": 6735,
-  "desc": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+  "desc": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. \ud83e\udd9e ",
   "fork": false
  },
  "11": {
@@ -183,7 +183,7 @@
   "lang": "Python",
   "license": "MIT",
   "open_issues": 14,
-  "desc": "Fully autonomous & self-evolving research from idea to paper. Chat an Idea. Get a Paper. 🦞",
+  "desc": "Fully autonomous & self-evolving research from idea to paper. Chat an Idea. Get a Paper. \ud83e\udd9e",
   "fork": false
  },
  "18": {
@@ -227,7 +227,7 @@
   "lang": "JavaScript",
   "license": "NOASSERTION",
   "open_issues": 118,
-  "desc": "A powerful tool for creating datasets for LLM fine-tuning 、RAG and Eval",
+  "desc": "A powerful tool for creating datasets for LLM fine-tuning \u3001RAG and Eval",
   "fork": false
  },
  "22": {
@@ -249,7 +249,7 @@
   "lang": "Go",
   "license": "MIT",
   "open_issues": 55,
-  "desc": "Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity",
+  "desc": "Tiny, Fast, and Deployable anywhere \u2014 automate the mundane, unleash your creativity",
   "fork": false
  },
  "24": {
@@ -392,7 +392,7 @@
   "lang": "Python",
   "license": "Apache-2.0",
   "open_issues": 29,
-  "desc": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
+  "desc": "817 structured cybersecurity skills for AI agents \u00b7 Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) \u00b7 agentskills.io standard \u00b7 Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms \u00b7 29 security domains \u00b7 Apache 2.0",
   "fork": false
  },
  "37": {
@@ -491,7 +491,7 @@
   "lang": "Swift",
   "license": "MIT",
   "open_issues": 124,
-  "desc": "Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX.",
+  "desc": "Lightning-Fast, On-Device, Multilingual TTS \u2014 running natively via ONNX.",
   "fork": false
  },
  "46": {
@@ -513,7 +513,7 @@
   "lang": "Rust",
   "license": "GPL-3.0",
   "open_issues": 41,
-  "desc": "🤱🏻 Turn any webpage into a desktop app with one command.",
+  "desc": "\ud83e\udd31\ud83c\udffb Turn any webpage into a desktop app with one command.",
   "fork": false
  },
  "48": {
@@ -524,7 +524,7 @@
   "lang": "Python",
   "license": "MIT",
   "open_issues": 101,
-  "desc": "We write your reusable computer vision tools. 💜",
+  "desc": "We write your reusable computer vision tools. \ud83d\udc9c",
   "fork": false
  },
  "49": {
@@ -590,7 +590,7 @@
   "lang": "Python",
   "license": "Apache-2.0",
   "open_issues": 43,
-  "desc": "GLM-OCR: Accurate ×  Fast × Comprehensive",
+  "desc": "GLM-OCR: Accurate \u00d7  Fast \u00d7 Comprehensive",
   "fork": false
  },
  "55": {
@@ -601,7 +601,7 @@
   "lang": "Python",
   "license": "AGPL-3.0",
   "open_issues": 326,
-  "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+  "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. \u7b80\u6d01\u901a\u7528\u7684\u7fa4\u4f53\u667a\u80fd\u5f15\u64ce\uff0c\u9884\u6d4b\u4e07\u7269",
   "fork": false
  },
  "56": {
@@ -707,5 +707,155 @@
   "open_issues": null,
   "desc": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
   "fork": false
+ },
+ "70": {
+  "slug": "soxoj/maigret",
+  "stars": 34707,
+  "pushed": "2026-06-29",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 43,
+  "desc": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Collect a dossier on a person by username from 3000+ sites"
+ },
+ "71": {
+  "slug": "browser-use/video-use",
+  "stars": 12532,
+  "pushed": "2026-05-15",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 48,
+  "desc": "Edit videos with coding agents"
+ },
+ "72": {
+  "slug": "simplex-chat/simplex-chat",
+  "stars": 17308,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "Haskell",
+  "license": "AGPL-3.0",
+  "open_issues": 1162,
+  "desc": "SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop apps \ud83d\udcf1!"
+ },
+ "73": {
+  "slug": "IceWhaleTech/CasaOS",
+  "stars": 36089,
+  "pushed": "2025-08-06",
+  "archived": false,
+  "lang": "Go",
+  "license": "Apache-2.0",
+  "open_issues": 816,
+  "desc": "CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system."
+ },
+ "74": {
+  "slug": "mauriceboe/TREK",
+  "stars": 8566,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "AGPL-3.0",
+  "open_issues": 21,
+  "desc": "A self-hosted travel/trip planner with real-time collaboration, interactive maps, PWA support, SSO, budgets, packing lists, and more."
+ },
+ "75": {
+  "slug": "penpot/penpot",
+  "stars": 54693,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "Clojure",
+  "license": "MPL-2.0",
+  "open_issues": 677,
+  "desc": "Penpot: The open-source design platform for Product teams that need scalable collaboration."
+ },
+ "76": {
+  "slug": "heygen-com/hyperframes",
+  "stars": 32350,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "Apache-2.0",
+  "open_issues": 67,
+  "desc": "Write HTML. Render video. Built for agents."
+ },
+ "77": {
+  "slug": "microsoft/markitdown",
+  "stars": 161740,
+  "pushed": "2026-06-24",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 822,
+  "desc": "Python tool for converting files and office documents to Markdown."
+ },
+ "78": {
+  "slug": "Panniantong/Agent-Reach",
+  "stars": 46965,
+  "pushed": "2026-06-29",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 107,
+  "desc": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees."
+ },
+ "79": {
+  "slug": "garrytan/gstack",
+  "stars": 118421,
+  "pushed": "2026-06-25",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": 757,
+  "desc": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA"
+ },
+ "80": {
+  "slug": "DietrichGebert/ponytail",
+  "stars": 68993,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "JavaScript",
+  "license": "MIT",
+  "open_issues": 130,
+  "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+ },
+ "81": {
+  "slug": "palmier-io/palmier-pro",
+  "stars": 9657,
+  "pushed": "2026-06-30",
+  "archived": false,
+  "lang": "Swift",
+  "license": "GPL-3.0",
+  "open_issues": 74,
+  "desc": "macOS video editor built for AI"
+ },
+ "82": {
+  "slug": "lfnovo/open-notebook",
+  "stars": 34125,
+  "pushed": "2026-06-25",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": 107,
+  "desc": "An Open Source implementation of Notebook LM with more flexibility and features"
+ },
+ "83": {
+  "slug": "aishwaryanr/awesome-generative-ai-guide",
+  "stars": 28013,
+  "pushed": "2026-06-24",
+  "archived": false,
+  "lang": "HTML",
+  "license": "MIT",
+  "open_issues": 11,
+  "desc": "A one stop repository for generative AI research updates, interview resources, notebooks and much more!"
+ },
+ "84": {
+  "slug": "punitarani/fli",
+  "stars": 2972,
+  "pushed": "2026-06-29",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": 35,
+  "desc": "Google Flights MCP, CLI and Python Library"
  }
 }
