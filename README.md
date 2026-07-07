@@ -15,7 +15,8 @@ tramite una skill globale.
 ```bash
 git clone <URL-di-questo-repo> whatsapp-ai-catalog
 cd whatsapp-ai-catalog
-./install-skill.sh
+./install-skill.sh          # Linux/macOS
+.\install-skill.ps1         # Windows (PowerShell)
 ```
 Lo script copia la skill in `~/.claude/skills/ai-tools-catalog/` e rigenera il catalogo dai dati del
 repo. Da quel momento, in **qualsiasi progetto** Claude Code, puoi chiedere ad es.
@@ -45,7 +46,8 @@ python3 scripts/build_catalog.py   # rigenera CATALOGO + catalogo.json e aggiorn
 | `scripts/` | `fetch_gh_meta.py`, `build_catalog.py` |
 | `skill/SKILL.md` | Definizione della skill (ridistribuibile) |
 | `.claude/agents/` · `.claude/commands/` | Agente e slash command di aggiornamento |
-| `install-skill.sh` | Installa la skill su un nuovo PC |
+| `install-skill.sh` | Installa la skill su un nuovo PC (Linux/macOS) |
+| `install-skill.ps1` | Installa la skill su un nuovo PC (Windows) |
 
 ## Privacy
 I file con i **messaggi WhatsApp personali** (CSV grezzo, riassunti, screenshot di login, snapshot

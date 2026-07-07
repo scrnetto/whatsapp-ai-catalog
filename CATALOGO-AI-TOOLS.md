@@ -3,7 +3,7 @@
 > Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai reel Instagram
 > e dai messaggi salvati nella chat WhatsApp personale di Marco Scarlino.
 > **95 repository** + **19 siti web**, organizzati per categoria operativa.
-> Stato attività verificato il **2026-07-01**. Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.
+> Stato attività verificato il **2026-07-07**. Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.
 
 ## Indice
 - **Coding Agent, Claude Code & sviluppo AI-assistito** (18)

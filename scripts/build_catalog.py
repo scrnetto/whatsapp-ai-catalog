@@ -61,7 +61,7 @@ def kfmt(n):
     return (f"{n/1000:.1f}k".replace('.0k', 'k')) if n >= 1000 else str(n)
 
 def load(name):
-    return json.load(open(os.path.join(ROOT, name)))
+    return json.load(open(os.path.join(ROOT, name), encoding='utf-8'))
 
 def main():
     repos = load('github-repos.json')
@@ -86,7 +86,7 @@ def main():
             'url': s['url'], 'stelle': None, 'ultimo_push': None, 'attivita': 'sito web',
             'attivita_emoji': '🌐', 'licenza': None, 'linguaggio': None, 'fonte': s.get('fonte', '')})
 
-    json.dump(unified, open(os.path.join(ROOT, 'catalogo-unificato.json'), 'w'), ensure_ascii=False, indent=1)
+    json.dump(unified, open(os.path.join(ROOT, 'catalogo-unificato.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
     # --- Markdown ---
     n_repo = sum(1 for u in unified if u['tipo'] == 'repo')
@@ -126,12 +126,12 @@ def main():
             L.append(f"| {nome} | {cosa} | {quando} | {stato_cell} |")
         L.append('')
     md = '\n'.join(L) + '\n'
-    open(os.path.join(ROOT, 'CATALOGO-AI-TOOLS.md'), 'w').write(md)
+    open(os.path.join(ROOT, 'CATALOGO-AI-TOOLS.md'), 'w', encoding='utf-8').write(md)
 
     # --- copia nella skill globale ---
     if os.path.isdir(SKILL):
-        open(os.path.join(SKILL, 'CATALOGO-AI-TOOLS.md'), 'w').write(md)
-        json.dump(unified, open(os.path.join(SKILL, 'catalogo.json'), 'w'), ensure_ascii=False, indent=1)
+        open(os.path.join(SKILL, 'CATALOGO-AI-TOOLS.md'), 'w', encoding='utf-8').write(md)
+        json.dump(unified, open(os.path.join(SKILL, 'catalogo.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         skill_msg = f"skill aggiornata: {SKILL}"
     else:
         skill_msg = f"⚠️ skill non trovata in {SKILL} (catalogo generato solo nel progetto)"
