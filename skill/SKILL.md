@@ -1,7 +1,7 @@
 ---
 name: ai-tools-catalog
 description: >-
-  Catalogo curato di 68 repository GitHub e 17 siti/servizi web di strumenti AI e dev
+  Catalogo curato di 95 repository GitHub e 19 siti/servizi web di strumenti AI e dev
   (coding agent & Claude Code, LLM e inferenza locale, RAG/memoria, OCR, generazione media
   video/immagini/3D/voce, sicurezza & supply-chain, dev tools, finanza/trading AI, ricerca AI),
   ciascuno con descrizione funzionale, stato di attività verificato su GitHub (stelle, ultimo
@@ -30,24 +30,27 @@ chat WhatsApp personale, ripuliti e arricchiti con metadati GitHub reali.
 2. Cita sempre **stato di attività** (🟢/🟡/🔴, stelle, ultimo push) e **licenza** se rilevante per
    l'uso nel progetto dell'utente.
 3. Se nessuna voce calza, dillo chiaramente: il catalogo è una raccolta personale, non esaustivo.
-4. I dati di attività sono stati verificati il **2026-06-30**: se serve precisione attuale,
+4. I dati di attività sono stati verificati il **2026-08-02**: se serve precisione attuale,
    ricontrolla il repo (le stelle/push cambiano nel tempo).
 
 ## Categorie e contenuto (indice rapido)
-- **A · Coding Agent, Claude Code & sviluppo AI-assistito**: CLI-Anything, Spec Kit, Everything Claude Code, Pixel Agents, BMAD-METHOD, Vibe Kanban, Claude SEO, cc-blender-skill, blender-mcp, BMAD-Speckit-SDD-Flow, Ralph Loop, ai-website-cloner-template, Dyad, Google Stitch
-- **B · Framework Agenti AI & assistenti personali**: NanoBot, Parlant, OpenClaw, PicoClaw, J.A.R.V.I.S, JARVIS-PA-Lovable, MiroFish, SwarmClaw, Proactor.ai, agentskills.io
-- **C · LLM, modelli & inferenza locale**: Unsloth AI, Heretic, Kimi K2.5, Qwen3-Coder, NanoChat, IQuest-Coder-V1, AirLLM, whichllm, DwarfStar (ds4), SpikingBrain-7B
-- **D · RAG, memoria agenti & knowledge base**: Easy Dataset, VideoRAG, last30days-skill, MinerU, Memvid, Headroom, TencentDB-Agent-Memory
-- **E · OCR & parsing documenti**: GLM-OCR, Unlimited-OCR (vedi anche MinerU in D)
-- **F · Generazione media (video, immagini, 3D, voce)**: TRELLIS, Qwen3-TTS, SAM Audio, Z-Image, VibeVoice, GLM-Image, Seedance 2.0, GenieRedux, Pusa V1.0, Supertonic, Deep-Live-Cam, Voxtral (Mistral)
-- **G · Sicurezza & supply-chain**: Anthropic-Cybersecurity-Skills, flowsint, Trivy, SkillSpector (NVIDIA), Bumblebee (Perplexity)
-- **H · Dev tools, produttività & librerie**: Stirling-PDF, Tolaria, Pake, supervision (Roboflow), CuPy, LibreTranslate, TestSprite, Google Code Wiki, Render
-- **I · Finanza & trading AI**: Kronos, ai-hedge-fund, TradingAgents
-- **J · Ricerca AI, world models & dati vettoriali**: AutoResearchClaw, zvec, SEAL, Jina AI, Google EmbeddingGemma
-- **Z · Contenuti personali / non-dev**: voci non rilevanti per i progetti (salute, ricette, social) — ignorabili.
+- **A · Coding Agent, Claude Code & sviluppo AI-assistito** (18): Everything Claude Code, gstack, Spec Kit, ponytail, BMAD-METHOD, CLI-Anything, Ralph Loop, ai-website-cloner-template, Vibe Kanban, blender-mcp, knowledge-work-plugins, Dyad, Claude SEO, Pixel Agents, cc-blender-skill, BMAD-Speckit-SDD-Flow, Google Stitch, GitReverse
+- **B · Framework Agenti AI & assistenti personali** (13): OpenClaw, odysseus, MiroFish, Agent-Reach, NanoBot, PicoClaw, Parlant, agent-lightning, SwarmClaw, J.A.R.V.I.S, JARVIS-PA-Lovable, Proactor.ai, agentskills.io
+- **C · LLM, modelli & inferenza locale** (11): Unsloth AI, NanoChat, timesfm, Heretic, AirLLM, DwarfStar (ds4), Qwen3-Coder, whichllm, Kimi K2.5, IQuest-Coder-V1, SpikingBrain-7B
+- **D · RAG, memoria agenti & knowledge base** (9): MinerU, Headroom, last30days-skill, open-notebook, Memvid, Easy Dataset, TencentDB-Agent-Memory, PixelRAG, VideoRAG
+- **E · OCR & parsing documenti** (3): markitdown, Unlimited-OCR, GLM-OCR
+- **F · Generazione media (video, immagini, 3D, voce)** (19): Deep-Live-Cam, VibeVoice, hyperframes, chatterbox, video-use, Supertonic, TRELLIS, palmier-pro, Qwen3-TTS, Z-Image, SAM Audio, ASCILINE, GLM-Image, Pusa V1.0 (Pusa-VidGen), GenieRedux, Seedance 2.0, ByteDance Seedance 2.0, ByteDance Seed, Mistral AI - Voxtral
+- **G · Sicurezza & supply-chain** (7): Trivy, maigret, Anthropic-Cybersecurity-Skills, simplex-chat, SkillSpector, flowsint, Bumblebee
+- **H · Dev tools, produttività & librerie** (19): Stirling-PDF, Pake, Penpot, Win11Debloat, twenty, cypress, supervision, CasaOS, Tolaria, aisuite, LibreTranslate, CuPy, TREK, dicebear, fli, TestSprite, Google Code Wiki, Render, Codeberg
+- **I · Finanza & trading AI** (3): TradingAgents, ai-hedge-fund, Kronos
+- **J · Ricerca AI, world models & dati vettoriali** (6): awesome-generative-ai-guide, zvec, AutoResearchClaw, SEAL (Self-Adapting LM), Jina AI, Google EmbeddingGemma
+- **Z · Contenuti personali / non-dev** (6): voci non rilevanti per i progetti (salute, ricette, social) — ignorabili.
 
 ## Aggiornare il catalogo
-La sorgente è la chat WhatsApp "Marco Scarlino" (file di lavoro in `~/progetti/whatsapp/`:
-`github-repos.json`, `marco-scarlino-siti-web.json`, `marco-scarlino-catalogo-completo.csv`).
-Quando arrivano nuovi reel/link, rigenera da lì e ricopia `CATALOGO-AI-TOOLS.md` e `catalogo.json`
-in questa cartella.
+La sorgente è la chat WhatsApp "Marco Scarlino". File di lavoro in `C:\progetti\whatsapp-ai-catalog\`:
+`github-repos.json`, `marco-scarlino-siti-web.json`, `marco-scarlino-catalogo-completo.csv`,
+`instagram-profili.json` (stato monitoraggio profili), `gh-meta.json` (metadati attività).
+Quando arrivano nuovi reel/link: aggiorna i JSON, poi esegui `python scripts/fetch_gh_meta.py` e
+`python scripts/build_catalog.py` (quest'ultimo rigenera `CATALOGO-AI-TOOLS.md` + `catalogo.json`
+e li ricopia in questa cartella). **Nota**: `build_catalog.py` non aggiorna questo `SKILL.md` —
+conteggi, data di verifica e indice categorie qui sopra vanno aggiornati a mano.
