@@ -51,6 +51,8 @@ La sorgente è la chat WhatsApp "Marco Scarlino". File di lavoro in `C:\progetti
 `github-repos.json`, `marco-scarlino-siti-web.json`, `marco-scarlino-catalogo-completo.csv`,
 `instagram-profili.json` (stato monitoraggio profili), `gh-meta.json` (metadati attività).
 Quando arrivano nuovi reel/link: aggiorna i JSON, poi esegui `python scripts/fetch_gh_meta.py` e
-`python scripts/build_catalog.py` (quest'ultimo rigenera `CATALOGO-AI-TOOLS.md` + `catalogo.json`
-e li ricopia in questa cartella). **Nota**: `build_catalog.py` non aggiorna questo `SKILL.md` —
-conteggi, data di verifica e indice categorie qui sopra vanno aggiornati a mano.
+`python scripts/build_catalog.py`. Quest'ultimo rigenera `CATALOGO-AI-TOOLS.md` + `catalogo.json`
+e riallinea da solo, in questo file, i **conteggi nella description**, la **data di verifica** e
+l'**indice categorie** qui sopra: non modificarli a mano, verrebbero sovrascritti. Il resto della
+prosa è libero. La sorgente versionata è `skill/SKILL.md` nel progetto, copiata poi in questa
+cartella.

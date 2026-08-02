@@ -12,15 +12,18 @@ Input  (nella root del progetto):
 Output:
     catalogo-unificato.json    (root progetto)
     CATALOGO-AI-TOOLS.md       (root progetto)
-    e copia di entrambi (json -> catalogo.json) in ~/.claude/skills/ai-tools-catalog/
+    skill/SKILL.md             (root progetto: conteggi, data di verifica e indice categorie
+                                rigenerati dai dati reali; il resto della prosa resta invariato)
+    e copia dei tre (json -> catalogo.json) in ~/.claude/skills/ai-tools-catalog/
 
 Uso:
     python3 scripts/build_catalog.py
 """
-import json, os, datetime
+import json, os, re, datetime
 
 ROOT  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKILL = os.path.expanduser('~/.claude/skills/ai-tools-catalog')
+SKILL_SRC = os.path.join(ROOT, 'skill', 'SKILL.md')
 
 MACRO = {
  'A': 'Coding Agent, Claude Code & sviluppo AI-assistito',
@@ -62,6 +65,52 @@ def kfmt(n):
 
 def load(name):
     return json.load(open(os.path.join(ROOT, name), encoding='utf-8'))
+
+def indice_categorie(unified):
+    """Righe dell'indice rapido di SKILL.md: una per macro-categoria non vuota."""
+    out = []
+    for c in ORDER:
+        items = [u for u in unified if u['macro'] == c]
+        if not items: continue
+        if c == 'Z':
+            out.append(f"- **{c} · {MACRO[c]}** ({len(items)}): voci non rilevanti per i progetti "
+                       "(salute, ricette, social) — ignorabili.")
+            continue
+        # stesso ordine delle tabelle nel markdown: repo per stelle desc, poi siti
+        repos_c = sorted([u for u in items if u['tipo'] == 'repo'], key=lambda x: -(x['stelle'] or 0))
+        sites_c = [u for u in items if u['tipo'] == 'sito']
+        nomi = ', '.join(u['nome'] for u in repos_c + sites_c)
+        out.append(f"- **{c} · {MACRO[c]}** ({len(items)}): {nomi}")
+    return out
+
+def sync_skill_md(unified, n_repo, n_sito):
+    """Riallinea le parti dinamiche di skill/SKILL.md (conteggi nella description, data di
+    verifica, indice categorie). E' la `description` a decidere quando Claude invoca la skill:
+    se resta indietro il catalogo risulta sottodimensionato. Le sostituzioni che non trovano
+    esattamente un match vengono segnalate invece di fallire in silenzio."""
+    if not os.path.isfile(SKILL_SRC):
+        return None, [f"⚠️ {SKILL_SRC} non trovato: SKILL.md non aggiornato"]
+
+    txt, warn = open(SKILL_SRC, encoding='utf-8').read(), []
+
+    def sub(pattern, repl, cosa, flags=0):
+        nonlocal txt
+        txt, n = re.subn(pattern, lambda m: repl(m), txt, flags=flags)
+        if n != 1:
+            warn.append(f"⚠️ SKILL.md: {cosa} non aggiornato ({n} match, atteso 1) — "
+                        "il pattern non corrisponde più, correggi build_catalog.py o SKILL.md")
+
+    sub(r'Catalogo curato di \d+ repository GitHub e \d+ siti/servizi web',
+        lambda m: f'Catalogo curato di {n_repo} repository GitHub e {n_sito} siti/servizi web',
+        'conteggi nella description')
+    sub(r'verificati il \*\*\d{4}-\d{2}-\d{2}\*\*',
+        lambda m: f'verificati il **{today().isoformat()}**', 'data di verifica')
+    blocco = '\n'.join(indice_categorie(unified))
+    sub(r'^(## Categorie e contenuto \(indice rapido\)\n).*?(?=^## )',
+        lambda m: m.group(1) + blocco + '\n\n', 'indice categorie', flags=re.M | re.S)
+
+    open(SKILL_SRC, 'w', encoding='utf-8').write(txt)
+    return txt, warn
 
 def main():
     repos = load('github-repos.json')
@@ -128,10 +177,15 @@ def main():
     md = '\n'.join(L) + '\n'
     open(os.path.join(ROOT, 'CATALOGO-AI-TOOLS.md'), 'w', encoding='utf-8').write(md)
 
+    # --- SKILL.md: riallinea conteggi, data e indice ---
+    skill_md, warn = sync_skill_md(unified, n_repo, n_sito)
+
     # --- copia nella skill globale ---
     if os.path.isdir(SKILL):
         open(os.path.join(SKILL, 'CATALOGO-AI-TOOLS.md'), 'w', encoding='utf-8').write(md)
         json.dump(unified, open(os.path.join(SKILL, 'catalogo.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        if skill_md is not None:
+            open(os.path.join(SKILL, 'SKILL.md'), 'w', encoding='utf-8').write(skill_md)
         skill_msg = f"skill aggiornata: {SKILL}"
     else:
         skill_msg = f"⚠️ skill non trovata in {SKILL} (catalogo generato solo nel progetto)"
@@ -140,6 +194,8 @@ def main():
     print(f"Catalogo generato: {len(unified)} voci ({n_repo} repo + {n_sito} siti)")
     print("Per categoria:", {c: n for c, n in by_cat.items() if n})
     print(skill_msg)
+    for w in warn:
+        print(w)
 
 if __name__ == '__main__':
     main()
