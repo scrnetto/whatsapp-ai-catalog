@@ -1,7 +1,7 @@
 ---
 name: ai-tools-catalog
 description: >-
-  Catalogo curato di 95 repository GitHub e 19 siti/servizi web di strumenti AI e dev
+  Catalogo curato di 132 repository GitHub e 21 siti/servizi web di strumenti AI e dev
   (coding agent & Claude Code, LLM e inferenza locale, RAG/memoria, OCR, generazione media
   video/immagini/3D/voce, sicurezza & supply-chain, dev tools, finanza/trading AI, ricerca AI),
   ciascuno con descrizione funzionale, stato di attività verificato su GitHub (stelle, ultimo
@@ -34,17 +34,17 @@ chat WhatsApp personale, ripuliti e arricchiti con metadati GitHub reali.
    ricontrolla il repo (le stelle/push cambiano nel tempo).
 
 ## Categorie e contenuto (indice rapido)
-- **A · Coding Agent, Claude Code & sviluppo AI-assistito** (18): Everything Claude Code, gstack, Spec Kit, ponytail, BMAD-METHOD, CLI-Anything, Ralph Loop, ai-website-cloner-template, Vibe Kanban, blender-mcp, knowledge-work-plugins, Dyad, Claude SEO, Pixel Agents, cc-blender-skill, BMAD-Speckit-SDD-Flow, Google Stitch, GitReverse
-- **B · Framework Agenti AI & assistenti personali** (13): OpenClaw, odysseus, MiroFish, Agent-Reach, NanoBot, PicoClaw, Parlant, agent-lightning, SwarmClaw, J.A.R.V.I.S, JARVIS-PA-Lovable, Proactor.ai, agentskills.io
-- **C · LLM, modelli & inferenza locale** (11): Unsloth AI, NanoChat, timesfm, Heretic, AirLLM, DwarfStar (ds4), Qwen3-Coder, whichllm, Kimi K2.5, IQuest-Coder-V1, SpikingBrain-7B
-- **D · RAG, memoria agenti & knowledge base** (9): MinerU, Headroom, last30days-skill, open-notebook, Memvid, Easy Dataset, TencentDB-Agent-Memory, PixelRAG, VideoRAG
-- **E · OCR & parsing documenti** (3): markitdown, Unlimited-OCR, GLM-OCR
-- **F · Generazione media (video, immagini, 3D, voce)** (19): Deep-Live-Cam, VibeVoice, hyperframes, chatterbox, video-use, Supertonic, TRELLIS, palmier-pro, Qwen3-TTS, Z-Image, SAM Audio, ASCILINE, GLM-Image, Pusa V1.0 (Pusa-VidGen), GenieRedux, Seedance 2.0, ByteDance Seedance 2.0, ByteDance Seed, Mistral AI - Voxtral
-- **G · Sicurezza & supply-chain** (7): Trivy, maigret, Anthropic-Cybersecurity-Skills, simplex-chat, SkillSpector, flowsint, Bumblebee
-- **H · Dev tools, produttività & librerie** (19): Stirling-PDF, Pake, Penpot, Win11Debloat, twenty, cypress, supervision, CasaOS, Tolaria, aisuite, LibreTranslate, CuPy, TREK, dicebear, fli, TestSprite, Google Code Wiki, Render, Codeberg
-- **I · Finanza & trading AI** (3): TradingAgents, ai-hedge-fund, Kronos
+- **A · Coding Agent, Claude Code & sviluppo AI-assistito** (21): Everything Claude Code, gstack, Spec Kit, ponytail, BMAD-METHOD, CLI-Anything, Ralph Loop, ai-website-cloner-template, Vibe Kanban, blender-mcp, knowledge-work-plugins, Dyad, hallmark, t3code, Claude SEO, Pixel Agents, wigolo, cc-blender-skill, BMAD-Speckit-SDD-Flow, Google Stitch, GitReverse
+- **B · Framework Agenti AI & assistenti personali** (16): OpenClaw, odysseus, MiroFish, Agent-Reach, NanoBot, PicoClaw, buzz, Parlant, agent-lightning, sia, SwarmClaw, J.A.R.V.I.S, JARVIS-PA-Lovable, Proactor.ai, agentskills.io, Runable
+- **C · LLM, modelli & inferenza locale** (14): Unsloth AI, NanoChat, OmniRoute, project-nomad, timesfm, Heretic, AirLLM, colibri, DwarfStar (ds4), Qwen3-Coder, whichllm, Kimi K2.5, IQuest-Coder-V1, SpikingBrain-7B
+- **D · RAG, memoria agenti & knowledge base** (12): MinerU, Headroom, last30days-skill, open-notebook, DeepTutor, cognee, karakeep, Memvid, Easy Dataset, TencentDB-Agent-Memory, PixelRAG, VideoRAG
+- **E · OCR & parsing documenti** (5): markitdown, meetily, OfficeCLI, Unlimited-OCR, GLM-OCR
+- **F · Generazione media (video, immagini, 3D, voce)** (24): Deep-Live-Cam, VibeVoice, voicebox, upscayl, hyperframes, chatterbox, video-use, lingbot-map, Supertonic, TRELLIS, palmier-pro, Qwen3-TTS, Z-Image, LTX-Video, SAM Audio, ASCILINE, GLM-Image, Pusa V1.0 (Pusa-VidGen), GenieRedux, Seedance 2.0, ByteDance Seedance 2.0, ByteDance Seed, Mistral AI - Voxtral, Motion
+- **G · Sicurezza & supply-chain** (11): strix, Trivy, maigret, bitchat, Anthropic-Cybersecurity-Skills, simplex-chat, amnezia-client, SkillSpector, CubeSandbox, flowsint, Bumblebee
+- **H · Dev tools, produttività & librerie** (31): Stirling-PDF, hoppscotch, protobuf, Pake, Penpot, Win11Debloat, twenty, cypress, supervision, appsmith, posthog, CasaOS, CloakBrowser, jenkins, turso, superfile, Tolaria, aisuite, LibreTranslate, outlines, harper, CuPy, TREK, dicebear, fli, databasement, karukan, TestSprite, Google Code Wiki, Render, Codeberg
+- **I · Finanza & trading AI** (4): TradingAgents, ai-hedge-fund, Kronos, OpenAlice
 - **J · Ricerca AI, world models & dati vettoriali** (6): awesome-generative-ai-guide, zvec, AutoResearchClaw, SEAL (Self-Adapting LM), Jina AI, Google EmbeddingGemma
-- **Z · Contenuti personali / non-dev** (6): voci non rilevanti per i progetti (salute, ricette, social) — ignorabili.
+- **Z · Contenuti personali / non-dev** (9): voci non rilevanti per i progetti (salute, ricette, social) — ignorabili.
 
 ## Aggiornare il catalogo
 La sorgente è la chat WhatsApp "Marco Scarlino". File di lavoro in `C:\progetti\whatsapp-ai-catalog\`:

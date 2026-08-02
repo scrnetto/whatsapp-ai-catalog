@@ -22,8 +22,8 @@ def slug(u):
     return '/'.join(m.group(1).rstrip('/').split('/')[:2]) if m else None
 
 def main():
-    repos = json.load(open(REPOS))
-    meta = json.load(open(META)) if os.path.exists(META) else {}
+    repos = json.load(open(REPOS, encoding='utf-8'))
+    meta = json.load(open(META, encoding='utf-8')) if os.path.exists(META) else {}
     done = skipped = 0
     for r in repos:
         k = str(r['id'])
@@ -51,7 +51,7 @@ def main():
         except Exception as e:
             meta[k] = {'slug': s, 'error': str(e)[:50]}
         time.sleep(0.4)
-    json.dump(meta, open(META, 'w'), indent=1)
+    json.dump(meta, open(META, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     missing = [str(r['id']) for r in repos if str(r['id']) not in meta or 'error' in meta.get(str(r['id']), {})]
     print(f"Recuperati ora: {done} | già presenti: {skipped} | totale con metadati: {len(repos)-len(missing)}/{len(repos)}")
     if missing:

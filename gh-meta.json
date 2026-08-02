@@ -1252,5 +1252,375 @@
   "src": "html",
   "checked_at": "2026-08-02",
   "full_name": "odysseus-dev/odysseus"
+ },
+ "96": {
+  "slug": "jenkinsci/jenkins",
+  "stars": 26389,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Java",
+  "license": "MIT",
+  "open_issues": 3610,
+  "desc": "Jenkins automation server"
+ },
+ "97": {
+  "slug": "tursodatabase/turso",
+  "stars": 23618,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Rust",
+  "license": "MIT",
+  "open_issues": 771,
+  "desc": "A SQL database in Rust: SQLite-compatible, now also speaking Postgres (experimental). The LLVM of databases."
+ },
+ "98": {
+  "slug": "togatoga/karukan",
+  "stars": 692,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Rust",
+  "license": "Apache-2.0",
+  "open_issues": 19,
+  "desc": "Japanese Input Method System for Linux, macOS, Neural Kana-Kanji Conversion Engine"
+ },
+ "99": {
+  "slug": "TencentCloud/CubeSandbox",
+  "stars": 10828,
+  "pushed": "2026-08-01",
+  "archived": false,
+  "lang": "Rust",
+  "license": "NOASSERTION",
+  "open_issues": 180,
+  "desc": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents."
+ },
+ "100": {
+  "slug": "pingdotgg/t3code",
+  "stars": 16303,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": 1033,
+  "desc": null
+ },
+ "101": {
+  "slug": "Crosstalk-Solutions/project-nomad",
+  "stars": 35375,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "Apache-2.0",
+  "open_issues": 71,
+  "desc": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required."
+ },
+ "102": {
+  "slug": "Nutlope/hallmark",
+  "stars": 20764,
+  "pushed": "2026-07-31",
+  "archived": false,
+  "lang": "CSS",
+  "license": "MIT",
+  "open_issues": 38,
+  "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex."
+ },
+ "103": {
+  "slug": "PostHog/posthog",
+  "stars": 37441,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "open_issues": 5325,
+  "desc": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP."
+ },
+ "104": {
+  "slug": "HKUDS/DeepTutor",
+  "stars": 31915,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 90,
+  "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/."
+ },
+ "105": {
+  "slug": "protocolbuffers/protobuf",
+  "stars": 71675,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "C++",
+  "license": "NOASSERTION",
+  "open_issues": 314,
+  "desc": "Protocol Buffers - Google's data interchange format"
+ },
+ "106": {
+  "slug": "KnockOutEZ/wigolo",
+  "stars": 4067,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "NOASSERTION",
+  "open_issues": 42,
+  "desc": "The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta."
+ },
+ "107": {
+  "slug": "usestrix/strix",
+  "stars": 46578,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 232,
+  "desc": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities."
+ },
+ "108": {
+  "slug": "topoteretes/cognee",
+  "stars": 29689,
+  "pushed": "2026-08-01",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 523,
+  "desc": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine."
+ },
+ "109": {
+  "slug": "Robbyant/lingbot-map",
+  "stars": 16052,
+  "pushed": "2026-07-23",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 69,
+  "desc": "A feed-forward 3D foundation model for reconstructing scenes from streaming data"
+ },
+ "110": {
+  "slug": "dottxt-ai/outlines",
+  "stars": 15475,
+  "pushed": "2026-08-01",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": 132,
+  "desc": "Structured Outputs"
+ },
+ "111": {
+  "slug": "block/buzz",
+  "stars": 20858,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Rust",
+  "license": "Apache-2.0",
+  "open_issues": 1606,
+  "desc": "A hive mind communication platform"
+ },
+ "112": {
+  "slug": "Automattic/harper",
+  "stars": 14109,
+  "pushed": "2026-08-01",
+  "archived": false,
+  "lang": "Rust",
+  "license": "Apache-2.0",
+  "open_issues": 701,
+  "desc": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered"
+ },
+ "113": {
+  "slug": "Pumpkin-MC/Pumpkin",
+  "stars": 10510,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Rust",
+  "license": "GPL-3.0",
+  "open_issues": 304,
+  "desc": "Empowering everyone to host fast and efficient Minecraft servers."
+ },
+ "114": {
+  "slug": "yorukot/superfile",
+  "stars": 22115,
+  "pushed": "2026-07-30",
+  "archived": false,
+  "lang": "Go",
+  "license": "MIT",
+  "open_issues": 236,
+  "desc": "Pretty fancy and modern terminal file manager"
+ },
+ "115": {
+  "slug": "appsmithorg/appsmith",
+  "stars": 40543,
+  "pushed": "2026-08-01",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "Apache-2.0",
+  "open_issues": 4469,
+  "desc": "Platform to build admin panels, internal tools, and dashboards. Integrates with 25+ databases and any API."
+ },
+ "116": {
+  "slug": "permissionlesstech/bitchat",
+  "stars": 34112,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Swift",
+  "license": "Unlicense",
+  "open_issues": 100,
+  "desc": "bluetooth mesh chat, IRC vibes"
+ },
+ "117": {
+  "slug": "hoppscotch/hoppscotch",
+  "stars": 79945,
+  "pushed": "2026-07-30",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": null,
+  "desc": null
+ },
+ "118": {
+  "slug": "jamiepine/voicebox",
+  "stars": 48058,
+  "pushed": "2026-07-28",
+  "archived": false,
+  "lang": null,
+  "license": "MIT",
+  "open_issues": null,
+  "desc": null
+ },
+ "119": {
+  "slug": "amnezia-vpn/amnezia-client",
+  "stars": 14261,
+  "pushed": "2026-07-31",
+  "archived": false,
+  "lang": "C++",
+  "license": "GPL-3.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "120": {
+  "slug": "CloakHQ/CloakBrowser",
+  "stars": 29512,
+  "pushed": "2026-08-01",
+  "archived": false,
+  "lang": null,
+  "license": "MIT",
+  "open_issues": null,
+  "desc": null
+ },
+ "121": {
+  "slug": "rommapp/romm",
+  "stars": 11859,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "Python",
+  "license": "AGPL-3.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "122": {
+  "slug": "upscayl/upscayl",
+  "stars": 47719,
+  "pushed": "2026-07-30",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "AGPL-3.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "123": {
+  "slug": "karakeep-app/karakeep",
+  "stars": 28012,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "AGPL-3.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "124": {
+  "slug": "Zackriya-Solutions/meetily",
+  "stars": 27953,
+  "pushed": "2026-06-05",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": null,
+  "desc": null
+ },
+ "125": {
+  "slug": "iOfficeAI/OfficeCLI",
+  "stars": 24226,
+  "pushed": "2026-07-31",
+  "archived": false,
+  "lang": null,
+  "license": "Apache-2.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "126": {
+  "slug": "Diolinux/PhotoGIMP",
+  "stars": 17196,
+  "pushed": "2026-07-11",
+  "archived": false,
+  "lang": "Python",
+  "license": "GPL-3.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "127": {
+  "slug": "Lightricks/LTX-Video",
+  "stars": 10793,
+  "pushed": "2026-01-05",
+  "archived": false,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "128": {
+  "slug": "diegosouzapw/OmniRoute",
+  "stars": 37563,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "open_issues": null,
+  "desc": null
+ },
+ "129": {
+  "slug": "David-Crty/databasement",
+  "stars": 1859,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": null,
+  "license": "MIT",
+  "open_issues": null,
+  "desc": null
+ },
+ "130": {
+  "slug": "TraderAlice/OpenAlice",
+  "stars": 6385,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "TypeScript",
+  "license": "AGPL-3.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "131": {
+  "slug": "JustVugg/colibri",
+  "stars": 22117,
+  "pushed": "2026-08-02",
+  "archived": false,
+  "lang": "C",
+  "license": "Apache-2.0",
+  "open_issues": null,
+  "desc": null
+ },
+ "132": {
+  "slug": "hexo-ai/sia",
+  "stars": 2089,
+  "pushed": "2026-07-02",
+  "archived": false,
+  "lang": "Python",
+  "license": "MIT",
+  "open_issues": null,
+  "desc": null
  }
 }
