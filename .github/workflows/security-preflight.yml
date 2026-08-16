@@ -1,0 +1,50 @@
+# Da COMMITTARE come .github/workflows/security-preflight.yml in ogni repo.
+# Enforcement automatico e indipendente dal PC: gira su GitHub a ogni push/PR (e prima del deploy).
+name: security-preflight
+
+on:
+  push:
+    branches: [main, master, production]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1) Dipendenze vulnerabili (fallisce su high/critical). Rimuovi --audit-level per essere piu' severo.
+      - name: npm audit
+        if: hashFiles('package-lock.json') != ''
+        run: npm audit --omit=dev --audit-level=high
+
+      # 2) Sink di esecuzione pericolosi con possibile input utente (segnala, non blocca).
+      - name: grep sink RCE/SSRF
+        run: |
+          echo "== possibili sink RCE =="
+          grep -rnE "child_process|execSync|\bexec\(|\beval\(|new Function|vm\.runIn) " \
+            --include=*.ts --include=*.js --include=*.tsx --include=*.jsx \
+            app src pages server lib 2>/dev/null || echo "nessun match"
+          echo "== possibili SSRF/tunnel =="
+          grep -rniE "sentry-tunnel|proxy|fetch\(.*req|axios\(.*req" \
+            --include=*.ts --include=*.js app src pages 2>/dev/null || echo "nessun match"
+
+      # 3) DB/servizi esposti su tutte le interfacce nel docker-compose (BLOCCA).
+      - name: check porte esposte in docker-compose
+        run: |
+          if ls docker-compose*.y*ml >/dev/null 2>&1; then
+            if grep -nE '^\s*-\s*"?[0-9]+:[0-9]+' docker-compose*.y*ml | grep -vE '127\.0\.0\.1'; then
+              echo "::error::Porta pubblicata su tutte le interfacce. Lega a 127.0.0.1 i servizi interni (DB, ecc.)."
+              exit 1
+            fi
+          fi
+
+      # 4) Segreti committati (gitleaks). BLOCCA se trova credenziali nel repo.
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
