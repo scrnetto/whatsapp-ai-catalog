@@ -46,6 +46,7 @@ cp config.example.json config.json     # then set your own chat
 | `instagram.enabled` | `false` → skip profile monitoring |
 | `catalogo.titolo` / `catalogo.fonte` | Heading and source line of the generated catalog |
 | `catalogo.lingua` | `it` (default) or `en` — language of category names, status labels and generated prose |
+| `github.token` | Optional GitHub token — see [below](#github-token-optional) |
 
 For a one-off run you can also use `/sync-ai-catalog "Another Chat"` or
 `/sync-ai-catalog --only-instagram` without touching the config.
@@ -79,7 +80,29 @@ Two things make it safe to run on a large catalog:
 - **It resumes.** Unauthenticated GitHub allows 60 requests/hour, so a catalog of 132 repos cannot
   refresh in one pass. The queue is ordered — missing entries first, then the stalest — and the run
   stops cleanly when the quota runs out, telling you when it resets. Re-run later and it picks up
-  where it left off. Set `GITHUB_TOKEN` (or pass `--token`) to get 5000/hour and finish in one go.
+  where it left off. A token raises the quota to 5000/hour and finishes it in one go.
+
+### GitHub token (optional)
+
+Only worth it if you want a full refresh in a single run.
+
+**Create one with no permissions at all.** Reading public repository metadata requires none, and a
+zero-permission token grants an attacker nothing beyond what anonymous access already allows — it
+just raises the rate limit.
+
+- *Fine-grained* — [Settings → Developer settings → Personal access tokens → Fine-grained](https://github.com/settings/personal-access-tokens/new):
+  set *Repository access* to **Public Repositories (read-only)** and leave every permission at
+  "No access".
+- *Classic* — [Settings → Developer settings → Tokens (classic)](https://github.com/settings/tokens):
+  **leave every scope checkbox unticked**.
+
+The token is read in this order — first match wins:
+
+| Where | How |
+|---|---|
+| `--token` | `python3 scripts/fetch_gh_meta.py --refresh --token ghp_...` (one-off; ends up in shell history) |
+| `GITHUB_TOKEN` / `GH_TOKEN` env var | **Recommended.** PowerShell, persistent: `[Environment]::SetEnvironmentVariable('GITHUB_TOKEN','ghp_...','User')` · bash: `export GITHUB_TOKEN=ghp_...` |
+| `github.token` in `config.json` | Most convenient, and `config.json` is gitignored — but the script **refuses to run** if it finds a token there while the file is not actually ignored by git, so a misconfigured `.gitignore` can't turn into a committed secret |
 
 ## Layout
 | Path | Role |

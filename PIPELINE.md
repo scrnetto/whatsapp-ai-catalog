@@ -40,6 +40,7 @@ The file is **gitignored** because it holds the name of your chat; the tracked s
 | `instagram.enabled` | `false` → Phase B (profile monitoring) skipped |
 | `catalogo.titolo` / `catalogo.fonte` | Heading and source line of `CATALOGO-AI-TOOLS.md` |
 | `catalogo.lingua` | `it` (default) or `en` — language of category names, status labels and generated prose |
+| `github.token` | Optional GitHub token (60 → 5000 API requests/hour). Create it with **no permissions**: public repo metadata needs none. Read only if `config.json` is gitignored; `GITHUB_TOKEN` in the environment takes precedence. |
 
 One-off overrides from the command: `/sync-ai-catalog "Chat Name"`, `--only-instagram`,
 `--only-whatsapp`. With no `config.json`, the agent asks which chat to read and `build_catalog.py`
@@ -68,8 +69,9 @@ python3 scripts/build_catalog.py               # rebuild MD+JSON and update the 
 ```
 `--refresh` is safe on a large catalog: it never overwrites good data with an error (a 404 repo
 keeps its entry and gains a `last_error` flag), and it stops cleanly when the API quota runs out,
-resuming from the stalest entries on the next run. `GITHUB_TOKEN` raises the quota from 60 to
-5000 requests/hour.
+resuming from the stalest entries on the next run. A token raises the quota from 60 to 5000
+requests/hour — set `GITHUB_TOKEN`, pass `--token`, or put it in `config.json` under
+`github.token` (the script refuses to read it from there unless the file is gitignored).
 
 ## Notes
 - Macro categories (`macro`): A coding/Claude Code · B AI agents · C local LLMs · D RAG/memory ·

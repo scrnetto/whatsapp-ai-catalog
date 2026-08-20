@@ -8,7 +8,14 @@ Usage:
     python3 scripts/fetch_gh_meta.py --refresh      # re-fetch everything, oldest data first
     python3 scripts/fetch_gh_meta.py --refresh 30   # re-fetch only what was checked >30 days ago
     python3 scripts/fetch_gh_meta.py --limit 50     # stop after 50 repos
-    python3 scripts/fetch_gh_meta.py --token TOKEN  # or set GITHUB_TOKEN in the environment
+    python3 scripts/fetch_gh_meta.py --token TOKEN  # see "Token" below
+
+Token (optional, raises the quota from 60 to 5000 requests/hour). Read in this order:
+    1. --token TOKEN
+    2. GITHUB_TOKEN or GH_TOKEN in the environment
+    3. "github": {"token": "..."} in config.json — refused unless config.json is gitignored
+Reading public repo metadata needs no permissions at all: create the token with NO scopes
+(classic) or "Public repositories, read-only" (fine-grained), so a leak grants nothing.
 
 Rate limits: 60 requests/hour per IP unauthenticated, 5000/hour with a token. A full refresh of a
 catalog larger than 60 repos therefore cannot finish in one unauthenticated run — so refreshes are
@@ -25,11 +32,48 @@ def slug(u):
     m = re.search(r'github\.com/([^/]+/[^/?#]+)', u)
     return '/'.join(m.group(1).rstrip('/').split('/')[:2]) if m else None
 
+CONFIG = os.path.join(ROOT, 'config.json')
+
+def token_da_config():
+    """Legge github.token da config.json. config.json e' gitignorato per progetto, ma un token
+    e' comunque un segreto: se qualcuno lo mette li' e il file NON risulta ignorato da git, si
+    interrompe invece di lasciarlo scivolare in un commit."""
+    try:
+        cfg = json.load(open(CONFIG, encoding='utf-8'))
+    except (FileNotFoundError, ValueError):
+        return None
+    tok = (cfg.get('github') or {}).get('token') or None
+    if not tok:
+        return None
+    if not ignorato_da_git(CONFIG):
+        print("✋ config.json contiene github.token ma NON e' ignorato da git: "
+              "il token finirebbe in un commit.\n"
+              "   Aggiungi 'config.json' a .gitignore, oppure usa la variabile "
+              "d'ambiente GITHUB_TOKEN.", file=sys.stderr)
+        sys.exit(3)
+    return tok
+
+def ignorato_da_git(path):
+    """True se git ignora il file. Fuori da un repo git non c'e' rischio di commit: True."""
+    import subprocess
+    try:
+        r = subprocess.run(['git', 'check-ignore', '-q', os.path.basename(path)],
+                           cwd=ROOT, capture_output=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    if r.returncode == 0:
+        return True
+    if r.returncode == 128:      # non e' un repo git
+        return True
+    return False
+
 def parse_args(argv):
     """--refresh [GIORNI] / --limit N / --token T. Argomenti sconosciuti -> errore esplicito,
-    cosi' un typo non viene scambiato per il comportamento di default."""
+    cosi' un typo non viene scambiato per il comportamento di default.
+    Precedenza del token: --token > GITHUB_TOKEN/GH_TOKEN > config.json."""
     opts = {'refresh': False, 'max_age': None, 'limit': None,
-            'token': os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')}
+            'token': (os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
+                      or token_da_config())}
     i = 0
     while i < len(argv):
         a = argv[i]
@@ -149,6 +193,12 @@ def main():
                 interrotto = True
                 break
         except urllib.error.HTTPError as e:
+            if e.code == 401:
+                # credenziali rifiutate: ogni chiamata successiva fallirebbe uguale e
+                # marcherebbe l'intero catalogo come rotto. Meglio fermarsi subito.
+                print("✋ GitHub rejected the token (401). Check it is valid and not expired, "
+                      "or run without a token.", file=sys.stderr)
+                sys.exit(4)
             if e.code == 403:
                 print(f"⚠️  GitHub rate limit hit after {nuovi + rinfrescati} repos. "
                       "Re-run later to resume, or pass --token / set GITHUB_TOKEN.",
