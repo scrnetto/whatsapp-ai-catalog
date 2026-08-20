@@ -240,16 +240,6 @@
     "uso": "Generazione immagini autoregressiva (Zhipu AI)."
   },
   {
-    "id": 25,
-    "progetto": "Seedance 2.0",
-    "descrizione": "Video generation multimodale (ByteDance)",
-    "url": "https://github.com/bytedance-seedance/seedance-2.0",
-    "categoria": "AI/Video",
-    "fonte": "Simone Rizzo AI (index 27)",
-    "macro": "F",
-    "uso": "Generazione video da prompt/immagini/video di riferimento (ByteDance)."
-  },
-  {
     "id": 26,
     "progetto": "GenieRedux",
     "descrizione": "World models con ambienti virtuali (Google Genie)",
@@ -1318,5 +1308,435 @@
     "fonte": "simorizzo_ai 09/07/2026 (reel DalSXHlDCtI)",
     "macro": "B",
     "uso": "Quando vuoi che un agente si auto-ottimizzi su un benchmark senza tuning manuale."
+  },
+  {
+    "id": 133,
+    "progetto": "OpenLogi",
+    "descrizione": "Alternativa open source in Rust a Logitech Options+: parla direttamente con l'hardware Logitech via HID++, senza account ne' telemetria, con configurazione in un file di testo.",
+    "url": "https://github.com/AprilNEA/OpenLogi",
+    "categoria": "Dev/Tools",
+    "fonte": "devop.sbs 20/08/2026 (reel DcQ4h2ZMhRw)",
+    "macro": "H",
+    "uso": "Quando vuoi rimappare tasti, DPI e gesture di mouse/tastiere Logitech in locale, anche su Linux."
+  },
+  {
+    "id": 134,
+    "progetto": "impeccable",
+    "descrizione": "Skill di design per coding agent: definisce contesto visivo, tono, colori e tipografia del progetto e applica regole deterministiche per evitare le UI tutte uguali generate dall'AI.",
+    "url": "https://github.com/pbakaus/impeccable",
+    "categoria": "Claude Code Skill",
+    "fonte": "devop.sbs 20/08/2026 (reel DcPKjljz0g7)",
+    "macro": "A",
+    "uso": "Quando l'interfaccia generata dall'agente sa di template e vuoi imporre un'identita' visiva coerente."
+  },
+  {
+    "id": 135,
+    "progetto": "Motrix",
+    "descrizione": "Download manager multipiattaforma costruito sul motore aria2, con interfaccia moderna: link diretti, FTP, torrent e magnet in multi-thread, piu' modalita' headless per server e NAS.",
+    "url": "https://github.com/agalwood/Motrix",
+    "categoria": "Dev/Tools",
+    "fonte": "devop.sbs 19/08/2026 (reel DcMJvGbuD8y)",
+    "macro": "H",
+    "uso": "Quando devi scaricare file grossi o torrent senza affidarti al download manager del browser."
+  },
+  {
+    "id": 136,
+    "progetto": "Dear ImGui",
+    "descrizione": "Libreria C++ immediate-mode per costruire rapidamente GUI tecniche (debugger, profiler, editor, pannelli per game engine) senza dipendenze esterne; genera vertex buffer da integrare nel proprio renderer.",
+    "url": "https://github.com/ocornut/imgui",
+    "categoria": "Dev/Librerie",
+    "fonte": "devop.sbs 18/08/2026 (reel DcJPvNKTEbN)",
+    "macro": "H",
+    "uso": "Quando ti serve un pannello di controllo o un debug tool in un'app C++/3D senza tirarti dietro un framework UI."
+  },
+  {
+    "id": 137,
+    "progetto": "cordis",
+    "descrizione": "Meta-framework TypeScript per plugin caricabili e scaricabili a caldo: isola ogni plugin in una gerarchia di contesti e fa il rollback deterministico degli effetti collaterali, senza memory leak ne' riavvii.",
+    "url": "https://github.com/cordiverse/cordis",
+    "categoria": "Dev/Librerie",
+    "fonte": "devop.sbs 18/08/2026 (reel DcG8EZYMcwd)",
+    "macro": "H",
+    "uso": "Quando costruisci un runtime a plugin (anche per agenti AI) e ti serve hot-reload senza risorse orfane."
+  },
+  {
+    "id": 138,
+    "progetto": "MediaCrawler",
+    "descrizione": "Crawler open source che raccoglie contenuti pubblici dai principali social cinesi (Xiaohongshu, Douyin, Bilibili, Weibo, Zhihu) pilotando un browser reale con Playwright; export in CSV/JSON/Excel, SQLite e MySQL, con WebUI.",
+    "url": "https://github.com/NanmiCoder/MediaCrawler",
+    "categoria": "Scraping",
+    "fonte": "devop.sbs 17/08/2026 (reel DcEpejnTbap)",
+    "macro": "H",
+    "uso": "Quando devi raccogliere dati pubblici dai social cinesi senza reimplementare i loro algoritmi di firma."
+  },
+  {
+    "id": 139,
+    "progetto": "holehe",
+    "descrizione": "Tool OSINT che verifica su oltre 120 piattaforme se un indirizzo email risulta registrato, sfruttando le risposte dei form di recupero password senza inviare notifiche al titolare.",
+    "url": "https://github.com/megadose/holehe",
+    "categoria": "Sicurezza/OSINT",
+    "fonte": "devop.sbs 16/08/2026 (reel DcBeNhqMIXO)",
+    "macro": "G",
+    "uso": "Quando fai digital footprint analysis su un'email in un assessment o vuoi capire quanto sei esposto."
+  },
+  {
+    "id": 140,
+    "progetto": "GeoLibre",
+    "descrizione": "Piattaforma GIS open source e cloud-native per esplorare e analizzare dati geospaziali da browser, desktop o Jupyter: mappe interattive, 3D, SQL spaziale ed elaborazione locale con DuckDB-WASM Spatial.",
+    "url": "https://github.com/opengeos/GeoLibre",
+    "categoria": "Dev/Tools",
+    "fonte": "devop.sbs 15/08/2026 (reel Db-YgUPzxeo)",
+    "macro": "H",
+    "uso": "Quando devi visualizzare o interrogare dati geospaziali senza spedirli a un servizio esterno."
+  },
+  {
+    "id": 141,
+    "progetto": "diagram-design",
+    "descrizione": "Skill open source che fa generare all'agente diagrammi editoriali in HTML/SVG nativo su griglia rigorosa, con estrazione automatica della palette dal sito che indichi e decine di modelli pronti.",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "categoria": "Claude Code Skill",
+    "fonte": "devop.sbs 14/08/2026 (reel Db7r18gO1OY)",
+    "macro": "A",
+    "uso": "Quando ti serve uno schema di architettura presentabile invece del solito diagramma anonimo generato dall'AI."
+  },
+  {
+    "id": 142,
+    "progetto": "codebase-memory-mcp",
+    "descrizione": "Server MCP che trasforma la codebase in un grafo della conoscenza persistente (funzioni, classi, chiamate, route, dipendenze) interrogabile dai coding agent; 158 linguaggi, tutto in locale, singolo binario.",
+    "url": "https://github.com/DeusData/codebase-memory-mcp",
+    "categoria": "RAG/Memoria",
+    "fonte": "devop.sbs 13/08/2026 (reel Db5w6HhzJq5)",
+    "macro": "D",
+    "uso": "Quando l'agente brucia token a riesplorare il progetto e vuoi dargli una mappa stabile dell'architettura."
+  },
+  {
+    "id": 143,
+    "progetto": "witr",
+    "descrizione": "CLI in Go che ricostruisce la catena di causalita' di un PID: dall'init fino al processo finale, incrociando servizi, supervisor, container e file lock; output JSON e TUI interattiva.",
+    "url": "https://github.com/pranshuparmar/witr",
+    "categoria": "Dev/Tools",
+    "fonte": "devop.sbs 12/08/2026 (reel Db38v8UOCIb)",
+    "macro": "H",
+    "uso": "Quando una porta e' occupata o un file e' bloccato e vuoi sapere subito chi ha avviato il processo."
+  },
+  {
+    "id": 144,
+    "progetto": "herdr",
+    "descrizione": "Multiplexer per agenti AI che vive nel terminale: piu' agenti in pannelli separati, sessioni che sopravvivono al detach e una socket API con cui gli agenti stessi creano pannelli e si coordinano.",
+    "url": "https://github.com/herdrdev/herdr",
+    "categoria": "Dev/Agent",
+    "fonte": "devop.sbs 11/08/2026 (reel Db0jaiwTVbw)",
+    "macro": "A",
+    "uso": "Quando fai girare piu' coding agent in parallelo e non sai piu' chi sta lavorando e chi e' bloccato."
+  },
+  {
+    "id": 145,
+    "progetto": "authentik",
+    "descrizione": "Identity Provider open source e self-hosted: centralizza gli accessi con OAuth2, OpenID Connect, SAML e LDAP, flussi di login personalizzabili e MFA con passkey o chiavi fisiche.",
+    "url": "https://github.com/goauthentik/authentik",
+    "categoria": "Sicurezza",
+    "fonte": "devop.sbs 10/08/2026 (reel DbykhqqOvCy)",
+    "macro": "G",
+    "uso": "Quando vuoi un SSO unico per homelab o azienda senza pagare Okta o Auth0."
+  },
+  {
+    "id": 146,
+    "progetto": "text-to-cad",
+    "descrizione": "Libreria di skill che permette agli agenti AI di lavorare su CAD, robotica e fabbricazione digitale: genera modelli STEP/STL/3MF/GLB da testo o immagini, disegni DXF, G-code e file URDF/SRDF/SDF.",
+    "url": "https://github.com/earthtojake/text-to-cad",
+    "categoria": "Robotica/3D",
+    "fonte": "devop.sbs 09/08/2026 (reel Dbva1okzI_k)",
+    "macro": "F",
+    "uso": "Quando vuoi che un agente passi dal generare codice al progettare pezzi meccanici stampabili."
+  },
+  {
+    "id": 147,
+    "progetto": "Cloudflare Computer",
+    "descrizione": "Runtime per agenti che separa lo stato persistente del filesystem (Durable Objects + SQLite) dagli ambienti di esecuzione modulari, dai container shell alla valutazione rapida di JavaScript nei Workers.",
+    "url": "https://github.com/cloudflare/computer",
+    "categoria": "Agenti AI",
+    "fonte": "devop.sbs 08/08/2026 (reel DbtRgW7Oc2W)",
+    "macro": "B",
+    "uso": "Quando devi dare a un agente un ambiente operativo vero senza esporre la tua infrastruttura."
+  },
+  {
+    "id": 148,
+    "progetto": "croc",
+    "descrizione": "Trasferimento file peer-to-peer da terminale con una frase segreta: funziona tra reti diverse tramite relay, senza aprire porte, con crittografia end-to-end, ripresa dei trasferimenti e relay self-hosted.",
+    "url": "https://github.com/schollz/croc",
+    "categoria": "Dev/Tools",
+    "fonte": "devop.sbs 08/08/2026 (reel Dbq5Sj-TXsJ)",
+    "macro": "H",
+    "uso": "Quando devi passare file tra due macchine senza cloud, account o configurazioni di rete."
+  },
+  {
+    "id": 149,
+    "progetto": "ruff",
+    "descrizione": "Linter e formatter Python scritto in Rust, ordini di grandezza piu' veloce di Flake8 e Black, che unifica in un solo strumento cio' che prima richiedeva piu' pacchetti e configurazioni.",
+    "url": "https://github.com/astral-sh/ruff",
+    "categoria": "Dev tools",
+    "fonte": "devop.sbs 07/08/2026 (reel DbnRxXnOZrd)",
+    "macro": "H",
+    "uso": "Quando il lint del progetto Python e' lento o frammentato su troppi tool."
+  },
+  {
+    "id": 150,
+    "progetto": "openship",
+    "descrizione": "Piattaforma open source self-hostable per il deploy di applicazioni: rileva stack e comandi di build da una repo o cartella e gestisce build, routing, HTTPS con Let's Encrypt e deploy automatici a ogni push.",
+    "url": "https://github.com/oblien/openship",
+    "categoria": "Dev/Self-hosting",
+    "fonte": "devop.sbs 06/08/2026 (reel DbllEebubEg)",
+    "macro": "H",
+    "uso": "Quando vuoi una PaaS tua su VPS o homelab invece di pagare un servizio gestito."
+  },
+  {
+    "id": 151,
+    "progetto": "PLFM_RADAR",
+    "descrizione": "Progetto open hardware di un radar con tracciamento multi-target: PCB, codice FPGA, schemi completi e GUI Python, licenza MIT.",
+    "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+    "categoria": "Hardware/Segnali",
+    "fonte": "marc.kaz 13/04/2026 (reel DXEzfJ8Dp1p)",
+    "macro": "H",
+    "uso": "Quando ti serve un riferimento completo e libero per costruire o studiare un radar."
+  },
+  {
+    "id": 152,
+    "progetto": "docker-android",
+    "descrizione": "Dispositivo Android completo che si avvia con un solo comando Docker: port-forwarding ADB, accelerazione KVM e GPU, funzionamento headless pronto per la CI.",
+    "url": "https://github.com/HQarroum/docker-android",
+    "categoria": "DevOps/CI",
+    "fonte": "marc.kaz 25/04/2026 (reel DXjstfTDq5U)",
+    "macro": "H",
+    "uso": "Quando devi testare un'app Android in pipeline senza emulatori installati a mano."
+  },
+  {
+    "id": 153,
+    "progetto": "Securo",
+    "descrizione": "Gestore di finanze personali self-hosted: visione completa di conti e spese restando sulla propria infrastruttura, senza cedere i dati a terzi.",
+    "url": "https://github.com/securo-finance/securo",
+    "categoria": "Finanza/Personal",
+    "fonte": "marc.kaz 19/08/2026 (reel DcOj0RjORlP)",
+    "macro": "I",
+    "uso": "Quando vuoi tracciare conti e spese senza collegare i tuoi dati a un servizio cloud."
+  },
+  {
+    "id": 154,
+    "progetto": "JoyAI-Video-Edit",
+    "descrizione": "Editor video real-time guidato da istruzioni in linguaggio naturale: modifica soggetto, sfondo, stile e movimento fotogramma per fotogramma su stream o file, a circa 30 FPS in 720p.",
+    "url": "https://github.com/jd-opensource/JoyAI-Video-Edit",
+    "categoria": "AI/Video",
+    "fonte": "marc.kaz 18/08/2026 (reel DcL52ZXOoBa)",
+    "macro": "F",
+    "uso": "Quando vuoi editare un video (anche in streaming) descrivendo a parole la modifica."
+  },
+  {
+    "id": 155,
+    "progetto": "Lunar",
+    "descrizione": "Backend e-commerce per Laravel: prodotti, ordini e gestione staff con pannello di amministrazione Filament estendibile, lasciando lo storefront completamente sotto il tuo controllo.",
+    "url": "https://github.com/lunarphp/lunar",
+    "categoria": "Dev/Librerie",
+    "fonte": "marc.kaz 18/08/2026 (reel DcJitRUOjdo)",
+    "macro": "H",
+    "uso": "Quando costruisci un e-commerce su misura in Laravel e non vuoi riscrivere il backend."
+  },
+  {
+    "id": 156,
+    "progetto": "MoneyPrinterTurbo",
+    "descrizione": "Pipeline che da un argomento o una parola chiave genera video verticali completi: script, voce narrante, sottotitoli, reperimento delle clip e montaggio finale.",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "categoria": "AI/Video",
+    "fonte": "marc.kaz 17/08/2026 (reel DcG5MjqOVYp)",
+    "macro": "F",
+    "uso": "Quando devi produrre short o reel in serie partendo solo da un tema."
+  },
+  {
+    "id": 157,
+    "progetto": "OpenSandbox",
+    "descrizione": "Infrastruttura di sandbox isolate per agenti autonomi: ambienti per codice, browsing e desktop completi, SDK in cinque linguaggi, Docker/Kubernetes con gVisor, Kata o Firecracker, vault credenziali e server MCP.",
+    "url": "https://github.com/opensandbox-group/OpenSandbox",
+    "categoria": "Agenti AI",
+    "fonte": "marc.kaz 16/08/2026 (reel DcBuc3XuVif)",
+    "macro": "B",
+    "uso": "Quando devi far eseguire codice a un agente senza dargli accesso alla tua macchina."
+  },
+  {
+    "id": 158,
+    "progetto": "LogTape",
+    "descrizione": "Libreria di logging a zero dipendenze: le librerie possono loggare senza configurazione mentre l'applicazione mantiene il controllo; gira su Deno, Node, Bun, browser ed edge, con redazione dei dati integrata.",
+    "url": "https://github.com/dahlia/logtape",
+    "categoria": "Dev/Librerie",
+    "fonte": "marc.kaz 15/08/2026 (reel Db_M8GzONtR)",
+    "macro": "H",
+    "uso": "Quando devi aggiungere logging a una libreria pubblicata senza imporre scelte a chi la usa."
+  },
+  {
+    "id": 159,
+    "progetto": "OpenMontage",
+    "descrizione": "Agente open source che da un singolo prompt produce un video finito: ricerca, sceneggiatura, generazione di immagini e video, reperimento di clip reali, voce, musica, sottotitoli e render finale.",
+    "url": "https://github.com/calesthio/OpenMontage",
+    "categoria": "AI/Video",
+    "fonte": "marc.kaz 13/08/2026 (reel Db3eufPuckZ)",
+    "macro": "F",
+    "uso": "Quando vuoi delegare a un agente l'intera produzione di un video, non solo la generazione delle clip."
+  },
+  {
+    "id": 160,
+    "progetto": "opennews-mcp",
+    "descrizione": "Server MCP che espone agli agenti oltre 85 fonti di notizie in tempo reale, con punteggio di impatto e segnali long/short su ogni articolo.",
+    "url": "https://github.com/6551Team/opennews-mcp",
+    "categoria": "Finanza/Dati",
+    "fonte": "marc.kaz 11/08/2026 (reel Db0yLC1uINo)",
+    "macro": "I",
+    "uso": "Quando l'agente deve ragionare su notizie di mercato aggiornate invece che sul suo training."
+  },
+  {
+    "id": 161,
+    "progetto": "DSPy",
+    "descrizione": "Framework per costruire sistemi AI modulari in Python: codice componibile al posto di prompt fragili, con ottimizzazione automatica di prompt e pesi per classificatori, RAG e loop agentici.",
+    "url": "https://github.com/stanfordnlp/dspy",
+    "categoria": "AI/Agent",
+    "fonte": "marc.kaz 10/08/2026 (reel DbyWc6_OhqU)",
+    "macro": "B",
+    "uso": "Quando vuoi programmare il comportamento di un LLM e farlo ottimizzare da metriche invece che a mano."
+  },
+  {
+    "id": 162,
+    "progetto": "Skylos",
+    "descrizione": "CLI e gate per le pull request che verifica il codice generato dall'AI contro il repo reale: individua helper, API e dipendenze inventati con 215 regole; gira in locale, in CI, in VS Code e via MCP.",
+    "url": "https://github.com/duriantaco/skylos",
+    "categoria": "Dev tools",
+    "fonte": "marc.kaz 09/08/2026 (reel DbvyxpRuDIZ)",
+    "macro": "H",
+    "uso": "Quando devi intercettare allucinazioni e codice morto prima che entrino in un merge."
+  },
+  {
+    "id": 163,
+    "progetto": "Mysterium Node",
+    "descrizione": "Nodo VPN decentralizzato basato su WireGuard, distribuito via Docker: mette la propria banda a disposizione di una rete globale in cambio di un compenso.",
+    "url": "https://github.com/mysteriumnetwork/node",
+    "categoria": "Sicurezza/Rete",
+    "fonte": "marc.kaz 08/08/2026 (reel DboLSc_sD7o)",
+    "macro": "G",
+    "uso": "Quando vuoi far parte di una rete VPN decentralizzata invece di usare un provider centrale."
+  },
+  {
+    "id": 164,
+    "progetto": "AFFiNE",
+    "descrizione": "Workspace local-first che unisce documenti, lavagna e database in un unico canvas edgeless, con AI multimodale per scrittura, presentazioni e mindmap; self-hostable e sincronizzato in tempo reale.",
+    "url": "https://github.com/toeverything/AFFiNE",
+    "categoria": "Dev/Productivity",
+    "fonte": "marc.kaz 07/08/2026 (reel Dbi7coSu427)",
+    "macro": "H",
+    "uso": "Quando cerchi un'alternativa self-hosted a Notion e Miro senza lock-in sul cloud."
+  },
+  {
+    "id": 165,
+    "progetto": "TUIOS",
+    "descrizione": "Multiplexer di terminale scritto in Go con controlli modali in stile Vim e tiling BSP: nove workspace, palette fuzzy, protocollo grafico Kitty, modalita' daemon e sessioni multi-client.",
+    "url": "https://github.com/Gaurav-Gosain/tuios",
+    "categoria": "Dev/Tools",
+    "fonte": "marc.kaz 17/08/2026 (reel DcGxfFBuDtH)",
+    "macro": "H",
+    "uso": "Quando vuoi un'alternativa moderna a tmux con CPU a riposo praticamente nulla."
+  },
+  {
+    "id": 166,
+    "progetto": "OpenObserve",
+    "descrizione": "Piattaforma di observability cloud-native in Rust che unifica log, metriche, tracce, RUM e osservabilita' di AI/LLM: storage Parquet su S3, deploy a singolo binario, OpenTelemetry nativo, query in SQL e PromQL.",
+    "url": "https://github.com/openobserve/openobserve",
+    "categoria": "Dev tools",
+    "fonte": "post DbP94HSs1-z salvato in chat 14/08/2026",
+    "macro": "H",
+    "uso": "Quando i costi di Elasticsearch o Datadog non stanno in piedi e vuoi un'alternativa self-hosted."
+  },
+  {
+    "id": 167,
+    "progetto": "UniFace",
+    "descrizione": "Libreria Python che unifica in una sola API rilevamento, riconoscimento, tracking, keypoint, segmentazione del volto, rimozione dello sfondo, stima di sguardo e posa, eta'/genere e liveness detection.",
+    "url": "https://github.com/yakhyo/uniface",
+    "categoria": "AI/Computer Vision",
+    "fonte": "reel Dbv9bdcxDdp salvato in chat 09/08/2026",
+    "macro": "H",
+    "uso": "Quando devi costruire un'applicazione di face AI senza incollare insieme quattro framework diversi."
+  },
+  {
+    "id": 168,
+    "progetto": "awesome-design-md",
+    "descrizione": "Raccolta di design system di decine di aziende note (Apple, Stripe, Linear, Notion e altre) in formato markdown, installabili come riferimento di stile dentro un coding agent.",
+    "url": "https://github.com/VoltAgent/awesome-design-md",
+    "categoria": "Dev/Design",
+    "fonte": "micheleparigi.ai (reel DbgWFoBunys)",
+    "macro": "A",
+    "uso": "Quando vuoi che l'agente segua il linguaggio visivo di un design system riconoscibile invece di inventare."
+  },
+  {
+    "id": 169,
+    "progetto": "video-shotcraft",
+    "descrizione": "Skill open source per coding agent che costruisce spot promozionali partendo dagli asset del prodotto: storyboard, inquadrature, montaggio e sound design, resi con Remotion.",
+    "url": "https://github.com/Vincentwei1021/video-shotcraft",
+    "categoria": "AI/Video",
+    "fonte": "micheleparigi.ai (reel DbqjRcbOz4c)",
+    "macro": "F",
+    "uso": "Quando ti serve uno spot di un prodotto digitale senza montarlo a mano."
+  },
+  {
+    "id": 170,
+    "progetto": "open-code-review",
+    "descrizione": "Sistema di review automatica delle pull request rilasciato da Alibaba, self-hostable e integrabile nelle pipeline CI/CD, cosi' il codice non esce verso API di terze parti.",
+    "url": "https://github.com/alibaba/open-code-review",
+    "categoria": "DevOps/CI",
+    "fonte": "ai_swarm_solutions 04/08/2026 (reel DboEjrxKbdW)",
+    "macro": "H",
+    "uso": "Quando vuoi review automatiche delle PR senza mandare il codice aziendale a un SaaS esterno."
+  },
+  {
+    "id": 171,
+    "progetto": "OPEN-UPSILON-LOGIC",
+    "descrizione": "Progetto che affianca ai coding agent una memoria logica deterministica in stile Prolog, per ridurre context drift e allucinazioni invece di lasciarli scandire il filesystem alla cieca.",
+    "url": "https://github.com/davidealbertazzi97-jpg/OPEN-UPSILON-LOGIC",
+    "categoria": "RAG/Memoria",
+    "fonte": "ai_swarm_solutions 13/08/2026 (reel Db3i_3sqJ2G)",
+    "macro": "D",
+    "uso": "Quando vuoi sperimentare guardrail logici sopra uno sciame di agenti; progetto molto giovane, valuta l'attivita' prima di adottarlo."
+  },
+  {
+    "id": 172,
+    "progetto": "OpenReply",
+    "descrizione": "Alternativa open source ai bot commento-DM: automatizza le risposte in DM ai commenti usando le API ufficiali di Meta, senza password ne' rischio di ban.",
+    "url": "https://github.com/diwenne/openreply",
+    "categoria": "Dev/Tools",
+    "fonte": "guglielmo.builds 17/08/2026 (reel DcGqeSFNLEg)",
+    "macro": "H",
+    "uso": "Quando gestisci un profilo e vuoi automatizzare le risposte ai commenti restando nelle API ufficiali."
+  },
+  {
+    "id": 173,
+    "progetto": "QM",
+    "descrizione": "Sistema di agenti AI con cui Y Combinator manda avanti le proprie operazioni interne (contabilita', legale, eventi, ingegneria), rilasciato open source come infrastruttura aziendale.",
+    "url": "https://github.com/yc-software/qm",
+    "categoria": "Agenti AI",
+    "fonte": "guglielmo.builds 06/08/2026 (reel DbqV4oitmA9)",
+    "macro": "B",
+    "uso": "Quando cerchi un riferimento reale di come si struttura uno stack di agenti per le operazioni di un'azienda."
+  },
+  {
+    "id": 174,
+    "progetto": "Atomic Agent",
+    "descrizione": "Agente open source che pianifica, naviga, modifica file e mantiene memoria girando interamente in locale su un modello piccolo, con risultati dichiarati competitivi sul benchmark GAIA.",
+    "url": "https://github.com/AtomicBot-ai/atomic-agent",
+    "categoria": "Agenti AI",
+    "fonte": "ai.honeycove 07/08/2026 (reel DbraHUOOJUI)",
+    "macro": "B",
+    "uso": "Quando vuoi un agente generalista che non esca dalla tua macchina."
+  },
+  {
+    "id": 175,
+    "progetto": "TencentDB Agent Memory",
+    "descrizione": "Sistema di memoria per agenti AI rilasciato da Tencent Cloud: conserva preferenze e conversazioni come memoria a lungo termine per mantenere il contesto tra sessioni.",
+    "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+    "categoria": "RAG/Memoria",
+    "fonte": "ai.honeycove 11/08/2026 (reel Db7wCBxOrFh)",
+    "macro": "D",
+    "uso": "Quando un agente deve ricordare preferenze e storico dell'utente tra una sessione e l'altra."
   }
 ]

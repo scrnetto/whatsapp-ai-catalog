@@ -148,5 +148,35 @@
     "fonte": "micheleparigi.ai 18/07/2026 (reel Da8lNQEu7Ad)",
     "macro": "F",
     "uso": "Quando ti serve un video animato professionale senza aprire After Effects, anche pilotato da Claude via MCP."
+  },
+  {
+    "id": 22,
+    "sito": "Higgsfield AI",
+    "url": "https://higgsfield.ai",
+    "descrizione": "Suite creativa AI-native per generazione di immagini e video, con app builder e un server MCP richiamabile da Claude o Cursor per produrre contenuti in serie.",
+    "categoria": "AI/Media",
+    "fonte": "marc.kaz 17/08/2026 (reel DcETIsVOvk5) e ai.honeycove (reel Db_wbyEyKGz)",
+    "macro": "F",
+    "uso": "Quando vuoi generare video o creativi in volume e pilotarli da un agente via MCP."
+  },
+  {
+    "id": 23,
+    "sito": "Dreamina (CapCut)",
+    "url": "https://dreamina.capcut.com",
+    "descrizione": "Generatore AI di video e immagini di CapCut: modalita' long video con clip fino a qualche minuto in una sola generazione e fino a 50 reference per tenere la coerenza dei soggetti.",
+    "categoria": "Generazione video",
+    "fonte": "marc.kaz 09/08/2026 (reel DbtKAz7uKRO) e ai.honeycove (reel DbxKkLaurrD)",
+    "macro": "F",
+    "uso": "Quando ti serve un video lungo e coerente senza cucire insieme clip separate."
+  },
+  {
+    "id": 24,
+    "sito": "Emergent",
+    "url": "https://emergent.sh",
+    "descrizione": "App builder che dalla descrizione a parole di un flusso di lavoro genera il sistema full-stack completo, con URL live e interfaccia responsive.",
+    "categoria": "AI/Coding",
+    "fonte": "marc.kaz 08/08/2026 (reel Dbl1gHDs-Iq) e themattvision (reel DbA2SpatIkd)",
+    "macro": "A",
+    "uso": "Quando vuoi un gestionale o un'app interna senza costruirla a mano."
   }
 ]
