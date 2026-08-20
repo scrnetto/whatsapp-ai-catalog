@@ -26,18 +26,62 @@ ROOT  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKILL = os.path.expanduser('~/.claude/skills/ai-tools-catalog')
 SKILL_SRC = os.path.join(ROOT, 'skill', 'SKILL.md')
 
-MACRO = {
- 'A': 'Coding Agent, Claude Code & sviluppo AI-assistito',
- 'B': 'Framework Agenti AI & assistenti personali',
- 'C': 'LLM, modelli & inferenza locale',
- 'D': 'RAG, memoria agenti & knowledge base',
- 'E': 'OCR & parsing documenti',
- 'F': 'Generazione media (video, immagini, 3D, voce)',
- 'G': 'Sicurezza & supply-chain',
- 'H': 'Dev tools, produttività & librerie',
- 'I': 'Finanza & trading AI',
- 'J': 'Ricerca AI, world models & dati vettoriali',
- 'Z': 'Contenuti personali / non-dev',
+# I nomi delle macro-categorie e la prosa generata dipendono da catalogo.lingua in config.json.
+# I *dati* (descrizione/uso delle voci) restano nella lingua in cui sono stati scritti: qui si
+# traduce solo l'impalcatura. Per aggiungere una lingua basta una nuova voce in LOCALI.
+LOCALI = {
+ 'it': {
+  'macro': {
+   'A': 'Coding Agent, Claude Code & sviluppo AI-assistito',
+   'B': 'Framework Agenti AI & assistenti personali',
+   'C': 'LLM, modelli & inferenza locale',
+   'D': 'RAG, memoria agenti & knowledge base',
+   'E': 'OCR & parsing documenti',
+   'F': 'Generazione media (video, immagini, 3D, voce)',
+   'G': 'Sicurezza & supply-chain',
+   'H': 'Dev tools, produttività & librerie',
+   'I': 'Finanza & trading AI',
+   'J': 'Ricerca AI, world models & dati vettoriali',
+   'Z': 'Contenuti personali / non-dev',
+  },
+  'stato': {'archiviato': 'archiviato', 'nd': 'n/d', 'molto_attivo': 'molto attivo',
+            'attivo': 'attivo', 'rallentato': 'rallentato', 'fermo': 'fermo',
+            'sito': 'sito web'},
+  'intro':   '> Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai',
+  'conteggi': '> **{r} repository** + **{s} siti web**, organizzati per categoria operativa.',
+  'verifica': '> Stato attività verificato il **{d}**. ',
+  'legenda': 'Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.',
+  'indice':  '## Indice',
+  'header':  '| Progetto | Cosa fa | Quando usarlo | Stato |',
+  'cella_sito': '🌐 sito',
+  'z_nota': 'voci non rilevanti per i progetti (salute, ricette, social) — ignorabili.',
+ },
+ 'en': {
+  'macro': {
+   'A': 'Coding agents, Claude Code & AI-assisted development',
+   'B': 'AI agent frameworks & personal assistants',
+   'C': 'LLMs, models & local inference',
+   'D': 'RAG, agent memory & knowledge bases',
+   'E': 'OCR & document parsing',
+   'F': 'Media generation (video, images, 3D, voice)',
+   'G': 'Security & supply chain',
+   'H': 'Dev tools, productivity & libraries',
+   'I': 'AI finance & trading',
+   'J': 'AI research, world models & vector data',
+   'Z': 'Personal / non-dev content',
+  },
+  'stato': {'archiviato': 'archived', 'nd': 'n/a', 'molto_attivo': 'very active',
+            'attivo': 'active', 'rallentato': 'slowing down', 'fermo': 'stalled',
+            'sito': 'website'},
+  'intro':   '> A unified catalog of **GitHub repositories** and **websites/services** collected from',
+  'conteggi': '> **{r} repositories** + **{s} websites**, grouped by practical category.',
+  'verifica': '> Activity status checked on **{d}**. ',
+  'legenda': 'Legend: 🟢 active (pushed ≤12 months ago) · 🟡 slowing down · 🔴 stalled · ⚫ archived · 🌐 website.',
+  'indice':  '## Index',
+  'header':  '| Project | What it does | When to use it | Status |',
+  'cella_sito': '🌐 site',
+  'z_nota': 'entries not relevant to dev work (health, recipes, social) — safe to ignore.',
+ },
 }
 ORDER = list("ABCDEFGHIJ")
 
@@ -49,30 +93,32 @@ PRIVATA = 'Z'
 def today():
     return datetime.date.today()
 
-def stato(m):
+def stato(m, S):
     if not m or m.get('archived'):
-        return ('⚫', 'archiviato')
+        return ('⚫', S['archiviato'])
     p = (m.get('pushed') or '')[:10]
     if not p:
-        return ('⚪', 'n/d')
+        return ('⚪', S['nd'])
     try:
         dt = datetime.date.fromisoformat(p)
     except Exception:
-        return ('⚪', 'n/d')
+        return ('⚪', S['nd'])
     mo = (today() - dt).days / 30
-    if mo <= 3:  return ('🟢', 'molto attivo')
-    if mo <= 12: return ('🟢', 'attivo')
-    if mo <= 24: return ('🟡', 'rallentato')
-    return ('🔴', 'fermo')
+    if mo <= 3:  return ('🟢', S['molto_attivo'])
+    if mo <= 12: return ('🟢', S['attivo'])
+    if mo <= 24: return ('🟡', S['rallentato'])
+    return ('🔴', S['fermo'])
 
-def kfmt(n):
-    if n is None: return 'n/d'
+def kfmt(n, nd='n/d'):
+    if n is None: return nd
     return (f"{n/1000:.1f}k".replace('.0k', 'k')) if n >= 1000 else str(n)
 
 def load(name):
     return json.load(open(os.path.join(ROOT, name), encoding='utf-8'))
 
-DEFAULT_CFG = {'titolo': 'Catalogo strumenti AI & Dev', 'fonte': 'reel e link salvati in chat'}
+DEFAULT_CFG = {'titolo': 'Catalogo strumenti AI & Dev',
+               'fonte': 'reel e link salvati in chat',
+               'lingua': 'it'}
 
 def config():
     """config.json e' gitignorato (contiene il nome della chat personale): se manca,
@@ -81,17 +127,21 @@ def config():
         cfg = load('config.json').get('catalogo', {})
     except FileNotFoundError:
         cfg = {}
-    return {k: cfg.get(k) or v for k, v in DEFAULT_CFG.items()}
+    out = {k: cfg.get(k) or v for k, v in DEFAULT_CFG.items()}
+    if out['lingua'] not in LOCALI:
+        print(f"  ⚠️ lingua '{out['lingua']}' non supportata (disponibili: "
+              f"{', '.join(LOCALI)}): uso 'it'")
+        out['lingua'] = 'it'
+    return out
 
-def indice_categorie(unified):
+def indice_categorie(unified, L):
     """Righe dell'indice rapido di SKILL.md: una per macro-categoria non vuota."""
-    out = []
+    MACRO, out = L['macro'], []
     for c in ORDER:
         items = [u for u in unified if u['macro'] == c]
         if not items: continue
         if c == 'Z':
-            out.append(f"- **{c} · {MACRO[c]}** ({len(items)}): voci non rilevanti per i progetti "
-                       "(salute, ricette, social) — ignorabili.")
+            out.append(f"- **{c} · {MACRO[c]}** ({len(items)}): {L['z_nota']}")
             continue
         # stesso ordine delle tabelle nel markdown: repo per stelle desc, poi siti
         repos_c = sorted([u for u in items if u['tipo'] == 'repo'], key=lambda x: -(x['stelle'] or 0))
@@ -100,7 +150,7 @@ def indice_categorie(unified):
         out.append(f"- **{c} · {MACRO[c]}** ({len(items)}): {nomi}")
     return out
 
-def sync_skill_md(unified, n_repo, n_sito):
+def sync_skill_md(unified, n_repo, n_sito, L):
     """Riallinea le parti dinamiche di skill/SKILL.md (conteggi nella description, data di
     verifica, indice categorie). E' la `description` a decidere quando Claude invoca la skill:
     se resta indietro il catalogo risulta sottodimensionato. Le sostituzioni che non trovano
@@ -109,6 +159,9 @@ def sync_skill_md(unified, n_repo, n_sito):
         return None, [f"⚠️ {SKILL_SRC} non trovato: SKILL.md non aggiornato"]
 
     txt, warn = open(SKILL_SRC, encoding='utf-8').read(), []
+    if L is not LOCALI['it']:
+        warn.append("ℹ️ skill/SKILL.md: solo conteggi, data e indice sono rigenerati; "
+                    "la prosa del file resta nella lingua in cui l'hai scritta")
 
     def sub(pattern, repl, cosa, flags=0):
         nonlocal txt
@@ -122,7 +175,7 @@ def sync_skill_md(unified, n_repo, n_sito):
         'conteggi nella description')
     sub(r'verificati il \*\*\d{4}-\d{2}-\d{2}\*\*',
         lambda m: f'verificati il **{today().isoformat()}**', 'data di verifica')
-    blocco = '\n'.join(indice_categorie(unified))
+    blocco = '\n'.join(indice_categorie(unified, L))
     sub(r'^(## Categorie e contenuto \(indice rapido\)\n).*?(?=^## )',
         lambda m: m.group(1) + blocco + '\n\n', 'indice categorie', flags=re.M | re.S)
 
@@ -131,6 +184,9 @@ def sync_skill_md(unified, n_repo, n_sito):
 
 def main():
     cfg   = config()
+    L     = LOCALI[cfg['lingua']]
+    MACRO = L['macro']
+    S     = L['stato']
     repos = load('github-repos.json')
     siti  = load('siti-web.json')
     meta  = load('gh-meta.json')
@@ -138,7 +194,7 @@ def main():
     unified = []
     for r in repos:
         m = meta.get(str(r['id']), {})
-        em, lab = stato(m)
+        em, lab = stato(m, S)
         unified.append({
             'tipo': 'repo', 'macro': r.get('macro', 'H'), 'macro_nome': MACRO.get(r.get('macro', 'H')),
             'nome': r['progetto'], 'cosa_fa': r['descrizione'], 'quando_usarlo': r.get('uso', ''),
@@ -150,7 +206,7 @@ def main():
         unified.append({
             'tipo': 'sito', 'macro': c, 'macro_nome': MACRO.get(c),
             'nome': s['sito'], 'cosa_fa': s['descrizione'], 'quando_usarlo': s.get('uso', ''),
-            'url': s['url'], 'stelle': None, 'ultimo_push': None, 'attivita': 'sito web',
+            'url': s['url'], 'stelle': None, 'ultimo_push': None, 'attivita': S['sito'],
             'attivita_emoji': '🌐', 'licenza': None, 'linguaggio': None, 'fonte': s.get('fonte', '')})
 
     scartate = [u for u in unified if u['macro'] == PRIVATA]
@@ -164,45 +220,45 @@ def main():
     # --- Markdown ---
     n_repo = sum(1 for u in unified if u['tipo'] == 'repo')
     n_sito = sum(1 for u in unified if u['tipo'] == 'sito')
-    L = []
-    L.append(f"# 📚 {cfg['titolo']}")
-    L.append('')
-    L.append('> Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai')
-    L.append(f"> {cfg['fonte']}.")
-    L.append(f'> **{n_repo} repository** + **{n_sito} siti web**, organizzati per categoria operativa.')
-    L.append(f'> Stato attività verificato il **{today().isoformat()}**. '
-             'Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.')
-    L.append('')
-    L.append('## Indice')
+    OUT = []
+    OUT.append(f"# 📚 {cfg['titolo']}")
+    OUT.append('')
+    OUT.append(L['intro'])
+    OUT.append(f"> {cfg['fonte']}.")
+    OUT.append(L['conteggi'].format(r=n_repo, s=n_sito))
+    OUT.append(L['verifica'].format(d=today().isoformat()) + L['legenda'])
+    OUT.append('')
+    OUT.append(L['indice'])
     for c in ORDER:
         n = sum(1 for u in unified if u['macro'] == c)
-        if n: L.append(f"- **{MACRO[c]}** ({n})")
-    L.append('')
+        if n: OUT.append(f"- **{MACRO[c]}** ({n})")
+    OUT.append('')
     for c in ORDER:
         items = [u for u in unified if u['macro'] == c]
         if not items: continue
         repos_c = sorted([u for u in items if u['tipo'] == 'repo'], key=lambda x: -(x['stelle'] or 0))
         sites_c = [u for u in items if u['tipo'] == 'sito']
-        L.append(f"## {MACRO[c]}")
-        L.append('')
-        L.append('| Progetto | Cosa fa | Quando usarlo | Stato |')
-        L.append('|---|---|---|---|')
+        OUT.append(f"## {MACRO[c]}")
+        OUT.append('')
+        OUT.append(L['header'])
+        OUT.append('|---|---|---|---|')
         for u in repos_c + sites_c:
             nome = f"[{u['nome']}]({u['url']})"
             cosa = (u['cosa_fa'] or '').replace('|', '/')
             quando = (u['quando_usarlo'] or '').replace('|', '/')
             if u['tipo'] == 'sito':
-                stato_cell = '🌐 sito'
+                stato_cell = L['cella_sito']
             else:
                 lic = f" · {u['licenza']}" if u.get('licenza') and u['licenza'] != 'NOASSERTION' else ''
-                stato_cell = f"{u['attivita_emoji']} ⭐{kfmt(u['stelle'])} · {u['ultimo_push'] or 'n/d'}{lic}"
-            L.append(f"| {nome} | {cosa} | {quando} | {stato_cell} |")
-        L.append('')
-    md = '\n'.join(L) + '\n'
+                stato_cell = (f"{u['attivita_emoji']} ⭐{kfmt(u['stelle'], S['nd'])} · "
+                              f"{u['ultimo_push'] or S['nd']}{lic}")
+            OUT.append(f"| {nome} | {cosa} | {quando} | {stato_cell} |")
+        OUT.append('')
+    md = '\n'.join(OUT) + '\n'
     open(os.path.join(ROOT, 'CATALOGO-AI-TOOLS.md'), 'w', encoding='utf-8').write(md)
 
     # --- SKILL.md: riallinea conteggi, data e indice ---
-    skill_md, warn = sync_skill_md(unified, n_repo, n_sito)
+    skill_md, warn = sync_skill_md(unified, n_repo, n_sito, L)
 
     # --- copia nella skill globale ---
     if os.path.isdir(SKILL):

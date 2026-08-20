@@ -1,70 +1,74 @@
-# Pipeline catalogo WhatsApp → skill `ai-tools-catalog`
+# WhatsApp catalog pipeline → `ai-tools-catalog` skill
 
-Automatizza ciò che è stato fatto a mano: leggere la **chat WhatsApp configurata in `config.json`**, catalogare
-repo GitHub e siti web condivisi (per lo più reel Instagram di AI/coding), e tenere aggiornata la
-**skill globale Claude Code** consultabile da ogni progetto.
+Automates what used to be done by hand: read the **WhatsApp chat configured in `config.json`**,
+catalog the GitHub repos and websites shared there (mostly Instagram reels about AI/coding), and
+keep the **global Claude Code skill** — queryable from any project — up to date.
 
-## Come si avvia
-- **Slash command:** `/aggiorna-catalogo`  (richiede WhatsApp Web loggato nel browser)
-- **Oppure** chiedendo: *"aggiorna il catalogo / controlla i nuovi reel"* →
-  parte l'agente **`whatsapp-catalog-updater`** (`.claude/agents/`).
+## How to run it
+- **Slash command:** `/aggiorna-catalogo` (needs WhatsApp Web logged in, unless Phase A is disabled)
+- **Or** just ask: *"update the catalog / check for new reels"* → this starts the
+  **`whatsapp-catalog-updater`** agent (`.claude/agents/`).
 
-## Cosa fa l'agente (in breve)
-**Fase A — Chat WhatsApp** *(saltata se `whatsapp.enabled: false`)*
-1. Apre WhatsApp Web, apre la chat indicata da `whatsapp.chat` e raccoglie tutti i messaggi (scroll + dedup).
-2. Confronta con il catalogo esistente e isola i **link nuovi**.
+## What the agent does
+**Phase A — WhatsApp chat** *(skipped when `whatsapp.enabled: false`)*
+1. Opens WhatsApp Web, opens the chat named by `whatsapp.chat`, and collects every message
+   (scroll + dedup — WhatsApp virtualises the DOM, so messages are gathered *during* the scroll).
+2. Diffs against the existing catalog and isolates the **new links**.
 
-**Fase B — Monitoraggio profili Instagram** *(richiede Instagram loggato)*
-- Ricava gli handle degli autori dei reel già catalogati (dal campo `fonte`), apre
-  `instagram.com/{handle}/reels/` e scorre la griglia per scoprire **reel nuovi** pubblicati da quei
-  creator. Stato tracciato in `instagram-profili.json` (controllo incrementale: si ferma quando trova
-  reel già visti). Senza login Instagram questa fase viene saltata (login wall) e segnalata.
+**Phase B — Instagram profile monitoring** *(skipped when `instagram.enabled: false`; needs Instagram logged in)*
+- Derives the handles of creators whose reels are already catalogued (from the `fonte` field), opens
+  `instagram.com/{handle}/reels/` and scans the grid for **new reels** from those creators. State is
+  tracked in `instagram-profili.json` — the check is incremental and stops at the first reel already
+  seen. Without an Instagram login this phase hits the login wall, gets skipped, and is reported.
 
-**Fasi comuni**
-3. Per ogni nuovo reel (A o B) legge la **caption Instagram** (meta tag) e ne ricava il repo GitHub
-   (esplicito o verificato via web) oppure il sito web; cataloga solo i reel tool-related; gli incerti
-   restano segnalati.
-4. Scrive i nuovi record (con `macro` + `uso`) in `github-repos.json` / `siti-web.json`.
-5. Recupera i metadati di attività e **rigenera** catalogo + skill.
+**Both phases**
+3. For each new reel, reads the **Instagram caption** (meta tag) and derives the GitHub repo (explicit
+   or verified via web search) or the website. Only tool-related reels are catalogued; anything
+   uncertain is reported rather than guessed.
+4. Writes the new records (with `macro` + `uso`) into `github-repos.json` / `siti-web.json`.
+5. Fetches activity metadata and **rebuilds** the catalog and the skill.
 
-## Configurazione (`config.json`)
-Il file è **gitignorato** perché contiene il nome della tua chat; lo schema tracciato è
-`config.example.json`. Chi clona il repo copia l'example e mette la propria sorgente.
+## Configuration (`config.json`)
+The file is **gitignored** because it holds the name of your chat; the tracked schema is
+`config.example.json`. Anyone cloning the repo copies the example and points it at their own source.
 
-| Campo | Effetto |
+| Field | Effect |
 |---|---|
-| `whatsapp.enabled` | `false` → Fase A saltata del tutto (nessuna apertura di WhatsApp Web) |
-| `whatsapp.chat` | Nome esatto della chat da aprire |
-| `whatsapp.self_chat` | `true` = chat "con te stesso"; `false` = cercala per nome nella lista |
-| `instagram.enabled` | `false` → Fase B (monitoraggio profili) saltata |
-| `catalogo.titolo` / `catalogo.fonte` | Intestazione di `CATALOGO-AI-TOOLS.md` |
+| `whatsapp.enabled` | `false` → Phase A skipped entirely (WhatsApp Web never opened) |
+| `whatsapp.chat` | Exact name of the chat to open |
+| `whatsapp.self_chat` | `true` = the "message yourself" chat; `false` = look it up by name in the list |
+| `instagram.enabled` | `false` → Phase B (profile monitoring) skipped |
+| `catalogo.titolo` / `catalogo.fonte` | Heading and source line of `CATALOGO-AI-TOOLS.md` |
+| `catalogo.lingua` | `it` (default) or `en` — language of category names, status labels and generated prose |
 
-Override una tantum dal comando: `/aggiorna-catalogo "Nome Chat"`, `--solo-instagram`,
-`--solo-whatsapp`. Senza `config.json`, l'agente chiede il nome della chat e `build_catalog.py`
-usa i default neutri.
+One-off overrides from the command: `/aggiorna-catalogo "Chat Name"`, `--solo-instagram`,
+`--solo-whatsapp`. With no `config.json`, the agent asks which chat to read and `build_catalog.py`
+falls back to neutral defaults.
 
-## File
-| File | Ruolo |
+## Files
+| File | Role |
 |---|---|
-| `config.json` / `config.example.json` | Configurazione locale (gitignorata) / schema tracciato |
-| `github-repos.json` | Repo catalogati (`id, progetto, descrizione, url, categoria, fonte, macro, uso`) |
-| `siti-web.json` | Siti web non-repo (stessi campi, `sito` al posto di `progetto`) |
-| `gh-meta.json` | Metadati GitHub (stelle, ultimo push, licenza) per id |
-| `instagram-profili.json` | Stato monitoraggio profili (handle → reel già visti/catalogati, ultimo controllo) |
-| `chat-messaggi.csv` | Dump grezzo dei messaggi |
-| `catalogo-unificato.json` / `CATALOGO-AI-TOOLS.md` | Output generati |
-| `scripts/fetch_gh_meta.py` | Recupera metadati attività (merge incrementale) |
-| `scripts/build_catalog.py` | Genera catalogo e aggiorna `~/.claude/skills/ai-tools-catalog/` |
+| `config.json` / `config.example.json` | Local configuration (gitignored) / tracked schema |
+| `github-repos.json` | Catalogued repos (`id, progetto, descrizione, url, categoria, fonte, macro, uso`) |
+| `siti-web.json` | Non-repo websites (same fields, `sito` instead of `progetto`) |
+| `gh-meta.json` | GitHub metadata (stars, last push, license) by repo id |
+| `instagram-profili.json` | Profile-monitoring state (handle → reels seen/catalogued, last check) |
+| `chat-messaggi.csv` | Raw message dump (gitignored) |
+| `catalogo-unificato.json` / `CATALOGO-AI-TOOLS.md` | Generated outputs |
+| `siti-personali.json` | Non-dev entries, kept out of the repo (gitignored) |
+| `scripts/fetch_gh_meta.py` | Fetches activity metadata (incremental merge) |
+| `scripts/build_catalog.py` | Builds the catalog and updates `~/.claude/skills/ai-tools-catalog/` |
 
-## Rigenerare solo il catalogo (senza rileggere WhatsApp)
+## Rebuild only, without re-reading WhatsApp
 ```bash
-python3 scripts/fetch_gh_meta.py     # aggiorna stelle/push (opzionale)
-python3 scripts/build_catalog.py     # rigenera MD+JSON e aggiorna la skill
+python3 scripts/fetch_gh_meta.py     # refresh stars/push (optional)
+python3 scripts/build_catalog.py     # rebuild MD+JSON and update the skill
 ```
 
-## Note
-- Macro-categorie (`macro`): A Coding/Claude Code · B Agenti AI · C LLM locali · D RAG/memoria ·
-  E OCR · F Generazione media · G Sicurezza · H Dev tools · I Finanza/trading · J Ricerca AI · Z non-dev.
-- L'API GitHub non autenticata limita a 60 richieste/ora: per i repo eccedenti l'agente usa lo
-  scraping HTML same-origin dal browser (vedi prompt dell'agente).
-- Principio guida: **non inventare URL**; gli elementi non verificabili vanno segnalati, non forzati.
+## Notes
+- Macro categories (`macro`): A coding/Claude Code · B AI agents · C local LLMs · D RAG/memory ·
+  E OCR · F media generation · G security · H dev tools · I finance/trading · J AI research ·
+  **Z personal/non-dev → private file, never committed**.
+- Unauthenticated GitHub API is capped at 60 requests/hour: for repos beyond that the agent falls
+  back to same-origin HTML scraping from the browser (see the agent prompt).
+- Guiding principle: **never invent URLs**. Anything unverifiable is reported, not forced.

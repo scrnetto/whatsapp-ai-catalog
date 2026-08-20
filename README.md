@@ -1,79 +1,92 @@
-# WhatsApp → Catalogo strumenti AI/Dev + skill Claude Code
+# WhatsApp → AI/Dev tools catalog + Claude Code skill
 
-Sistema che legge i reel/link salvati nella chat WhatsApp personale (chat "con te stesso"),
-ne estrae **repository GitHub** e **siti/servizi web** di strumenti AI e dev, verifica lo stato
-di attività su GitHub, e mantiene un **catalogo consultabile da Claude Code in qualsiasi progetto**
-tramite una skill globale.
+Reads the reels and links you save in a WhatsApp chat (typically the "message yourself" chat),
+extracts **GitHub repositories** and **websites/services** for AI and dev tooling, checks how alive
+each project is on GitHub, and keeps a **catalog that Claude Code can query from any project**
+through a global skill.
 
-## Cosa contiene il catalogo
-- **69 repository GitHub** + **17 siti web**, in 10 categorie operative (Coding/Claude Code, LLM locali,
-  RAG/memoria, OCR, generazione media, sicurezza, dev tools, finanza/trading, ricerca AI) + 1 non-dev.
-- Per ogni voce: cosa fa, *quando usarlo*, e stato di attività (⭐ stelle, ultimo push, licenza).
-- Versione leggibile: [`CATALOGO-AI-TOOLS.md`](CATALOGO-AI-TOOLS.md). Dati: `catalogo-unificato.json`.
+> The tooling and docs are in English; the catalog *entries* are in Italian, because that is the
+> language of the reels they come from. Section headings and status labels follow
+> `catalogo.lingua` in your config — see [Configuration](#configuration).
 
-## Installare la skill su un altro PC con Claude Code
+## What the catalog holds
+- **132 GitHub repositories** + **15 websites**, in 10 practical categories (coding agents/Claude
+  Code, local LLMs, RAG/memory, OCR, media generation, security, dev tools, finance/trading, AI
+  research). Counts are regenerated on every build.
+- Per entry: what it does, *when to use it*, and activity status (⭐ stars, last push, license).
+- Human-readable output: [`CATALOGO-AI-TOOLS.md`](CATALOGO-AI-TOOLS.md). Structured data:
+  `catalogo-unificato.json`.
+
+## Install the skill on another machine
 ```bash
-git clone <URL-di-questo-repo> whatsapp-ai-catalog
+git clone https://github.com/scrnetto/whatsapp-ai-catalog.git
 cd whatsapp-ai-catalog
 ./install-skill.sh          # Linux/macOS
 .\install-skill.ps1         # Windows (PowerShell)
 ```
-Lo script copia la skill in `~/.claude/skills/ai-tools-catalog/` e rigenera il catalogo dai dati del
-repo. Da quel momento, in **qualsiasi progetto** Claude Code, puoi chiedere ad es.
-*"che libreria open-source uso per fare OCR su PDF?"* e la skill propone le voci pertinenti con stato.
+The script copies the skill into `~/.claude/skills/ai-tools-catalog/` and rebuilds the catalog from
+the data in the repo. From then on, in **any** Claude Code project, you can ask things like *"which
+open-source library should I use for OCR on PDFs?"* and the skill surfaces the relevant entries with
+their activity status.
 
-> Richiede solo `python3` (libreria standard). Non serve token/credenziali.
+> Needs only `python3` (standard library). No tokens or credentials required.
 
-## Aggiornare il catalogo (sul PC principale)
-Serve il browser con WhatsApp Web loggato (e Instagram loggato per il monitoraggio profili).
-- Da Claude Code: **`/aggiorna-catalogo`** (lancia l'agente `whatsapp-catalog-updater`).
-- L'agente: legge la chat, controlla i profili Instagram dei creator già noti per reel nuovi,
-  estrae/verifica i repo, e rigenera catalogo + skill. Vedi [`PIPELINE.md`](PIPELINE.md).
+## Configuration
+The chat to read is not hardcoded — it lives in `config.json`, which is **gitignored**:
 
-### Solo rigenerare il catalogo (senza rileggere WhatsApp)
 ```bash
-python3 scripts/fetch_gh_meta.py   # aggiorna stelle/ultimo push (API GitHub, opzionale)
-python3 scripts/build_catalog.py   # rigenera CATALOGO + catalogo.json e aggiorna la skill
+cp config.example.json config.json     # then set your own chat
 ```
 
-## Struttura
-| Percorso | Ruolo |
+| Field | Effect |
 |---|---|
-| `config.example.json` | Schema di configurazione: da copiare in `config.json` (gitignorato) |
-| `github-repos.json` | Repo catalogati (`id, progetto, descrizione, url, categoria, fonte, macro, uso`) |
-| `siti-web.json` | Siti web non-repo |
-| `gh-meta.json` | Metadati attività GitHub per id |
-| `instagram-profili.json` | Stato monitoraggio profili (reel già visti per handle) |
+| `whatsapp.enabled` | `false` → skip WhatsApp entirely (run on Instagram profiles alone) |
+| `whatsapp.chat` | Exact chat name, as it appears in WhatsApp Web |
+| `whatsapp.self_chat` | `true` if it is the "message yourself" chat |
+| `instagram.enabled` | `false` → skip profile monitoring |
+| `catalogo.titolo` / `catalogo.fonte` | Heading and source line of the generated catalog |
+| `catalogo.lingua` | `it` (default) or `en` — language of category names, status labels and generated prose |
+
+For a one-off run you can also use `/aggiorna-catalogo "Another Chat"` or
+`/aggiorna-catalogo --solo-instagram` without touching the config.
+
+**The project works without WhatsApp**: with `whatsapp.enabled: false` you still get a catalog fed
+by the Instagram profiles tracked in `instagram-profili.json`.
+
+Adding a language means adding one entry to `LOCALI` in `scripts/build_catalog.py`. Note that only
+the *scaffolding* is translated — entry descriptions stay in whatever language they were written in,
+and the prose of `skill/SKILL.md` is not generated, so it keeps its own language.
+
+## Updating the catalog
+Requires a browser with WhatsApp Web logged in (and Instagram logged in for profile monitoring).
+- From Claude Code: **`/aggiorna-catalogo`** (runs the `whatsapp-catalog-updater` agent).
+- The agent reads the chat, checks known creators' Instagram profiles for new reels, extracts and
+  verifies the repos, then rebuilds the catalog and the skill. See [`PIPELINE.md`](PIPELINE.md).
+
+### Rebuild only, without re-reading WhatsApp
+```bash
+python3 scripts/fetch_gh_meta.py   # refresh stars/last push (GitHub API, optional)
+python3 scripts/build_catalog.py   # rebuild CATALOGO + catalogo.json and update the skill
+```
+
+## Layout
+| Path | Role |
+|---|---|
+| `config.example.json` | Configuration schema — copy to `config.json` (gitignored) |
+| `github-repos.json` | Catalogued repos (`id, progetto, descrizione, url, categoria, fonte, macro, uso`) |
+| `siti-web.json` | Non-repo websites |
+| `gh-meta.json` | GitHub activity metadata, keyed by repo id |
+| `instagram-profili.json` | Profile-monitoring state (reels already seen, per handle) |
 | `scripts/` | `fetch_gh_meta.py`, `build_catalog.py` |
-| `skill/SKILL.md` | Definizione della skill (ridistribuibile) |
-| `.claude/agents/` · `.claude/commands/` | Agente e slash command di aggiornamento |
-| `install-skill.sh` | Installa la skill su un nuovo PC (Linux/macOS) |
-| `install-skill.ps1` | Installa la skill su un nuovo PC (Windows) |
-
-## Configurare la sorgente
-La chat da leggere non è cablata nel codice: sta in `config.json`, che è **gitignorato**.
-
-```bash
-cp config.example.json config.json     # poi metti il nome della tua chat
-```
-
-| Campo | Effetto |
-|---|---|
-| `whatsapp.enabled` | `false` → salta del tutto la lettura di WhatsApp (usa solo i profili Instagram) |
-| `whatsapp.chat` | Nome esatto della chat, come appare in WhatsApp Web |
-| `whatsapp.self_chat` | `true` se è la chat "con te stesso" |
-| `instagram.enabled` | `false` → salta il monitoraggio dei profili |
-| `catalogo.titolo` / `catalogo.fonte` | Intestazione del catalogo generato |
-
-Per una singola esecuzione puoi anche fare `/aggiorna-catalogo "Altra Chat"` oppure
-`/aggiorna-catalogo --solo-instagram`, senza toccare la config.
-
-**Il repo funziona anche senza WhatsApp**: con `whatsapp.enabled: false` resta un catalogo
-alimentato dai profili Instagram in `instagram-profili.json`.
+| `skill/SKILL.md` | Skill definition (redistributable) |
+| `.claude/agents/` · `.claude/commands/` | Update agent and slash command |
+| `install-skill.sh` · `install-skill.ps1` | Install the skill on a new machine |
 
 ## Privacy
-I file con i **messaggi WhatsApp personali** (CSV grezzo, riassunti, screenshot di login, snapshot
-delle pagine), `config.json` e le voci non-dev (`siti-personali.json`) sono esclusi dal repo via
-`.gitignore` e restano solo in locale. Nel repo finiscono solo il catalogo dei tool e il tooling.
-Le voci taggate `macro: "Z"` (contenuti personali) vengono inoltre scartate da `build_catalog.py`
-prima di generare gli output.
+Files holding **personal WhatsApp content** (raw message dump, summaries, login screenshots, page
+snapshots), `config.json`, and non-dev entries (`siti-personali.json`) are kept out of the repo via
+`.gitignore` and stay local. Only the tool catalog and the tooling are committed.
+
+Entries tagged `macro: "Z"` (personal content) are additionally dropped by `build_catalog.py` before
+the outputs are generated — a second line of defence, so a personal entry that slips into a tracked
+file still never reaches the published catalog.
