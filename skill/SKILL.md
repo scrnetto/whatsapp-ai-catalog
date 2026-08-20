@@ -1,7 +1,7 @@
 ---
 name: ai-tools-catalog
 description: >-
-  Catalogo curato di 132 repository GitHub e 21 siti/servizi web di strumenti AI e dev
+  Catalogo curato di 132 repository GitHub e 15 siti/servizi web di strumenti AI e dev
   (coding agent & Claude Code, LLM e inferenza locale, RAG/memoria, OCR, generazione media
   video/immagini/3D/voce, sicurezza & supply-chain, dev tools, finanza/trading AI, ricerca AI),
   ciascuno con descrizione funzionale, stato di attività verificato su GitHub (stelle, ultimo
@@ -30,7 +30,7 @@ chat WhatsApp personale, ripuliti e arricchiti con metadati GitHub reali.
 2. Cita sempre **stato di attività** (🟢/🟡/🔴, stelle, ultimo push) e **licenza** se rilevante per
    l'uso nel progetto dell'utente.
 3. Se nessuna voce calza, dillo chiaramente: il catalogo è una raccolta personale, non esaustivo.
-4. I dati di attività sono stati verificati il **2026-08-02**: se serve precisione attuale,
+4. I dati di attività sono stati verificati il **2026-08-20**: se serve precisione attuale,
    ricontrolla il repo (le stelle/push cambiano nel tempo).
 
 ## Categorie e contenuto (indice rapido)
@@ -41,10 +41,9 @@ chat WhatsApp personale, ripuliti e arricchiti con metadati GitHub reali.
 - **E · OCR & parsing documenti** (5): markitdown, meetily, OfficeCLI, Unlimited-OCR, GLM-OCR
 - **F · Generazione media (video, immagini, 3D, voce)** (24): Deep-Live-Cam, VibeVoice, voicebox, upscayl, hyperframes, chatterbox, video-use, lingbot-map, Supertonic, TRELLIS, palmier-pro, Qwen3-TTS, Z-Image, LTX-Video, SAM Audio, ASCILINE, GLM-Image, Pusa V1.0 (Pusa-VidGen), GenieRedux, Seedance 2.0, ByteDance Seedance 2.0, ByteDance Seed, Mistral AI - Voxtral, Motion
 - **G · Sicurezza & supply-chain** (11): strix, Trivy, maigret, bitchat, Anthropic-Cybersecurity-Skills, simplex-chat, amnezia-client, SkillSpector, CubeSandbox, flowsint, Bumblebee
-- **H · Dev tools, produttività & librerie** (31): Stirling-PDF, hoppscotch, protobuf, Pake, Penpot, Win11Debloat, twenty, cypress, supervision, appsmith, posthog, CasaOS, CloakBrowser, jenkins, turso, superfile, Tolaria, aisuite, LibreTranslate, outlines, harper, CuPy, TREK, dicebear, fli, databasement, karukan, TestSprite, Google Code Wiki, Render, Codeberg
+- **H · Dev tools, produttività & librerie** (34): Stirling-PDF, hoppscotch, protobuf, Pake, Penpot, Win11Debloat, twenty, cypress, supervision, appsmith, posthog, CasaOS, CloakBrowser, jenkins, turso, superfile, Tolaria, PhotoGIMP, aisuite, LibreTranslate, outlines, harper, CuPy, romm, TREK, Pumpkin, dicebear, fli, databasement, karukan, TestSprite, Google Code Wiki, Render, Codeberg
 - **I · Finanza & trading AI** (4): TradingAgents, ai-hedge-fund, Kronos, OpenAlice
 - **J · Ricerca AI, world models & dati vettoriali** (6): awesome-generative-ai-guide, zvec, AutoResearchClaw, SEAL (Self-Adapting LM), Jina AI, Google EmbeddingGemma
-- **Z · Contenuti personali / non-dev** (9): voci non rilevanti per i progetti (salute, ricette, social) — ignorabili.
 
 ## Aggiornare il catalogo
 La sorgente è la chat WhatsApp "Marco Scarlino". File di lavoro in `C:\progetti\whatsapp-ai-catalog\`:

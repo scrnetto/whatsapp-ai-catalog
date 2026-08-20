@@ -1,13 +1,7 @@
 id,sito,categoria,url,descrizione,fonte
-1,Clinicametabolomica,Salute,https://share.google/3PEvsQ0d1dTj90ErB,Articolo: 6 carenze che scatenano la sindrome di Sjogren,messaggio 03/07/2025
-2,Nintendo eShop (redeem),Gaming,https://ec.nintendo.com/redeem/,"Pagina riscatto codici Nintendo (msg con codici E12KYH7G7PQBGBTG, P3M1P3LZFE997ZTK)",messaggio 20/08/2025
-3,Proactor.ai,Tool AI,https://proactor.ai,Pagina pricing di Proactor.ai (assistente AI),messaggio 02/01/2026 (share.google/5sSkqijVpEmMcPGJp)
+3,Proactor.ai,Tool AI,https://proactor.ai,Pagina pricing di Proactor.ai (assistente AI),messaggio 02/01/2026
 4,ByteDance Seedance 2.0,AI/Video,https://seed.bytedance.com/en/seedance2_0,Pagina ufficiale del modello video Seedance 2.0 (ByteDance Seed),messaggio 12/02/2026
-5,ByteDance Seed,AI/Team,https://share.google/LG73RZT9Y4oIhlhWp,Team/organizzazione ByteDance Seed (ricerca AI),messaggio 12/02/2026
-6,YouTube,Video,https://share.google/2IO5HNn00UcfWZYEi,Video YouTube condiviso (fonte non specificata),messaggio 09/04/2026
-7,Cookist,Cucina,https://www.cookist.it/sfogliatine-alle-mele-la-ricetta-dei-dolcetti-veloci-e-irresistibili/,Ricetta sfogliatine alle mele,messaggio 26/11/2025
-8,Facebook (reel/post),Social,https://www.facebook.com/,5 reel/post Facebook condivisi (contenuti vari non identificati),"messaggi 31/07/2025, 21/09/2025, 23/11/2025, 26/12/2025, 29/12/2025, 19/04/2026"
-9,Instagram Stories (simorizzo_ai),Social/AI,https://www.instagram.com/stories/simorizzo_ai/,Story di Simone Rizzo AI,messaggio 30/12/2025
+5,ByteDance Seed,AI/Team,https://seed.bytedance.com/en/,Team/organizzazione ByteDance Seed (ricerca AI),messaggio 12/02/2026
 10,Mistral AI - Voxtral,AI/TTS,https://mistral.ai/news/voxtral-tts/,"Voxtral 4B, modello TTS open-weight (alternativa ElevenLabs) - solo modello/sito, no repo",reel DZm0AWkKckt (ai_swarm_solutions 15/06/2026)
 11,Jina AI,AI/Embedding,https://jina.ai,"Jina Embedding V4, modello embedding per RAG",reel DLujSxQvd9G (simorizzo_ai 05/07/2025)
 12,TestSprite,Tool AI/Dev,https://www.testsprite.com,Agente AI che risolve problemi nel codice generato dai coding agent,reel DMv03jZsEoM (simorizzo_ai 30/07/2025)

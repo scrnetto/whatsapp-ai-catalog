@@ -38,7 +38,12 @@ MACRO = {
  'J': 'Ricerca AI, world models & dati vettoriali',
  'Z': 'Contenuti personali / non-dev',
 }
-ORDER = list("ABCDEFGHIJZ")
+ORDER = list("ABCDEFGHIJ")
+
+# La macro Z marca contenuti personali (salute, social, gaming, codici): non deve mai
+# finire negli output pubblicati. Le voci Z vivono in marco-scarlino-siti-personali.json,
+# che e' gitignorato; questo filtro e' la seconda linea di difesa se una sfugge.
+PRIVATA = 'Z'
 
 def today():
     return datetime.date.today()
@@ -134,6 +139,12 @@ def main():
             'nome': s['sito'], 'cosa_fa': s['descrizione'], 'quando_usarlo': s.get('uso', ''),
             'url': s['url'], 'stelle': None, 'ultimo_push': None, 'attivita': 'sito web',
             'attivita_emoji': '🌐', 'licenza': None, 'linguaggio': None, 'fonte': s.get('fonte', '')})
+
+    scartate = [u for u in unified if u['macro'] == PRIVATA]
+    if scartate:
+        print(f"  privacy: {len(scartate)} voci macro {PRIVATA} escluse dagli output "
+              f"({', '.join(u['nome'] for u in scartate)})")
+        unified = [u for u in unified if u['macro'] != PRIVATA]
 
     json.dump(unified, open(os.path.join(ROOT, 'catalogo-unificato.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 

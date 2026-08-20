@@ -2,8 +2,8 @@
 
 > Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai reel Instagram
 > e dai messaggi salvati nella chat WhatsApp personale di Marco Scarlino.
-> **132 repository** + **21 siti web**, organizzati per categoria operativa.
-> Stato attività verificato il **2026-08-02**. Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.
+> **132 repository** + **15 siti web**, organizzati per categoria operativa.
+> Stato attività verificato il **2026-08-20**. Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.
 
 ## Indice
 - **Coding Agent, Claude Code & sviluppo AI-assistito** (21)
@@ -13,10 +13,9 @@
 - **OCR & parsing documenti** (5)
 - **Generazione media (video, immagini, 3D, voce)** (24)
 - **Sicurezza & supply-chain** (11)
-- **Dev tools, produttività & librerie** (31)
+- **Dev tools, produttività & librerie** (34)
 - **Finanza & trading AI** (4)
 - **Ricerca AI, world models & dati vettoriali** (6)
-- **Contenuti personali / non-dev** (9)
 
 ## Coding Agent, Claude Code & sviluppo AI-assistito
 
@@ -136,7 +135,7 @@
 | [GenieRedux](https://github.com/insait-institute/GenieRedux) | World models con ambienti virtuali (Google Genie) | World model: ambienti virtuali generativi (replica di Google Genie). | 🟢 ⭐77 · 2026-05-14 · MIT |
 | [Seedance 2.0](https://github.com/bytedance-seedance/seedance-2.0) | Video generation multimodale (ByteDance) | Generazione video da prompt/immagini/video di riferimento (ByteDance). | 🟢 ⭐25 · 2026-04-10 · Apache-2.0 |
 | [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) | Pagina ufficiale del modello video Seedance 2.0 (ByteDance Seed) | Pagina ufficiale modello video Seedance (vedi repo correlati). | 🌐 sito |
-| [ByteDance Seed](https://share.google/LG73RZT9Y4oIhlhWp) | Team/organizzazione ByteDance Seed (ricerca AI) | Team di ricerca AI di ByteDance (hub di modelli). | 🌐 sito |
+| [ByteDance Seed](https://seed.bytedance.com/en/) | Team/organizzazione ByteDance Seed (ricerca AI) | Team di ricerca AI di ByteDance (hub di modelli). | 🌐 sito |
 | [Mistral AI - Voxtral](https://mistral.ai/news/voxtral-tts/) | Voxtral 4B, modello TTS open-weight (alternativa ElevenLabs) - solo modello/sito, no repo | Voce/TTS open-weight di Mistral, alternativa a ElevenLabs (modello, no repo). | 🌐 sito |
 | [Motion](https://motion.so) | Agente AI per generare video di motion graphics da prompt: cura ricerca, design, animazione, voiceover e montaggio, richiamabile da Claude o Cursor via MCP. | Quando ti serve un video animato professionale senza aprire After Effects, anche pilotato da Claude via MCP. | 🌐 sito |
 
@@ -177,12 +176,15 @@
 | [turso](https://github.com/tursodatabase/turso) | Riscrittura moderna di SQLite in Rust: rimuove limiti storici del motore originale mantenendo compatibilita, con concorrenza e replica migliorate. | Quando vuoi SQLite ma con scrittura concorrente e funzionalita moderne senza cambiare dialetto SQL. | 🟢 ⭐23.6k · 2026-08-02 · MIT |
 | [superfile](https://github.com/yorukot/superfile) | File manager open source con interfaccia moderna dentro il terminale: navigazione visuale, anteprime e operazioni rapide. | Quando vivi nel terminale e vuoi gestire i file senza rinunciare a una UI leggibile. | 🟢 ⭐22.1k · 2026-07-30 · MIT |
 | [Tolaria](https://github.com/refactoringhq/tolaria) | App desktop open-source per appunti resilienti | App desktop open-source per appunti resilienti al cambio di formato. | 🟢 ⭐19.2k · 2026-08-02 · AGPL-3.0 |
+| [PhotoGIMP](https://github.com/Diolinux/PhotoGIMP) | Patch che riorganizza GIMP con layout, scorciatoie e icone in stile Photoshop per ridurre l'attrito nella migrazione. | Quando passi da Photoshop a GIMP e non vuoi perdere produttivita per colpa dell'interfaccia. | 🟢 ⭐17.2k · 2026-07-11 · GPL-3.0 |
 | [aisuite](https://github.com/andrewyng/aisuite) | Libreria di Andrew Ng che offre un'interfaccia unificata in stile OpenAI per chiamare LLM di provider diversi (OpenAI, Anthropic, Google, Mistral...) cambiando modello con una sola stringa. | Quando vuoi testare/scambiare piu' LLM nel codice senza riscrivere l'integrazione per ogni provider. | 🟢 ⭐15.9k · 2026-07-25 · MIT |
 | [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate) | API di traduzione automatica self-hosted open-source | API di traduzione automatica self-hosted (privacy, no costi per chiamata). | 🟢 ⭐15.8k · 2026-08-01 · AGPL-3.0 |
 | [outlines](https://github.com/dottxt-ai/outlines) | Libreria per forzare output strutturati e validi dagli LLM (JSON, regex, grammatiche) eliminando parsing fragile. | Quando l'LLM deve restituire JSON o formati rigidi che la tua applicazione consuma direttamente. | 🟢 ⭐15.5k · 2026-08-01 · Apache-2.0 |
 | [harper](https://github.com/Automattic/harper) | Correttore grammaticale open source velocissimo e privacy-first: gira in locale senza inviare il testo a server esterni. | Quando vuoi un'alternativa a Grammarly che non spedisca i tuoi testi nel cloud. | 🟢 ⭐14.1k · 2026-08-01 · Apache-2.0 |
 | [CuPy](https://github.com/cupy/cupy) | Array library GPU-accelerated compatibile NumPy | Array library GPU (NumPy-compatibile) per accelerare calcolo/data science. | 🟢 ⭐12.2k · 2026-07-31 · MIT |
+| [romm](https://github.com/rommapp/romm) | Piattaforma self-hosted che trasforma una collezione di ROM in una libreria ordinata via browser, con metadati e copertine per oltre 400 piattaforme. | Quando vuoi catalogare e giocare la tua collezione di ROM da un'interfaccia web ordinata. | 🟢 ⭐11.9k · 2026-08-02 · AGPL-3.0 |
 | [TREK](https://github.com/mauriceboe/TREK) | Travel/trip planner self-hosted con collaborazione in tempo reale, mappe interattive, supporto PWA, SSO, budget e packing list; espone anche un server MCP per assistenti AI. | Quando organizzi viaggi di gruppo e vuoi un pianificatore collaborativo self-hosted al posto di fogli e chat sparse. | 🟢 ⭐11.4k · 2026-07-25 · AGPL-3.0 |
+| [Pumpkin](https://github.com/Pumpkin-MC/Pumpkin) | Server Minecraft riscritto da zero in Rust: elimina la JVM, si avvia in pochi secondi e riduce drasticamente il consumo di risorse. | Quando ospiti un server Minecraft e vuoi prestazioni e avvio molto piu rapidi della implementazione Java. | 🟢 ⭐10.5k · 2026-08-02 · GPL-3.0 |
 | [dicebear](https://github.com/dicebear/dicebear) | Libreria open source per generare avatar unici e deterministici a partire da un seed/ID utente, con decine di stili e API HTTP: utile per popolare profili senza chiedere il caricamento di una foto. | Quando ti serve un avatar di default unico per ogni utente della tua app senza upload di immagini. | 🟢 ⭐9.2k · 2026-08-01 · MIT |
 | [fli](https://github.com/punitarani/fli) | Libreria Python, CLI e server MCP open source per Google Flights: ricerca voli con filtri avanzati e date flessibili, integrabile con Claude per trovare il volo piu' economico parlando in linguaggio naturale. Esiste anche il port TypeScript fli-js. | Quando vuoi cercare voli (anche via Claude/MCP) in modo programmatico senza aprire decine di tab tra i comparatori. | 🟢 ⭐3.1k · 2026-05-29 · MIT |
 | [databasement](https://github.com/David-Crty/databasement) | Gestore self-hosted di backup di database con web UI: pianifica e ripristina MySQL, PostgreSQL, MongoDB, Redis e altri verso S3, SFTP o storage locale. | Quando devi automatizzare e monitorare i backup di piu database da un'unica interfaccia. | 🟢 ⭐1.9k · 2026-08-02 · MIT |
@@ -211,18 +213,4 @@
 | [SEAL (Self-Adapting LM)](https://github.com/Continual-Intelligence/SEAL) | Framework MIT: LLM che generano i propri dati di training adattandosi (self-edits) | LLM che si auto-adatta generando i propri dati di training (ricerca MIT). | 🟡 ⭐1.8k · 2025-08-01 · MIT |
 | [Jina AI](https://jina.ai) | Jina Embedding V4, modello embedding per RAG | Modelli di embedding per RAG (Jina). | 🌐 sito |
 | [Google EmbeddingGemma](https://ai.google.dev/gemma) | Modello embedding Google per RAG locale on-device | Modello di embedding Google per RAG locale on-device. | 🌐 sito |
-
-## Contenuti personali / non-dev
-
-| Progetto | Cosa fa | Quando usarlo | Stato |
-|---|---|---|---|
-| [PhotoGIMP](https://github.com/Diolinux/PhotoGIMP) | Patch che riorganizza GIMP con layout, scorciatoie e icone in stile Photoshop per ridurre l'attrito nella migrazione. | Quando passi da Photoshop a GIMP e non vuoi perdere produttivita per colpa dell'interfaccia. | 🟢 ⭐17.2k · 2026-07-11 · GPL-3.0 |
-| [romm](https://github.com/rommapp/romm) | Piattaforma self-hosted che trasforma una collezione di ROM in una libreria ordinata via browser, con metadati e copertine per oltre 400 piattaforme. | Quando vuoi catalogare e giocare la tua collezione di ROM da un'interfaccia web ordinata. | 🟢 ⭐11.9k · 2026-08-02 · AGPL-3.0 |
-| [Pumpkin](https://github.com/Pumpkin-MC/Pumpkin) | Server Minecraft riscritto da zero in Rust: elimina la JVM, si avvia in pochi secondi e riduce drasticamente il consumo di risorse. | Quando ospiti un server Minecraft e vuoi prestazioni e avvio molto piu rapidi della implementazione Java. | 🟢 ⭐10.5k · 2026-08-02 · GPL-3.0 |
-| [Clinicametabolomica](https://share.google/3PEvsQ0d1dTj90ErB) | Articolo: 6 carenze che scatenano la sindrome di Sjogren | Articolo divulgativo di salute (non strumento dev). | 🌐 sito |
-| [Nintendo eShop (redeem)](https://ec.nintendo.com/redeem/) | Pagina riscatto codici Nintendo (msg con codici E12KYH7G7PQBGBTG, P3M1P3LZFE997ZTK) | Pagina riscatto codici Nintendo (personale). | 🌐 sito |
-| [YouTube](https://share.google/2IO5HNn00UcfWZYEi) | Video YouTube condiviso (fonte non specificata) | Video YouTube condiviso (personale). | 🌐 sito |
-| [Cookist](https://www.cookist.it/sfogliatine-alle-mele-la-ricetta-dei-dolcetti-veloci-e-irresistibili/) | Ricetta sfogliatine alle mele | Ricetta di cucina (personale). | 🌐 sito |
-| [Facebook (reel/post)](https://www.facebook.com/) | 5 reel/post Facebook condivisi (contenuti vari non identificati) | Contenuti Facebook condivisi (personale). | 🌐 sito |
-| [Instagram Stories (simorizzo_ai)](https://www.instagram.com/stories/simorizzo_ai/) | Story di Simone Rizzo AI | Story Instagram di Simone Rizzo AI. | 🌐 sito |
 

@@ -22,7 +22,7 @@ non è deducibile con certezza, segnalalo come incerto.
 - `gh-meta.json` — metadati attività GitHub per id repo.
 - `scripts/fetch_gh_meta.py` — recupera stelle/ultimo push/licenza (merge incrementale).
 - `scripts/build_catalog.py` — genera `catalogo-unificato.json` + `CATALOGO-AI-TOOLS.md` e **aggiorna la skill globale** `~/.claude/skills/ai-tools-catalog/`.
-- Macro-categorie (campo `macro`): A Coding/Claude Code · B Agenti AI · C LLM & inferenza locale · D RAG/memoria/knowledge · E OCR/documenti · F Generazione media · G Sicurezza · H Dev tools/librerie · I Finanza/trading · J Ricerca AI/vettoriali · Z non-dev.
+- Macro-categorie (campo `macro`): A Coding/Claude Code · B Agenti AI · C LLM & inferenza locale · D RAG/memoria/knowledge · E OCR/documenti · F Generazione media · G Sicurezza · H Dev tools/librerie · I Finanza/trading · J Ricerca AI/vettoriali · **Z non-dev/personale → file privato, vedi §4**.
 
 Per il browser usa i tool del plugin **Playwright** (`browser_navigate`, `browser_evaluate`, `browser_tabs`).
 Prerequisiti:
@@ -141,7 +141,16 @@ Per ogni caption:
 Classifica anche i link diretti non-github dei messaggi come siti web.
 
 ### 4. Scrivi i nuovi record
-Per ogni nuovo repo aggiungi a `github-repos.json` un record con `id` progressivo e **compila `macro` (A–Z) e `uso`** (una frase "quando usarlo"). Per i siti, aggiungi a `marco-scarlino-siti-web.json` con `macro` e `uso`. Evita duplicati di URL.
+Per ogni nuovo repo aggiungi a `github-repos.json` un record con `id` progressivo e **compila `macro` (A–J) e `uso`** (una frase "quando usarlo"). Per i siti, aggiungi a `marco-scarlino-siti-web.json` con `macro` e `uso`. Evita duplicati di URL.
+
+⚠️ **Privacy — la macro `Z`.** Il repo è pubblicabile, quindi i file tracciati devono contenere
+**solo strumenti dev/AI**. Ogni voce che non lo è (salute, ricette, social, gaming personale, video
+condivisi, e in generale qualsiasi cosa riveli abitudini o dati personali) va taggata `macro: "Z"` e
+scritta in **`marco-scarlino-siti-personali.json`** — che è gitignorato — *non* in
+`marco-scarlino-siti-web.json`. Non riportare **mai** nel `descrizione`/`uso` codici riscattabili,
+credenziali, importi, contatti o riferimenti a condizioni di salute, nemmeno per le voci `Z`:
+descrivi il link, non il suo contenuto personale. `build_catalog.py` scarta comunque le `Z` dagli
+output, ma è una rete di sicurezza, non una scusa per scriverle nei file tracciati.
 
 ### 5. Metadati attività + rigenera
 1. `python3 scripts/fetch_gh_meta.py` (recupera stelle/push dei nuovi repo).
