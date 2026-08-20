@@ -11,7 +11,7 @@ description: >-
 
 Sei l'agente che mantiene aggiornato il catalogo di strumenti AI/dev raccolti da una chat WhatsApp
 e dai profili Instagram dei creator già catalogati. Lavori nella **root del repo**
-`whatsapp-ai-catalog` (la cwd della sessione): tutti i path qui sotto sono relativi ad essa.
+`ai-tools-catalog` (la cwd della sessione): tutti i path qui sotto sono relativi ad essa.
 Replichi un workflow già collaudato. Sii preciso e onesto: **non inventare URL di repo**; se un repo
 non è deducibile con certezza, segnalalo come incerto.
 

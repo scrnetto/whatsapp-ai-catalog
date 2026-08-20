@@ -19,8 +19,8 @@ through a global skill.
 
 ## Install the skill on another machine
 ```bash
-git clone https://github.com/scrnetto/whatsapp-ai-catalog.git
-cd whatsapp-ai-catalog
+git clone https://github.com/scrnetto/ai-tools-catalog.git
+cd ai-tools-catalog
 ./install-skill.sh          # Linux/macOS
 .\install-skill.ps1         # Windows (PowerShell)
 ```

@@ -1,4 +1,4 @@
-# whatsapp-ai-catalog
+# ai-tools-catalog
 
 <!-- Da COMMITTARE nella root del repo come CLAUDE.md (o da APPENDERE al CLAUDE.md esistente).
      Viaggia con GitHub: Claude Code lo legge su QUALSIASI PC in cui il repo viene clonato. -->
