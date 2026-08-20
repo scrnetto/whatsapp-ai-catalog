@@ -7,7 +7,7 @@ keep the **global Claude Code skill** — queryable from any project — up to d
 ## How to run it
 - **Slash command:** `/sync-ai-catalog` (needs WhatsApp Web logged in, unless Phase A is disabled)
 - **Or** just ask: *"update the catalog / check for new reels"* → this starts the
-  **`whatsapp-catalog-updater`** agent (`.claude/agents/`).
+  **`catalog-updater`** agent (`.claude/agents/`).
 
 ## What the agent does
 **Phase A — WhatsApp chat** *(skipped when `whatsapp.enabled: false`)*

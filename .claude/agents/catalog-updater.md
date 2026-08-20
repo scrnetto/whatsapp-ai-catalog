@@ -1,5 +1,5 @@
 ---
-name: whatsapp-catalog-updater
+name: catalog-updater
 description: >-
   Legge i messaggi della chat WhatsApp configurata in config.json e monitora i profili Instagram
   degli autori dei reel già catalogati, trova i reel/link nuovi rispetto a quanto già catalogato, ne

@@ -60,7 +60,7 @@ and the prose of `skill/SKILL.md` is not generated, so it keeps its own language
 
 ## Updating the catalog
 Requires a browser with WhatsApp Web logged in (and Instagram logged in for profile monitoring).
-- From Claude Code: **`/sync-ai-catalog`** (runs the `whatsapp-catalog-updater` agent).
+- From Claude Code: **`/sync-ai-catalog`** (runs the `catalog-updater` agent).
 - The agent reads the chat, checks known creators' Instagram profiles for new reels, extracts and
   verifies the repos, then rebuilds the catalog and the skill. See [`PIPELINE.md`](PIPELINE.md).
 

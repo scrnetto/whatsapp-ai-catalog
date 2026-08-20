@@ -2,7 +2,7 @@
 description: Scan the configured WhatsApp chat and tracked Instagram creators for new AI/dev tools, then rebuild the catalog and the ai-tools-catalog skill
 ---
 
-Run the **whatsapp-catalog-updater** agent end to end: read the configured WhatsApp chat, check the
+Run the **catalog-updater** agent end to end: read the configured WhatsApp chat, check the
 Instagram profiles of creators already in the catalog for new reels, extract and verify the GitHub
 repositories and websites they point to, fetch their activity status, and rebuild
 `CATALOGO-AI-TOOLS.md` + `catalogo-unificato.json` — updating the global `ai-tools-catalog` skill.
