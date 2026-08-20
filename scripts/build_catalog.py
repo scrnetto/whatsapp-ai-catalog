@@ -4,9 +4,10 @@ Genera il catalogo unificato (repo GitHub + siti web) e aggiorna la skill global
 Claude Code 'ai-tools-catalog'.
 
 Input  (nella root del progetto):
+    config.json                -> opzionale (vedi config.example.json): titolo e fonte del catalogo
     github-repos.json          -> ogni repo deve avere: id, progetto, descrizione, url,
                                    categoria, fonte, macro (A..Z), uso
-    marco-scarlino-siti-web.json -> ogni sito: id, sito, url, descrizione, fonte, macro, uso
+    siti-web.json              -> ogni sito: id, sito, url, descrizione, fonte, macro, uso
     gh-meta.json               -> metadati attività per id repo (da fetch_gh_meta.py + scraping)
 
 Output:
@@ -41,7 +42,7 @@ MACRO = {
 ORDER = list("ABCDEFGHIJ")
 
 # La macro Z marca contenuti personali (salute, social, gaming, codici): non deve mai
-# finire negli output pubblicati. Le voci Z vivono in marco-scarlino-siti-personali.json,
+# finire negli output pubblicati. Le voci Z vivono in siti-personali.json,
 # che e' gitignorato; questo filtro e' la seconda linea di difesa se una sfugge.
 PRIVATA = 'Z'
 
@@ -70,6 +71,17 @@ def kfmt(n):
 
 def load(name):
     return json.load(open(os.path.join(ROOT, name), encoding='utf-8'))
+
+DEFAULT_CFG = {'titolo': 'Catalogo strumenti AI & Dev', 'fonte': 'reel e link salvati in chat'}
+
+def config():
+    """config.json e' gitignorato (contiene il nome della chat personale): se manca,
+    o se manca la sezione 'catalogo', si usano i default neutri."""
+    try:
+        cfg = load('config.json').get('catalogo', {})
+    except FileNotFoundError:
+        cfg = {}
+    return {k: cfg.get(k) or v for k, v in DEFAULT_CFG.items()}
 
 def indice_categorie(unified):
     """Righe dell'indice rapido di SKILL.md: una per macro-categoria non vuota."""
@@ -118,8 +130,9 @@ def sync_skill_md(unified, n_repo, n_sito):
     return txt, warn
 
 def main():
+    cfg   = config()
     repos = load('github-repos.json')
-    siti  = load('marco-scarlino-siti-web.json')
+    siti  = load('siti-web.json')
     meta  = load('gh-meta.json')
 
     unified = []
@@ -152,10 +165,10 @@ def main():
     n_repo = sum(1 for u in unified if u['tipo'] == 'repo')
     n_sito = sum(1 for u in unified if u['tipo'] == 'sito')
     L = []
-    L.append('# 📚 Catalogo strumenti AI & Dev — da chat "Marco Scarlino"')
+    L.append(f"# 📚 {cfg['titolo']}")
     L.append('')
-    L.append('> Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai reel Instagram')
-    L.append('> e dai messaggi salvati nella chat WhatsApp personale di Marco Scarlino.')
+    L.append('> Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai')
+    L.append(f"> {cfg['fonte']}.")
     L.append(f'> **{n_repo} repository** + **{n_sito} siti web**, organizzati per categoria operativa.')
     L.append(f'> Stato attività verificato il **{today().isoformat()}**. '
              'Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.')

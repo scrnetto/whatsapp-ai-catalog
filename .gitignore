@@ -1,10 +1,13 @@
+# --- Configurazione locale (contiene il nome della TUA chat) ---
+config.json
+
 # --- Dati personali estratti dalla chat WhatsApp (NON pubblicare) ---
 # messaggi grezzi: importi, codici, contatti, note mediche/lavoro
-marco-scarlino-catalogo-completo.csv
+chat-messaggi.csv
 # riassunti dei messaggi personali
-marco-scarlino-chat.md
+chat-riassunto.md
 # voci non-dev estratte dalla chat (salute, gaming, social): restano solo in locale
-marco-scarlino-siti-personali.json
+siti-personali.json
 # screenshot login WhatsApp
 whatsapp-login.png
 # snapshot delle pagine WhatsApp/Instagram (contengono dati personali)

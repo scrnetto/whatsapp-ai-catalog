@@ -1,15 +1,15 @@
-# Report Repository GitHub - Chat Marco Scarlino
+# Report Repository GitHub — estrazione iniziale dalla chat
 
 **Estratto il:** 2026-06-29 · **Aggiornato il:** 2026-06-30
 **Totale repository:** 68
-**Fonte:** 180 messaggi WhatsApp (intera chat ricaricata, 30/06/2025 → 30/06/2026) + caption Instagram
+**Fonte:** 180 messaggi della chat WhatsApp configurata (intera chat ricaricata, 30/06/2025 → 30/06/2026) + caption Instagram
 
 > **Aggiornamento 30/06/2026:** ricontrollata l'intera chat scrollando fino in cima.
 > Recuperati **180 messaggi** (vs 100 della prima estrazione) con **158 reel/post Instagram unici**.
 > Analizzati **tutti i 114 reel non catalogati** (75 del 2026 + 39 del 2025) leggendo la caption
 > Instagram di ciascuno. Identificati e aggiunti **32 nuovi repository GitHub** (id 35–68), verificati
 > via web quando l'URL non era esplicito. I siti web non-GitHub sono tracciati a parte in
-> `marco-scarlino-siti-web.csv`.
+> `siti-web.csv`.
 
 ---
 
@@ -133,6 +133,6 @@ URL esplicito nella caption (es. account devop.sbs nel formato *Repo/Autore*) op
 | DZm0AWkKckt | Voxtral 4B (Mistral) | Modello open-weight distribuito via HuggingFace/sito Mistral, nessun repo GitHub dedicato → tracciato nei siti web |
 
 ### Siti web non-GitHub
-Tracciati separatamente in **`marco-scarlino-siti-web.csv`** / `.json` (17 voci: link diretti nei messaggi + siti-prodotto citati nei reel).
+Tracciati separatamente in **`siti-web.csv`** / `.json` (17 voci: link diretti nei messaggi + siti-prodotto citati nei reel).
 
-Catalogo completo dei 180 messaggi: `marco-scarlino-catalogo-completo.csv`.
+Catalogo completo dei 180 messaggi: `chat-messaggi.csv`.

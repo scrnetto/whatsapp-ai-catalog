@@ -8,10 +8,10 @@ description: >-
   push) e suggerimento d'uso. Usa questa skill quando l'utente cerca uno strumento, libreria,
   modello o repo per un progetto ("che tool esiste per X", "c'è un'alternativa open-source a Y",
   "come faccio OCR/RAG/TTS/fine-tuning", "un agente per Z"), vuole valutare alternative, o chiede
-  se un progetto è ancora attivo/manutenuto. Fonte: chat WhatsApp personale di Marco Scarlino.
+  se un progetto è ancora attivo/manutenuto. Fonte: reel e link salvati in chat.
 ---
 
-# Catalogo strumenti AI & Dev (Marco Scarlino)
+# Catalogo strumenti AI & Dev
 
 Catalogo operativo di strumenti AI/dev raccolti dai reel Instagram e dai messaggi salvati in una
 chat WhatsApp personale, ripuliti e arricchiti con metadati GitHub reali.
@@ -46,9 +46,10 @@ chat WhatsApp personale, ripuliti e arricchiti con metadati GitHub reali.
 - **J · Ricerca AI, world models & dati vettoriali** (6): awesome-generative-ai-guide, zvec, AutoResearchClaw, SEAL (Self-Adapting LM), Jina AI, Google EmbeddingGemma
 
 ## Aggiornare il catalogo
-La sorgente è la chat WhatsApp "Marco Scarlino". File di lavoro in `C:\progetti\whatsapp-ai-catalog\`:
-`github-repos.json`, `marco-scarlino-siti-web.json`, `marco-scarlino-catalogo-completo.csv`,
-`instagram-profili.json` (stato monitoraggio profili), `gh-meta.json` (metadati attività).
+La sorgente è configurata in `config.json` del progetto (chat WhatsApp e/o profili Instagram
+monitorati). File di lavoro in `C:\progetti\whatsapp-ai-catalog\`: `github-repos.json`,
+`siti-web.json`, `instagram-profili.json` (stato monitoraggio profili),
+`gh-meta.json` (metadati attività).
 Quando arrivano nuovi reel/link: aggiorna i JSON, poi esegui `python scripts/fetch_gh_meta.py` e
 `python scripts/build_catalog.py`. Quest'ultimo rigenera `CATALOGO-AI-TOOLS.md` + `catalogo.json`
 e riallinea da solo, in questo file, i **conteggi nella description**, la **data di verifica** e

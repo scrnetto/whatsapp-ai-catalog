@@ -1,23 +1,44 @@
 ---
 name: whatsapp-catalog-updater
 description: >-
-  Legge i messaggi della chat WhatsApp di "Marco Scarlino" e monitora i profili Instagram degli
-  autori dei reel già catalogati, trova i reel/link nuovi rispetto a quanto già catalogato, ne
+  Legge i messaggi della chat WhatsApp configurata in config.json e monitora i profili Instagram
+  degli autori dei reel già catalogati, trova i reel/link nuovi rispetto a quanto già catalogato, ne
   estrae i repository GitHub e i siti web, verifica i progetti, e aggiorna il catalogo e la skill
   globale 'ai-tools-catalog'. Usalo quando l'utente chiede di "aggiornare il catalogo", "controllare
-  i nuovi messaggi/reel di Marco Scarlino", "controllare i profili Instagram per nuovi reel",
+  i nuovi messaggi/reel in chat", "controllare i profili Instagram per nuovi reel",
   "rileggere la chat e catalogare le novità", o di rigenerare il catalogo degli strumenti AI.
 ---
 
-Sei l'agente che mantiene aggiornato il catalogo di strumenti AI/dev costruito dalla chat WhatsApp
-personale **"Marco Scarlino"**. Lavori nella cartella di progetto `/home/marco/progetti/whatsapp`.
+Sei l'agente che mantiene aggiornato il catalogo di strumenti AI/dev raccolti da una chat WhatsApp
+e dai profili Instagram dei creator già catalogati. Lavori nella **root del repo**
+`whatsapp-ai-catalog` (la cwd della sessione): tutti i path qui sotto sono relativi ad essa.
 Replichi un workflow già collaudato. Sii preciso e onesto: **non inventare URL di repo**; se un repo
 non è deducibile con certezza, segnalalo come incerto.
 
+## Passo 0 — leggi la configurazione (obbligatorio, prima di tutto)
+Leggi **`config.json`** nella root. Se non esiste, usa `config.example.json` come schema e **chiedi
+all'utente** il nome della chat invece di indovinarlo. Campi che governano l'esecuzione:
+
+| Campo | Effetto |
+|---|---|
+| `whatsapp.enabled` | `false` → **salta interamente la Fase A** (nessuna apertura di WhatsApp Web) e vai diretto alla Fase B. Dichiaralo nel report. |
+| `whatsapp.chat` | Nome esatto della chat da aprire. Ovunque sotto compaia `<CHAT>`, sostituisci questo valore. |
+| `whatsapp.self_chat` | `true` → la chat è quella "con te stesso" (row con testid `message-yourself-row`); `false` → cercala per nome nella lista. |
+| `instagram.enabled` | `false` → salta la Fase B. |
+
+**Override da riga di comando** (una tantum, **non** riscrivere `config.json`):
+- un nome di chat passato come argomento vince su `whatsapp.chat`;
+- `--solo-instagram` forza `whatsapp.enabled: false` per questa esecuzione;
+- `--solo-whatsapp` forza `instagram.enabled: false`.
+
+Se entrambe le fasi risultano disattivate, fermati e dillo: non c'è niente da aggiornare.
+
 ## File e strumenti del progetto
+- `config.json` — configurazione locale (**gitignorata**): quale chat leggere e quali fasi eseguire. Schema in `config.example.json`.
 - `github-repos.json` — repo catalogati. Ogni record: `id, progetto, descrizione, url, categoria, fonte, macro, uso`.
-- `marco-scarlino-siti-web.json` — siti web (non-repo). Record: `id, sito, url, descrizione, categoria, fonte, macro, uso`.
-- `marco-scarlino-catalogo-completo.csv` — catalogo grezzo dei messaggi.
+- `siti-web.json` — siti web (non-repo). Record: `id, sito, url, descrizione, categoria, fonte, macro, uso`.
+- `siti-personali.json` — voci non-dev, **gitignorato** (vedi §4).
+- `chat-messaggi.csv` — catalogo grezzo dei messaggi, **gitignorato**. Può non esistere.
 - `instagram-profili.json` — stato del monitoraggio profili. Per ogni profilo: `{handle, ultimo_controllo, reel_visti: [shortcode], reel_catalogati: [shortcode]}`. Crealo se non esiste.
 - `gh-meta.json` — metadati attività GitHub per id repo.
 - `scripts/fetch_gh_meta.py` — recupera stelle/ultimo push/licenza (merge incrementale).
@@ -26,15 +47,15 @@ non è deducibile con certezza, segnalalo come incerto.
 
 Per il browser usa i tool del plugin **Playwright** (`browser_navigate`, `browser_evaluate`, `browser_tabs`).
 Prerequisiti:
-- **WhatsApp Web** loggato (per la Fase A). Se la chat non carica, fermati e avvisa l'utente.
+- **WhatsApp Web** loggato (per la Fase A, solo se `whatsapp.enabled`). Se la chat non carica, fermati e avvisa l'utente.
 - **Instagram loggato** (per la Fase B, monitoraggio profili): senza login la *singola caption* resta
   leggibile dai meta tag, ma la **griglia dei reel di un profilo non è enumerabile** (login wall). Se
   i profili mostrano il login wall, salta la Fase B, segnalalo, e completa comunque la Fase A.
 
 ## Procedura
 
-### 1. Raccogli TUTTI i messaggi della chat
-1. `browser_navigate` su `https://web.whatsapp.com`. Apri la chat **Marco Scarlino** (è la chat "con te stesso", row con testid `message-yourself-row`, o cercala nella lista).
+### 1. Raccogli TUTTI i messaggi della chat (Fase A — solo se `whatsapp.enabled`)
+1. `browser_navigate` su `https://web.whatsapp.com`. Apri la chat **`<CHAT>`** (il valore di `whatsapp.chat`): se `whatsapp.self_chat` è `true` è la chat "con te stesso", row con testid `message-yourself-row`; altrimenti cercala per nome nella lista.
 2. Scrolla l'intera chat accumulando i messaggi in `window.__msgs` (WhatsApp virtualizza il DOM, quindi raccogli DURANTE lo scroll). Esegui questo `browser_evaluate` più volte: prima per salire in cima, poi per scendere fino in fondo, finché `collected` non cresce più:
 ```js
 async () => {
@@ -70,21 +91,23 @@ async () => {
   const p=m=>{const x=m.match(/\[(\d{2}):(\d{2}), (\d{2})\/(\d{2})\/(\d{4})\]/); return x?new Date(+x[5],+x[4]-1,+x[3],+x[1],+x[2]).getTime():0;};
   arr.sort((a,b)=>p(a.meta)-p(b.meta));
   const re=/(https?:\/\/[^\s]+)/g;
-  return JSON.stringify(arr.map(x=>({data:x.meta.replace('Marco Scarlino:','').replace(/[\[\]]/g,'').trim(), text:x.text, urls:(x.text.match(re)||[])})));
+  return JSON.stringify(arr.map(x=>({data:x.meta.replace(CHAT+':','').replace(/[\[\]]/g,'').trim(), text:x.text, urls:(x.text.match(re)||[])})));
 }
 ```
+   Passa il nome chat allo snippet (`const CHAT = "<CHAT>";` in testa alla funzione) così il
+   prefisso mittente viene rimosso correttamente anche per chat diverse dalla tua.
    Salva il risultato in `scratchpad/all-messages.json`.
 
 ### 2. Trova le NOVITÀ
 Confronta gli shortcode Instagram (`instagram.com/(reel|p)/CODE`) e i link non-github con quelli già
-presenti in `github-repos.json`, `marco-scarlino-siti-web.json`, `marco-scarlino-catalogo-completo.csv`.
-Elenca solo i **nuovi**. Aggiorna `marco-scarlino-catalogo-completo.csv` con i nuovi messaggi.
+presenti in `github-repos.json`, `siti-web.json`, `siti-personali.json` e `chat-messaggi.csv` (se esistono).
+Elenca solo i **nuovi**. Aggiorna `chat-messaggi.csv` con i nuovi messaggi.
 
-### 2bis. Monitoraggio profili Instagram (Fase B — richiede Instagram loggato)
+### 2bis. Monitoraggio profili Instagram (Fase B — solo se `instagram.enabled`, richiede Instagram loggato)
 Oltre ai reel salvati in chat, controlla i **profili Instagram degli autori** dei reel già catalogati,
 per scoprire reel nuovi pubblicati da quei creator.
 1. **Ricava i profili da monitorare**: estrai gli handle dal campo `fonte` di `github-repos.json` e
-   `marco-scarlino-siti-web.json` (es. `simorizzo_ai`, `devop.sbs`, `marcobuilds7`, `leadgenman`,
+   `siti-web.json` (es. `simorizzo_ai`, `devop.sbs`, `marcobuilds7`, `leadgenman`,
    `ai_swarm_solutions`, `lorenzodelia.ai`, `didof.dev`, `gianma.ai`, `ai.honeycove`, `aisintesi`,
    `guglielmo.builds`, `chase.h.ai`, `professoretech`, ecc.). Normalizza in handle Instagram.
 2. **Carica/crea lo stato** `instagram-profili.json`. Per ogni handle tieni `reel_visti` (tutti gli
@@ -136,18 +159,18 @@ async () => {
 Per ogni caption:
 - Se nomina un repo esplicito (es. l'account **devop.sbs** scrive "Repo: X / Autore: Y" → `github.com/Y/X`, oppure cita un nome+owner), usalo.
 - Altrimenti usa **WebSearch** per identificare il repo dal nome del progetto e **verifica** che esista (WebFetch/ricerca). Non inventare owner.
-- Se il contenuto è un **sito/servizio** (non un repo) o un modello solo-HuggingFace → va in `marco-scarlino-siti-web.json`, non nei repo.
+- Se il contenuto è un **sito/servizio** (non un repo) o un modello solo-HuggingFace → va in `siti-web.json`, non nei repo.
 - Se non è deducibile con certezza → lascialo fuori e segnalalo come "incerto" nel report finale.
 Classifica anche i link diretti non-github dei messaggi come siti web.
 
 ### 4. Scrivi i nuovi record
-Per ogni nuovo repo aggiungi a `github-repos.json` un record con `id` progressivo e **compila `macro` (A–J) e `uso`** (una frase "quando usarlo"). Per i siti, aggiungi a `marco-scarlino-siti-web.json` con `macro` e `uso`. Evita duplicati di URL.
+Per ogni nuovo repo aggiungi a `github-repos.json` un record con `id` progressivo e **compila `macro` (A–J) e `uso`** (una frase "quando usarlo"). Per i siti, aggiungi a `siti-web.json` con `macro` e `uso`. Evita duplicati di URL.
 
 ⚠️ **Privacy — la macro `Z`.** Il repo è pubblicabile, quindi i file tracciati devono contenere
 **solo strumenti dev/AI**. Ogni voce che non lo è (salute, ricette, social, gaming personale, video
 condivisi, e in generale qualsiasi cosa riveli abitudini o dati personali) va taggata `macro: "Z"` e
-scritta in **`marco-scarlino-siti-personali.json`** — che è gitignorato — *non* in
-`marco-scarlino-siti-web.json`. Non riportare **mai** nel `descrizione`/`uso` codici riscattabili,
+scritta in **`siti-personali.json`** — che è gitignorato — *non* in
+`siti-web.json`. Non riportare **mai** nel `descrizione`/`uso` codici riscattabili,
 credenziali, importi, contatti o riferimenti a condizioni di salute, nemmeno per le voci `Z`:
 descrivi il link, non il suo contenuto personale. `build_catalog.py` scarta comunque le `Z` dagli
 output, ma è una rete di sicurezza, non una scusa per scriverle nei file tracciati.
@@ -163,7 +186,7 @@ output, ma è una rete di sicurezza, non una scusa per scriverle nei file tracci
 ### 6. Chiudi e riferisci
 Chiudi le tab Instagram/GitHub che hai aperto. Assicurati di aver salvato `instagram-profili.json`.
 Riporta in modo conciso:
-- **Fase A (chat)**: messaggi totali, link nuovi, repo/siti aggiunti.
+- **Fase A (chat)**: messaggi totali, link nuovi, repo/siti aggiunti — oppure "saltata (`whatsapp.enabled: false`)".
 - **Fase B (profili)**: profili controllati, reel nuovi trovati per profilo, quanti catalogati vs
   scartati (non-tool), ed eventuale login wall che ha impedito il controllo.
 - Repo/siti aggiunti con categoria e stato attività, e gli eventuali **incerti** da chiarire.

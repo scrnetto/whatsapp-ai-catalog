@@ -39,8 +39,9 @@ python3 scripts/build_catalog.py   # rigenera CATALOGO + catalogo.json e aggiorn
 ## Struttura
 | Percorso | Ruolo |
 |---|---|
+| `config.example.json` | Schema di configurazione: da copiare in `config.json` (gitignorato) |
 | `github-repos.json` | Repo catalogati (`id, progetto, descrizione, url, categoria, fonte, macro, uso`) |
-| `marco-scarlino-siti-web.json` | Siti web non-repo |
+| `siti-web.json` | Siti web non-repo |
 | `gh-meta.json` | Metadati attività GitHub per id |
 | `instagram-profili.json` | Stato monitoraggio profili (reel già visti per handle) |
 | `scripts/` | `fetch_gh_meta.py`, `build_catalog.py` |
@@ -49,7 +50,30 @@ python3 scripts/build_catalog.py   # rigenera CATALOGO + catalogo.json e aggiorn
 | `install-skill.sh` | Installa la skill su un nuovo PC (Linux/macOS) |
 | `install-skill.ps1` | Installa la skill su un nuovo PC (Windows) |
 
+## Configurare la sorgente
+La chat da leggere non è cablata nel codice: sta in `config.json`, che è **gitignorato**.
+
+```bash
+cp config.example.json config.json     # poi metti il nome della tua chat
+```
+
+| Campo | Effetto |
+|---|---|
+| `whatsapp.enabled` | `false` → salta del tutto la lettura di WhatsApp (usa solo i profili Instagram) |
+| `whatsapp.chat` | Nome esatto della chat, come appare in WhatsApp Web |
+| `whatsapp.self_chat` | `true` se è la chat "con te stesso" |
+| `instagram.enabled` | `false` → salta il monitoraggio dei profili |
+| `catalogo.titolo` / `catalogo.fonte` | Intestazione del catalogo generato |
+
+Per una singola esecuzione puoi anche fare `/aggiorna-catalogo "Altra Chat"` oppure
+`/aggiorna-catalogo --solo-instagram`, senza toccare la config.
+
+**Il repo funziona anche senza WhatsApp**: con `whatsapp.enabled: false` resta un catalogo
+alimentato dai profili Instagram in `instagram-profili.json`.
+
 ## Privacy
 I file con i **messaggi WhatsApp personali** (CSV grezzo, riassunti, screenshot di login, snapshot
-delle pagine) sono esclusi dal repo via `.gitignore` e restano solo in locale. Nel repo finiscono solo
-il catalogo dei tool e il tooling.
+delle pagine), `config.json` e le voci non-dev (`siti-personali.json`) sono esclusi dal repo via
+`.gitignore` e restano solo in locale. Nel repo finiscono solo il catalogo dei tool e il tooling.
+Le voci taggate `macro: "Z"` (contenuti personali) vengono inoltre scartate da `build_catalog.py`
+prima di generare gli output.

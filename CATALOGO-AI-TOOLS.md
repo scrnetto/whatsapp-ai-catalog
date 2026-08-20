@@ -1,7 +1,7 @@
-# 📚 Catalogo strumenti AI & Dev — da chat "Marco Scarlino"
+# 📚 Catalogo strumenti AI & Dev
 
-> Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai reel Instagram
-> e dai messaggi salvati nella chat WhatsApp personale di Marco Scarlino.
+> Catalogo unificato di **repository GitHub** e **siti/servizi web** raccolti dai
+> reel e link salvati in chat.
 > **132 repository** + **15 siti web**, organizzati per categoria operativa.
 > Stato attività verificato il **2026-08-20**. Legenda: 🟢 attivo (push ≤12 mesi) · 🟡 rallentato · 🔴 fermo · ⚫ archiviato · 🌐 sito web.
 

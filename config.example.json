@@ -1,0 +1,18 @@
+{
+  "_commento": "Copia questo file in config.json (gitignorato) e adattalo. Senza config.json valgono questi default.",
+
+  "whatsapp": {
+    "enabled": false,
+    "chat": "<nome esatto della chat da leggere, come appare in WhatsApp Web>",
+    "self_chat": true
+  },
+
+  "instagram": {
+    "enabled": true
+  },
+
+  "catalogo": {
+    "titolo": "Catalogo strumenti AI & Dev",
+    "fonte": "reel e link salvati in chat"
+  }
+}
