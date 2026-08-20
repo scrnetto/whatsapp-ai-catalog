@@ -47,8 +47,8 @@ cp config.example.json config.json     # then set your own chat
 | `catalogo.titolo` / `catalogo.fonte` | Heading and source line of the generated catalog |
 | `catalogo.lingua` | `it` (default) or `en` — language of category names, status labels and generated prose |
 
-For a one-off run you can also use `/aggiorna-catalogo "Another Chat"` or
-`/aggiorna-catalogo --solo-instagram` without touching the config.
+For a one-off run you can also use `/sync-ai-catalog "Another Chat"` or
+`/sync-ai-catalog --only-instagram` without touching the config.
 
 **The project works without WhatsApp**: with `whatsapp.enabled: false` you still get a catalog fed
 by the Instagram profiles tracked in `instagram-profili.json`.
@@ -59,15 +59,27 @@ and the prose of `skill/SKILL.md` is not generated, so it keeps its own language
 
 ## Updating the catalog
 Requires a browser with WhatsApp Web logged in (and Instagram logged in for profile monitoring).
-- From Claude Code: **`/aggiorna-catalogo`** (runs the `whatsapp-catalog-updater` agent).
+- From Claude Code: **`/sync-ai-catalog`** (runs the `whatsapp-catalog-updater` agent).
 - The agent reads the chat, checks known creators' Instagram profiles for new reels, extracts and
   verifies the repos, then rebuilds the catalog and the skill. See [`PIPELINE.md`](PIPELINE.md).
 
 ### Rebuild only, without re-reading WhatsApp
 ```bash
-python3 scripts/fetch_gh_meta.py   # refresh stars/last push (GitHub API, optional)
-python3 scripts/build_catalog.py   # rebuild CATALOGO + catalogo.json and update the skill
+python3 scripts/fetch_gh_meta.py             # fetch metadata for repos that have none
+python3 scripts/fetch_gh_meta.py --refresh   # re-check every repo, stalest data first
+python3 scripts/fetch_gh_meta.py --refresh 30  # only what was last checked >30 days ago
+python3 scripts/build_catalog.py             # rebuild CATALOGO + catalogo.json, update the skill
 ```
+
+Activity data goes stale, so `--refresh` re-checks stars, last push, archived status and license.
+Two things make it safe to run on a large catalog:
+
+- **It never loses data.** If a repo 404s (deleted or renamed) the existing entry is kept and
+  flagged with `last_error` instead of being overwritten with an error.
+- **It resumes.** Unauthenticated GitHub allows 60 requests/hour, so a catalog of 132 repos cannot
+  refresh in one pass. The queue is ordered — missing entries first, then the stalest — and the run
+  stops cleanly when the quota runs out, telling you when it resets. Re-run later and it picks up
+  where it left off. Set `GITHUB_TOKEN` (or pass `--token`) to get 5000/hour and finish in one go.
 
 ## Layout
 | Path | Role |

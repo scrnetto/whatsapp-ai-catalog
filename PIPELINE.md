@@ -5,7 +5,7 @@ catalog the GitHub repos and websites shared there (mostly Instagram reels about
 keep the **global Claude Code skill** — queryable from any project — up to date.
 
 ## How to run it
-- **Slash command:** `/aggiorna-catalogo` (needs WhatsApp Web logged in, unless Phase A is disabled)
+- **Slash command:** `/sync-ai-catalog` (needs WhatsApp Web logged in, unless Phase A is disabled)
 - **Or** just ask: *"update the catalog / check for new reels"* → this starts the
   **`whatsapp-catalog-updater`** agent (`.claude/agents/`).
 
@@ -41,8 +41,8 @@ The file is **gitignored** because it holds the name of your chat; the tracked s
 | `catalogo.titolo` / `catalogo.fonte` | Heading and source line of `CATALOGO-AI-TOOLS.md` |
 | `catalogo.lingua` | `it` (default) or `en` — language of category names, status labels and generated prose |
 
-One-off overrides from the command: `/aggiorna-catalogo "Chat Name"`, `--solo-instagram`,
-`--solo-whatsapp`. With no `config.json`, the agent asks which chat to read and `build_catalog.py`
+One-off overrides from the command: `/sync-ai-catalog "Chat Name"`, `--only-instagram`,
+`--only-whatsapp`. With no `config.json`, the agent asks which chat to read and `build_catalog.py`
 falls back to neutral defaults.
 
 ## Files
@@ -56,19 +56,26 @@ falls back to neutral defaults.
 | `chat-messaggi.csv` | Raw message dump (gitignored) |
 | `catalogo-unificato.json` / `CATALOGO-AI-TOOLS.md` | Generated outputs |
 | `siti-personali.json` | Non-dev entries, kept out of the repo (gitignored) |
-| `scripts/fetch_gh_meta.py` | Fetches activity metadata (incremental merge) |
+| `scripts/fetch_gh_meta.py` | Fetches activity metadata (incremental merge, `--refresh` to re-check) |
 | `scripts/build_catalog.py` | Builds the catalog and updates `~/.claude/skills/ai-tools-catalog/` |
 
 ## Rebuild only, without re-reading WhatsApp
 ```bash
-python3 scripts/fetch_gh_meta.py     # refresh stars/push (optional)
-python3 scripts/build_catalog.py     # rebuild MD+JSON and update the skill
+python3 scripts/fetch_gh_meta.py               # only repos with no metadata yet
+python3 scripts/fetch_gh_meta.py --refresh     # re-check all, stalest first, resumable
+python3 scripts/fetch_gh_meta.py --refresh 30  # only entries older than 30 days
+python3 scripts/build_catalog.py               # rebuild MD+JSON and update the skill
 ```
+`--refresh` is safe on a large catalog: it never overwrites good data with an error (a 404 repo
+keeps its entry and gains a `last_error` flag), and it stops cleanly when the API quota runs out,
+resuming from the stalest entries on the next run. `GITHUB_TOKEN` raises the quota from 60 to
+5000 requests/hour.
 
 ## Notes
 - Macro categories (`macro`): A coding/Claude Code · B AI agents · C local LLMs · D RAG/memory ·
   E OCR · F media generation · G security · H dev tools · I finance/trading · J AI research ·
   **Z personal/non-dev → private file, never committed**.
-- Unauthenticated GitHub API is capped at 60 requests/hour: for repos beyond that the agent falls
-  back to same-origin HTML scraping from the browser (see the agent prompt).
+- Unauthenticated GitHub API is capped at 60 requests/hour: `fetch_gh_meta.py` stops at the quota
+  and resumes next run, and for repos still missing the agent falls back to same-origin HTML
+  scraping from the browser (see the agent prompt).
 - Guiding principle: **never invent URLs**. Anything unverifiable is reported, not forced.

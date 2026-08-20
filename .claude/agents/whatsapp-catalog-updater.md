@@ -27,9 +27,13 @@ all'utente** il nome della chat invece di indovinarlo. Campi che governano l'ese
 | `instagram.enabled` | `false` → salta la Fase B. |
 
 **Override da riga di comando** (una tantum, **non** riscrivere `config.json`):
-- un nome di chat passato come argomento vince su `whatsapp.chat`;
-- `--solo-instagram` forza `whatsapp.enabled: false` per questa esecuzione;
-- `--solo-whatsapp` forza `instagram.enabled: false`.
+
+| Argomento | Effetto |
+|---|---|
+| `"Nome Chat"` | vince su `whatsapp.chat` |
+| `--only-instagram` | forza `whatsapp.enabled: false` per questa esecuzione |
+| `--only-whatsapp` | forza `instagram.enabled: false` |
+| `--refresh-meta [GIORNI]` | allo step 5 lancia `fetch_gh_meta.py --refresh [GIORNI]` invece del solo recupero dei mancanti |
 
 Se entrambe le fasi risultano disattivate, fermati e dillo: non c'è niente da aggiornare.
 
@@ -176,7 +180,13 @@ descrivi il link, non il suo contenuto personale. `build_catalog.py` scarta comu
 output, ma è una rete di sicurezza, non una scusa per scriverle nei file tracciati.
 
 ### 5. Metadati attività + rigenera
-1. `python3 scripts/fetch_gh_meta.py` (recupera stelle/push dei nuovi repo).
+1. `python3 scripts/fetch_gh_meta.py` (recupera stelle/push dei **nuovi** repo).
+   Con `--refresh-meta` fra gli argomenti usa invece `python3 scripts/fetch_gh_meta.py --refresh`
+   (o `--refresh <GIORNI>`): rinfresca anche i repo già catalogati, partendo dai dati più stantii.
+   Lo script si ferma da solo quando esaurisce la quota API e riprende al giro successivo, quindi
+   **non è un errore** se riporta "Stopped early": riportalo e basta. Non cancella mai dati validi.
+   Se l'utente ha un `GITHUB_TOKEN` nell'ambiente la quota passa da 60 a 5000 richieste/ora.
+   Segnala eventuali `last_error: 404`: sono repo spariti o rinominati, da verificare a mano.
 2. Se colpisci il **rate limit GitHub** (60/ora), completa i mancanti con scraping HTML *same-origin*:
    apri una tab su `https://github.com` ed esegui un `browser_evaluate` che fa `fetch(\`https://github.com/${slug}\`)`
    e ricava stelle da `id="repo-stars-counter-star" title="..."`, l'ultimo push dal `datetime=` più recente,
